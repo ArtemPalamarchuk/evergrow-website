@@ -11,8 +11,8 @@ import { francisco, biden, deliver } from "../../../assets/images";
         </h2>
         <p class="text-white text-md-p font-urbanist-m mb-[26px]">
           Evergrow is a technology startup based in San Francisco, California.
-          We build financial and compliance tools to enable a swift and just
-          transition to a world with abundant carbon-neutral energy.
+          We build financial and compliance tools to enable a swift and
+          just transition to a world with abundant carbon-neutral energy.
         </p>
       </div>
       <div class="w-1/2"><img :src="francisco" alt="francisco"></div>
