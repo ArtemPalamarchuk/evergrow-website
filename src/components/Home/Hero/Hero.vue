@@ -19,7 +19,7 @@ import { hero } from "../../../assets/images";
 
 <style scoped>
   .hero {
-    @apply w-full relative bg-[#E6F0ED] pl-[120px] py-[147px] mb-10;
+    @apply w-full relative bg-light-green pl-[120px] py-[147px] mb-10;
   }
 
    .text-content {

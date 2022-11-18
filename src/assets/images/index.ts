@@ -21,3 +21,30 @@ export {logo, chevron ,arrow, hero}
 export {axios, ctvc ,canary, solar}
 export {netZero, corporateFinance ,sponsors, contractors, banks, syndicators, approach}
 
+//ABOUT PAGE
+import biden from "./about/description/biden.svg"
+import deliver from "./about/description/deliver.svg"
+import francisco from "./about/description/francisco.svg"
+
+import congruent from "./about/investors/congruent.svg"
+import firstRound from "./about/investors/firstRound.svg"
+import garuda from "./about/investors/garuda.svg"
+import journey from "./about/investors/journey.svg"
+import xyz from "./about/investors/xyz.svg"
+
+import person1 from "./about/team/person1.svg"
+import person2 from "./about/team/person2.svg"
+import person3 from "./about/team/person3.svg"
+import person4 from "./about/team/person4.svg"
+import person5 from "./about/team/person5.svg"
+import person6 from "./about/team/person6.svg"
+import person7 from "./about/team/person7.svg"
+
+import joinUs from "./about/joinUs.svg"
+import linkedIn from "./about/LinkedIn.svg"
+
+export {biden, deliver, francisco}
+export {congruent, firstRound, garuda, journey, xyz}
+export {person1, person2, person3, person4, person5, person6, person7}
+export {joinUs, linkedIn}
+

@@ -7,8 +7,9 @@ module.exports = {
     extend: {
       colors: {
         "primary": "#068576",
-        'dark': '#2A4547',
+        "dark": '#2A4547',
         "secondary": '#F1805F',
+        "light-green": '#E6F0ED'
       },
       fontFamily: {
         ["urbanist-m"]: "Urbanist-500",
@@ -20,6 +21,7 @@ module.exports = {
         "lg-h": ["48px", {lineHeight: "58px", fontWeight: 700}],
         "md-h": ["40px", {lineHeight: "45px", fontWeight: 700}],
         "sm-h": ["30px", {lineHeight: "38px", fontWeight: 700}],
+        "xs-h": ["24px", {lineHeight: "38px", fontWeight: 700}],
         // Interfaces
         "sm-i": ["14px", {lineHeight: "24px"}],
         "md-i": ["16px", {lineHeight: "24px"}],
