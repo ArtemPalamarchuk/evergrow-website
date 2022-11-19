@@ -56,10 +56,10 @@ import Solutions from "../Solutions.vue";
   }
 
   .evergrow p, .title {
-    @apply text-sm-i font-urbanist-m mb-4
+    @apply text-xs-h-mob mb-4
   }
 
   li {
-    @apply text-md-i font-urbanist-sb mb-4
+    @apply text-md-i mb-4
   }
 </style>

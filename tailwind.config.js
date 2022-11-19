@@ -18,14 +18,22 @@ module.exports = {
       },
       fontSize: {
         // Headings
-        "lg-h": ["48px", {lineHeight: "58px", fontWeight: 700}],
-        "md-h": ["40px", {lineHeight: "45px", fontWeight: 700}],
-        "sm-h": ["30px", {lineHeight: "38px", fontWeight: 700}],
-        "xs-h": ["24px", {lineHeight: "38px", fontWeight: 700}],
+        "lg-h": ["48px", {lineHeight: "58px"}],
+        "md-h": ["40px", {lineHeight: "45px"}],
+        "sm-h": ["30px", {lineHeight: "32px"}],
+        "xs-h": ["24px", {lineHeight: "38px"}],
+        // tablet
+        "md-h-tab": ["40px", {lineHeight: "48px"}],
+        "sm-h-tab": ["30px", {lineHeight: "45px"}],
+        "xs-h-tab": ["18px", {lineHeight: "24px"}],
+        // mobile
+        "sm-h-mob": ["26px", {lineHeight: "28px"}],
+        "xs-h-mob": ["14px", {lineHeight: "18px"}],
+
         // Interfaces
-        "sm-i": ["14px", {lineHeight: "24px"}],
-        "md-i": ["16px", {lineHeight: "24px"}],
         "lg-i": ["20px", {lineHeight: "32px"}],
+        "md-i": ["16px", {lineHeight: "24px"}],
+        "sm-i": ["14px", {lineHeight: "24px"}],
         // Paragraphs
         'md-p': ["18px", {lineHeight: "30px"}],
       },
@@ -34,6 +42,11 @@ module.exports = {
         1: 1,
       }
     },
+    screens: {
+      'sm': '640px', // tablet
+      'md': '1024px', // laptop
+      'lg': '1280px', // desktop
+    }
   },
   plugins: [],
 }

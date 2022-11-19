@@ -22,16 +22,16 @@ import { hero } from "../../../assets/images";
     @apply w-full relative bg-light-green pl-[120px] py-[147px] mb-10;
   }
 
-   .text-content {
+  .text-content {
     @apply max-w-[480px];
   }
 
-   .text-content h1 {
+  .text-content h1 {
     @apply text-lg-h text-dark mb-8
   }
 
-   .text-content p {
-    @apply mb-12 text-dark text-md-p font-urbanist-m;
+  .text-content p {
+    @apply mb-12 text-dark text-md-p;
   }
 
   .img-wrap {

@@ -32,7 +32,7 @@ const {img, title, text} = defineProps<CardProps>()
   }
 
   h3 {
-    @apply text-xs-h text-white font-urbanist-b mb-1
+    @apply text-xs-h text-white mb-1
   }
 
   p {

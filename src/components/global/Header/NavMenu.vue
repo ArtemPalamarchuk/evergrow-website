@@ -27,7 +27,7 @@ const toggleSolutionsMenu = () => {
 <template>
   <nav class="nav-menu">
     <div class="solutions-container" @click="toggleSolutionsMenu">
-      Solutions
+      <a @click="false">Solutions</a>
       <img :src="chevron" alt="chevron">
       <solutions v-if="isActiveDDMenu"/>
     </div>
@@ -45,7 +45,7 @@ const toggleSolutionsMenu = () => {
 
 <style scoped>
   .nav-menu {
-    @apply w-full flex justify-center gap-8 text-[#1a1a1a] opacity-70 font-urbanist-sb z-1;
+    @apply w-full flex justify-center gap-8 text-[#1a1a1a] opacity-70 z-1;
   }
 
   .solutions-container {

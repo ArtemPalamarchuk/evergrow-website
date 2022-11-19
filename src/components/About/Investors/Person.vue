@@ -22,7 +22,7 @@ const {name, title, subtitle} = defineProps<CardProps>()
 <style scoped>
 
 h3 {
-  @apply text-xs-h text-secondary font-urbanist-b mb-1
+  @apply text-xs-h text-secondary mb-1
 }
 
 p {

@@ -28,11 +28,11 @@ import { joinUs } from "../../../assets/images";
 }
 
 h2 {
-  @apply text-white text-lg-h font-urbanist-b mb-4
+  @apply text-white text-lg-h mb-4
 }
 
 p {
-  @apply text-white text-md-p font-urbanist-m mb-16
+  @apply text-white text-md-p mb-16
 }
 
 button {

@@ -33,10 +33,10 @@ const {img, title, text} = defineProps<CardProps>()
   }
 
   h3 {
-    @apply text-sm-h text-white font-urbanist-b mb-2
+    @apply text-sm-h text-white mb-2
   }
 
   p {
-    @apply text-md-i text-white font-urbanist-sb
+    @apply text-md-i text-white
   }
 </style>

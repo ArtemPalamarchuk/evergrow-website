@@ -16,3 +16,15 @@
   font-family: "Urbanist-700";
   src: url("../fonts/Urbanist/Urbanist-Bold.ttf");
 }
+
+h1, h2, h3, h4, h5, h6, button {
+  @apply font-urbanist-b
+}
+
+li, a {
+  @apply font-urbanist-sb
+}
+
+p {
+  @apply font-urbanist-m
+}

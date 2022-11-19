@@ -38,11 +38,11 @@ import ProfileCard from './ProfileCard.vue'
 }
 
 .text-content h2 {
-  @apply text-lg-h text-dark font-urbanist-b w-1/2;
+  @apply text-lg-h text-dark w-1/2;
 }
 
 .text-content p {
-  @apply text-md-p text-dark font-urbanist-m w-1/2;
+  @apply text-md-p text-dark w-1/2;
 }
 
 .profileCards {

@@ -16,6 +16,6 @@ const {text, styles = {}} = defineProps<ButtonProps>()
 <style scoped>
   button {
     @apply flex items-center rounded-md px-6 py-[6px] cursor-pointer
-    bg-primary text-white text-lg-i whitespace-nowrap font-urbanist-b;
+    bg-primary text-white text-lg-i whitespace-nowrap;
   }
 </style>

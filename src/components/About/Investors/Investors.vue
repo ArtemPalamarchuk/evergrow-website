@@ -58,7 +58,7 @@
 }
 
 .title {
-  @apply text-dark text-md-h text-center font-urbanist-b mb-8;
+  @apply text-dark text-md-h text-center mb-8;
 }
 
 .images-container {
