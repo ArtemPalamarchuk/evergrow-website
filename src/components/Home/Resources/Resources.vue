@@ -1,5 +1,5 @@
 <script setup>
-import { axios, canary, ctvc, solar } from "../../../assets/images";
+import { axios, canary, ctvc, solar } from "@/assets/images";
 </script>
 
 <template>
@@ -16,18 +16,30 @@ import { axios, canary, ctvc, solar } from "../../../assets/images";
 
 <style scoped>
   .resources {
-    @apply bg-[#F5F3EF] rounded-[2rem] rounded-br-[0] px-[70px] py-12 mb-10 mx-7;
+    @apply bg-[#F5F3EF] pt-4 pb-3
+    sm:py-7
+    md:py-12
   }
 
   .title {
-    @apply text-dark text-md-h text-center mb-8;
+    @apply text-dark text-md-p text-center mb-2
+    sm:text-sm-h-tab sm:mb-4
+    md:text-md-h
   }
 
   .images-container {
-    @apply flex gap-8;
+    @apply grid gap-y-2 gap-x-2.5 px-4 grid-cols-2
+    sm:grid-cols-4
+    md:gap-[50px] md:mx-auto md:w-fit
+  }
+
+  .image-container img {
+    @apply scale-[0.6] md:scale-[0.9]
   }
 
   .image-container {
-    @apply w-full h-[100px] flex items-center justify-center bg-white rounded-[1rem];
+    @apply h-[54px] flex items-center justify-center bg-white rounded-[1rem]
+    sm:h-[64px]
+    md:h-[81px] md:w-[211px]
   }
 </style>

@@ -1,21 +1,38 @@
 <script setup>
+import { logo } from "@/assets/images";
 import NavMenu from "./NavMenu.vue"
-import { logo } from "../../../assets/images";
 import Button from "../Button.vue";
+import Hamburger from "@/components/global/Header/Hamburger.vue";
+
+const hamburgerHandler = () => {}
+
 </script>
 
 <template>
   <header>
-    <router-link to="/" class="sidebar-title">
-      <img :src="logo" alt="">
+    <router-link to="/" class="logo">
+      <img :src="logo" alt="logo">
     </router-link>
-    <nav-menu/>
-    <Button text="Contact Us"/>
+    <div class="menu">
+      <nav-menu/>
+      <Button text="Contact Us"/>
+    </div>
+    <Hamburger @click="hamburgerHandler"/>
   </header>
 </template>
 
 <style scoped>
   header {
-    @apply flex items-center h-[58px] mb-4 px-6 mb-[21px]
+    @apply h-[72px] flex items-center px-4 pt-[30px] pb-[14px]
+    sm:mb-[9px] sm:h-[58px] sm:px-6 sm:py-0
+    md:mb-[14px]
+  }
+
+  .logo {
+    @apply flex shrink-0 w-[105px] h-[25px] mt-1
+  }
+
+  .menu {
+    @apply hidden sm:flex w-full items-center
   }
 </style>

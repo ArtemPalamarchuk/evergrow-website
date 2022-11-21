@@ -1,5 +1,5 @@
 <script setup>
-import { logo } from "../../../assets/images";
+import { logo } from "@/assets/images";
 import Solutions from "../Solutions.vue";
 </script>
 
@@ -12,7 +12,7 @@ import Solutions from "../Solutions.vue";
         </router-link>
         <p>© 2022 Company</p>
       </div>
-      <div class="solutions">
+      <div class="solutions-wrap">
         <p class="title">Solutions</p>
         <solutions/>
       </div>
@@ -44,22 +44,48 @@ import Solutions from "../Solutions.vue";
 
 <style scoped>
   footer {
-    @apply bg-[#F5F3EF] px-[120px] pb-8 pt-[80px] text-dark
+    @apply bg-[#F5F3EF] text-dark px-4 pt-10 pb-8
+    sm:py-8
+    md:px-[120px] md:py-[56px]
   }
 
   .info {
-    @apply flex justify-between
+    @apply grid pt-2
+    sm:grid-cols-auto-columns
+    md:grid-cols-4
+  }
+
+  .evergrow {
+    @apply
+    sm:col-span-3
+    md:col-auto
   }
 
   .evergrow img {
-    @apply mt-4 mb-4
+    @apply mb-2
+    md:mt-5
   }
 
   .evergrow p, .title {
-    @apply text-xs-h-mob mb-4
+    @apply text-xs-h-mob
+  }
+
+  .title:not(.solutions-wrap .title) {
+    @apply mt-8 mb-2
+    md:mt-0
+  }
+
+  .solutions-wrap .title {
+    @apply mb-2 mt-6
+    md:mt-0
   }
 
   li {
-    @apply text-md-i mb-4
+    @apply text-sm-i
+    md:text-md-i
+  }
+
+  li:not(li:last-child) {
+    @apply mb-2
   }
 </style>

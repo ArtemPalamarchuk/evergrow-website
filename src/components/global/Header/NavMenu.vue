@@ -1,5 +1,5 @@
 <script setup>
-import {chevron} from "../../../assets/images";
+import {chevron} from "@/assets/images";
 import {ref} from "vue";
 import Solutions from "../Solutions.vue";
 

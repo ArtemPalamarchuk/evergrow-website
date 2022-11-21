@@ -9,7 +9,7 @@
 
 <style scoped>
   li {
-    @apply text-md-i mb-4
+    @apply text-md-i mb-2
   }
 
   li:last-child {

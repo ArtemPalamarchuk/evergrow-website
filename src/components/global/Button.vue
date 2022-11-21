@@ -8,14 +8,13 @@ const {text, styles = {}} = defineProps<ButtonProps>()
 </script>
 
 <template>
-  <button :style="styles">
+  <button :class="styles">
     {{ text }}
   </button>
 </template>
 
 <style scoped>
   button {
-    @apply flex items-center rounded-md px-6 py-[6px] cursor-pointer
-    bg-primary text-white text-lg-i whitespace-nowrap;
+    @apply flex items-center rounded-md py-3 px-6 cursor-pointer bg-primary text-md-i text-white whitespace-nowrap
   }
 </style>
