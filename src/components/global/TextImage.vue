@@ -28,7 +28,7 @@ const {heading, mainText, secondaryText = "", img} = defineProps<TextImageProps>
   }
 
   .text-content {
-    @apply bg-secondary px-4 py-6
+    @apply bg-secondary px-4 py-6 flex flex-col justify-center
     sm:pr-[78px]
     lg:py-[58px] lg:pl-[120px] lg:pr-[78px]
     lg:w-1/2
@@ -46,7 +46,7 @@ const {heading, mainText, secondaryText = "", img} = defineProps<TextImageProps>
   }
 
   img {
-    @apply object-cover
+    @apply object-cover max-h-[550px] lg:max-h-full
     lg:w-1/2
   }
 </style>

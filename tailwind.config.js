@@ -36,6 +36,7 @@ module.exports = {
         "sm-i": ["14px", {lineHeight: "24px"}],
         // Paragraphs
         'md-p': ["18px", {lineHeight: "30px"}],
+        'sm-p': ["16px", {lineHeight: "24px"}],
       },
       zIndex: {
         0: 0,
@@ -47,6 +48,7 @@ module.exports = {
     },
     screens: {
       'sm': '640px', // tablet
+      'sm-l': '767px', // tablet-large
       'md': '1024px', // laptop
       'lg': '1280px', // desktop
     }
