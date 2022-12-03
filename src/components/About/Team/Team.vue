@@ -11,7 +11,7 @@ import ProfileCard from './ProfileCard.vue'
         We bring deep experience in compliance technology, software engineering, and project finance
       </p>
     </div>
-    <div class="grid grid-cols-2 sm-l:grid-cols-3 md:grid-cols-4 gap-x-5 gap-y-6 sm:gap-y-10 md:gap-y-14">
+    <div class="grid grid-cols-2 sm:flex sm:justify-center sm:flex-wrap gap-x-5 gap-y-6 sm:gap-y-10 md:gap-y-14">
       <ProfileCard :img="person1" title="James Richards" text="CEO"/>
       <ProfileCard :img="person2" title="Cassandra Xia"  text="Head of Engineering"/>
       <ProfileCard :img="person3" title="Charles Stone"  text="Strategic Finance Lead"/>
@@ -40,13 +40,5 @@ import ProfileCard from './ProfileCard.vue'
 
 .text-content p {
   @apply text-md-p text-dark w-full sm-l:w-[60%] md:w-[55%] lg:w-1/2;
-}
-
-.profileCards {
-  @apply flex w-full gap-[26px]
-}
-
-.advantages .profileCards:last-child{
-  @apply mb-0
 }
 </style>

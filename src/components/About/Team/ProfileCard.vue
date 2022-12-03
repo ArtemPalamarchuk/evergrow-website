@@ -18,7 +18,7 @@ const {img, title, text} = defineProps<CardProps>()
         <h3>{{ title }}</h3>
         <p>{{ text }}</p>
       </div>
-      <div>
+      <div class="linkedIn">
         <img :src="linkedIn" alt="arrow" class="cursor-pointer float-right mt-3">
       </div>
     </div>
@@ -28,7 +28,7 @@ const {img, title, text} = defineProps<CardProps>()
 <style scoped>
 
   .content {
-    @apply flex flex-col bg-primary px-5 py-4 rounded-bl-[2rem] h-[134px] sm:h-auto;
+    @apply flex flex-col relative bg-primary py-3 px-4 md:px-6 md:py-5 rounded-bl-[2rem] h-[120px] md:h-[134px];
   }
 
   h3 {
@@ -37,5 +37,9 @@ const {img, title, text} = defineProps<CardProps>()
 
   p {
     @apply text-xs-h-mob sm:text-md-i text-white font-urbanist-sb
+  }
+
+  .linkedIn {
+    @apply absolute right-4 bottom-3 md:right-6 md:bottom-5;
   }
 </style>
