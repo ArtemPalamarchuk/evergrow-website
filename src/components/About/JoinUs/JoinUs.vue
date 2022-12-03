@@ -16,13 +16,6 @@ const {heading, text} = joinUsContent
 </template>
 
 <style scoped>
-.joinUs {
-  @apply flex
-}
-
-.text-content {
-  @apply w-1/2 bg-secondary flex flex-col justify-center pl-[120px] pr-[73px]
-}
 
 h2 {
   @apply text-white text-lg-h mb-4

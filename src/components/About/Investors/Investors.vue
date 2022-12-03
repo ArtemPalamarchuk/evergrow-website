@@ -7,11 +7,11 @@
   <section class="investors">
     <h2 class="title">Our investors</h2>
     <div class="images-container">
-      <div class="image-container rounded-lg rounded-tl-[2rem] sm-l:rounded-tl-lg basis-[calc(100%/3-5.33px)] sm-l:basis-1/5"><img :src="xyz" alt="xyz"></div>
-      <div class="image-container rounded-lg basis-[calc(100%/3-5.33px)] sm-l:basis-1/5"><img :src="congruent" alt="congruent"></div>
-      <div class="image-container rounded-lg basis-[calc(100%/3-5.33px)] sm-l:basis-1/5"><img :src="firstRound" alt="firstRound"></div>
-      <div class="image-container rounded-lg rounded-bl-[2rem] sm-l:rounded-bl-lg basis-[calc(100%/2-4px)] sm-l:basis-1/5"><img :src="journey" alt="journey"></div>
-      <div class="image-container rounded-lg rounded-br-[2rem] sm-l:rounded-br-lg basis-[calc(100%/2-4px)] sm-l:basis-1/5"><img :src="garuda" alt="garuda"></div>
+      <div class="image-container rounded-tl-[2rem] sm-l:rounded-tl-lg basis-[calc(100%/3-5.33px)] sm-l:basis-1/5"><img :src="xyz" alt="xyz"></div>
+      <div class="image-container basis-[calc(100%/3-5.33px)] sm-l:basis-1/5"><img :src="congruent" alt="congruent"></div>
+      <div class="image-container basis-[calc(100%/3-5.33px)] sm-l:basis-1/5"><img :src="firstRound" alt="firstRound"></div>
+      <div class="image-container rounded-bl-[2rem] sm-l:rounded-bl-lg basis-[calc(100%/2-4px)] sm-l:basis-1/5"><img :src="journey" alt="journey"></div>
+      <div class="image-container rounded-br-[2rem] sm-l:rounded-br-lg basis-[calc(100%/2-4px)] sm-l:basis-1/5"><img :src="garuda" alt="garuda"></div>
     </div>
     <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
       <Person name="Ross Fubini" title="Managing Partner" subtitle="XYZ Venture Capital"/>
@@ -58,14 +58,9 @@
   lg:py-12 lg:px-[70px]
   md:py-7 md:px-8
   sm-l:py-5 sm-l:px-3
-
-}
-
-.line {
-  @apply h-px bg-gray-400 w-full
 }
 
 .image-container {
-  @apply w-full h-[100px] flex items-center justify-center bg-secondary bg-[#f28d70];
+  @apply w-full rounded-lg h-[100px] flex items-center justify-center bg-secondary bg-[#f28d70];
 }
 </style>
