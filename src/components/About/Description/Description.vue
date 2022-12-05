@@ -4,26 +4,26 @@ import { francisco, biden, deliver } from "../../../assets/images";
 
 <template>
   <section class="description-wrapper">
-    <div class="description bg-primary">
-      <div class="text-content">
-        <h2 class="text-white text-lg-h mb-4">
+    <div class="box-wrapper bg-primary flex-col">
+      <div class="text-content px-4 py-[72px] lg:pr-[78px] lg:pl-[120px] sm:w-[65%] md:w-[80%] lg:py-[58px]">
+        <h2 class="text-white">
           Helping to build and sustain a carbon neutral world
         </h2>
-        <p class="text-white text-md-p mb-[26px]">
+        <p class="text-white">
           Evergrow is a technology startup based in San Francisco, California.
           We build financial and compliance tools to enable a swift and just
           transition to a world with abundant carbon-neutral energy.
         </p>
       </div>
-      <div class="w-1/2"><img :src="francisco" alt="francisco"></div>
+      <img class="object-cover max-h-[550px] lg:w-1/2 lg:max-h-full" :src="francisco" alt="francisco">
     </div>
 
-    <div class="description bg-white py-24">
-      <div class="text-content">
-        <h2 class="text-dark text-lg-h mb-4">
+    <div class="box-wrapper bg-white flex-col py-[60px] px-4 lg:px-[120px] lg:py-24">
+      <div class="text-content lg:mr-20">
+        <h2 class="text-dark">
           An unprecedented climate opportunity
         </h2>
-        <p class="text-dark text-md-p mb-[26px]">
+        <p class="text-dark mb-[26px]">
           In August 2022, the US government enacted the Inflation Reduction Act (IRA),
           which authorizes new funding for a comprehensive set of clean energy technologies.
           The law is expected to deploy hundreds of billions of dollars, but there’s no cap -
@@ -32,14 +32,14 @@ import { francisco, biden, deliver } from "../../../assets/images";
           It also comes with strong requirements to pay good wages and train the next generation workforce.
         </p>
       </div>
-      <img class="rounded-t-[2rem] rounded-bl-[2rem]" :src="biden" alt="biden">
+      <img class="rounded-t-[2rem] rounded-bl-[2rem] object-cover md:w-[70%] md:mx-auto lg:w-1/2" :src="biden" alt="biden">
     </div>
 
-    <div class="description bg-light-green py-24">
-      <img class="rounded-t-[2rem] rounded-br-[2rem] ml-[120px]" :src="deliver" alt="francisco">
-      <div class="text-content">
-        <h2 class="text-dark text-lg-h mb-4">Time to deliver</h2>
-        <p class="text-dark text-md-p mb-[26px]">
+    <div class="box-wrapper bg-light-green flex-col-reverse py-[60px] px-4 lg:px-[120px] lg:py-24">
+      <img class="rounded-t-[2rem] rounded-br-[2rem] object-cover md:w-[70%] md:mx-auto lg:w-1/2" :src="deliver" alt="francisco">
+      <div class="text-content lg:ml-20">
+        <h2 class="text-dark">Time to deliver</h2>
+        <p class="text-dark mb-[26px]">
           Evergrow is focused on making the promise of this landmark legislation into a reality.
           We believe the law’s labor requirements will help to ensure that the energy transition
           increases equity and fights income inequality, and we are proud to help implement it.
@@ -52,11 +52,19 @@ import { francisco, biden, deliver } from "../../../assets/images";
 </template>
 
 <style scoped>
-.description {
-  @apply flex
+.box-wrapper {
+  @apply flex lg:flex-row;
+}
+
+h2 {
+  @apply text-sm-h-mob mb-4 sm:text-md-h-tab md:text-lg-h;
+}
+
+p {
+  @apply text-sm-p sm:text-md-p;
 }
 
 .text-content {
-  @apply w-1/2 flex flex-col justify-center pl-[120px] pr-[73px]
+  @apply flex flex-col justify-center lg:w-1/2
 }
 </style>

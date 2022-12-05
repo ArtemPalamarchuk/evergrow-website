@@ -52,3 +52,10 @@ export const approachContent = {
   secondaryText: `That’s why we built Evergrow - to make tax credits simple. It’s a new approach that can scale with the challenge
         before us.`,
 }
+
+export const joinUsContent = {
+  heading: `Join us`,
+  text: `Evergrow works in person at the beautiful Shack 15 space in the iconic San Francisco Ferry Building.
+        We are always looking for talented and mission-driven individuals to join our team.
+        Take a look at our openings and get in touch!`,
+}

@@ -17,7 +17,7 @@ const {heading, text, secondaryText} = approachContent
 
 <style scoped>
   button {
-    @apply py-[13px] bg-white text-secondary mt-[26px]
+    @apply py-[13px] bg-white text-secondary mt-[26px] w-fit
     sm:mt-[52px]
     md:mt-[26px]
   }
