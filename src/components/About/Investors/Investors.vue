@@ -14,19 +14,19 @@
       <div class="image-container rounded-br-[1.5rem] rounded-lg sm-l:rounded-lg basis-[calc(100%/2-4px)] sm-l:basis-1/5"><img :src="journey" alt="garuda"></div>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-      <Person name="Andy Karetsky" title="President, " subtitle="Skyview Ventures"/>
-      <Person name="Maddie Hall" title="Co-Founder, " subtitle="Living Carbon"/>
-      <Person name="Justin Kan" title="Co-Founder, " subtitle="Twitch"/>
-      <Person name="Sanjeev Kumar" title="Renewable Energy Executive" subtitle=""/>
-      <Person name="Erica Dorfman" title="SVP Of Capital Markets, " subtitle="Brex"/>
-      <Person name="Michael Tannenbaum" title="COO, " subtitle="Brex"/>
-      <Person name="Karen Karniol-Tambour" title="Co-CIO Sustainability, " subtitle="Bridgewater Associates"/>
-      <Person name="Richard Matsui" title="CEO, " subtitle="Kwh Analytics"/>
-      <Person name="Max Mullen" title="Co-Founder, " subtitle="Instacart"/>
-      <Person name="Zach Perrett" title="CEO, " subtitle="Plaid"/>
-      <Person name="Sierra Peterson" title="Managing Partner, " subtitle="Voyager"/>
-      <Person name="Peter Reinhardt" title="CEO, " subtitle="Charm Industrial"/>
-      <Person name="Janice Tran" title="CEO, " subtitle="Kanin Energy"/>
+      <Person name="Andy Karetsky" position="President," company="Skyview Ventures"/>
+      <Person name="Maddie Hall" position="Co-Founder," company="Living Carbon"/>
+      <Person name="Justin Kan" position="Co-Founder," company="Twitch"/>
+      <Person name="Sanjeev Kumar" position="Renewable Energy Executive" company=""/>
+      <Person name="Erica Dorfman" position="SVP Of Capital Markets," company="Brex"/>
+      <Person name="Michael Tannenbaum" position="COO," company="Brex"/>
+      <Person name="Karen Karniol-Tambour" position="Co-CIO Sustainability," company="Bridgewater Associates"/>
+      <Person name="Richard Matsui" position="CEO," company="Kwh Analytics"/>
+      <Person name="Max Mullen" position="Co-Founder," company="Instacart"/>
+      <Person name="Zach Perrett" position="CEO," company="Plaid"/>
+      <Person name="Sierra Peterson" position="Managing Partner," company="Voyager"/>
+      <Person name="Peter Reinhardt" position="CEO," company="Charm Industrial"/>
+      <Person name="Janice Tran" position="CEO," company="Kanin Energy"/>
     </div>
   </section>
 </template>
