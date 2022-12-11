@@ -44,7 +44,7 @@ import Solutions from "../Solutions.vue";
 
 <style scoped>
   footer {
-    @apply bg-[#F5F3EF] text-dark px-4 pt-10 pb-8
+    @apply bg-beige text-dark px-4 pt-10 pb-8
     sm:py-8
     md:px-[120px] md:py-[56px]
   }

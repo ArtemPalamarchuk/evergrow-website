@@ -22,8 +22,6 @@ export {axios, ctvc ,canary, solar}
 export {netZero, corporateFinance ,sponsors, contractors, banks, syndicators, approach}
 
 //ABOUT PAGE
-import biden from "./about/description/biden.svg"
-import deliver from "./about/description/deliver.svg"
 import francisco from "./about/description/francisco.svg"
 
 import congruent from "./about/investors/congruent.svg"
@@ -43,7 +41,7 @@ import person7 from "./about/team/person7.svg"
 import joinUs from "./about/joinUs.svg"
 import linkedIn from "./about/LinkedIn.svg"
 
-export {biden, deliver, francisco}
+export {francisco}
 export {congruent, firstRound, garuda, journey, xyz}
 export {person1, person2, person3, person4, person5, person6, person7}
 export {joinUs, linkedIn}

@@ -16,7 +16,7 @@ import { axios, canary, ctvc, solar } from "@/assets/images";
 
 <style scoped>
   .resources {
-    @apply bg-[#F5F3EF] pt-4 pb-3
+    @apply bg-beige pt-4 pb-3
     sm:py-7
     md:py-12
   }

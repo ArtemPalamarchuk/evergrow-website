@@ -9,7 +9,8 @@ module.exports = {
         "primary": "#068576",
         "dark": '#2A4547',
         "secondary": '#F1805F',
-        "light-green": '#E6F0ED'
+        "light-green": '#E6F0ED',
+        "beige": '#F5F3EF'
       },
       fontFamily: {
         ["urbanist-m"]: "Urbanist-500",
@@ -48,7 +49,7 @@ module.exports = {
     },
     screens: {
       'sm': '640px', // tablet
-      'sm-l': '767px', // tablet-large
+      'sm-l': '768px', // tablet-large
       'md': '1024px', // laptop
       'lg': '1280px', // desktop
     }

@@ -7,9 +7,6 @@ import ProfileCard from './ProfileCard.vue'
   <section class="team">
     <div class="text-content">
       <h2>Our team</h2>
-      <p>
-        We bring deep experience in compliance technology, software engineering, and project finance
-      </p>
     </div>
     <div class="grid grid-cols-2 sm:flex sm:justify-center sm:flex-wrap gap-x-5 gap-y-6 sm:gap-y-10 md:gap-y-14">
       <ProfileCard :img="person1" title="James Richards" text="CEO"/>
@@ -31,14 +28,10 @@ import ProfileCard from './ProfileCard.vue'
 }
 
 .text-content {
-  @apply flex flex-col sm-l:flex-row mb-6 sm-l:mb-12 gap-4 sm-l:justify-between;
+  @apply flex justify-center mb-6 sm-l:mb-12;
 }
 
 .text-content h2 {
   @apply text-sm-h sm-l:text-md-h-tab md:text-lg-h text-dark;
-}
-
-.text-content p {
-  @apply text-md-p text-dark w-full sm-l:w-[60%] md:w-[55%] lg:w-1/2;
 }
 </style>
