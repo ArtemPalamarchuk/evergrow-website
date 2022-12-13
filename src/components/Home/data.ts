@@ -59,3 +59,10 @@ export const joinUsContent = {
         We are always looking for talented and mission-driven individuals to join our team.
         Take a look at our openings and get in touch!`,
 }
+
+export const taxesHeroContent = {
+  heading: `Lower your tax bill (and the temperature)`,
+  text: `Evergrow is the safest and easiest way to buy green tax credits. 
+         Earn high IRRs on cash in treasury, boost after-tax cashflow, 
+         and put your tax dollars to work fighting climate change.`,
+}

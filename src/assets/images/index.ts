@@ -52,3 +52,12 @@ export {congruent, firstRound, garuda, journey, xyz}
 export {person1, person2, person3, person4, person5, person6, person7}
 export {joinUs, linkedIn}
 
+//TAXES PAGE
+import snow from "./taxes/description/snow.png"
+import aboutTaxes1 from "./taxes/aboutTaxes/aboutTaxes1.png"
+import aboutTaxes2 from "./taxes/aboutTaxes/aboutTaxes2.png"
+import aboutTaxes3 from "./taxes/aboutTaxes/aboutTaxes3.png"
+import aboutTaxes4 from "./taxes/aboutTaxes/aboutTaxes4.png"
+
+export {snow}
+export {aboutTaxes1, aboutTaxes2, aboutTaxes3, aboutTaxes4}

@@ -2,19 +2,21 @@
 
 interface CardProps {
   name: string,
-  title: string,
-  subtitle: string,
+  position: string,
+  company: string,
 }
 
-const {name, title, subtitle} = defineProps<CardProps>()
+const {name, position, company} = defineProps<CardProps>()
 </script>
 
 <template>
   <div class="card">
     <div class="text-container w-fit">
       <h3>{{ name }}</h3>
-      <p>{{ title }}</p>
-      <p>{{ subtitle }}</p>
+      <div class="flex flex-col sm-l:flex-row sm-l:flex-wrap">
+        <p class="font-urbanist-b sm-l:mr-1">{{ position }}</p>
+        <p class="font-urbanist-sb">{{ company }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -26,6 +28,6 @@ h3 {
 }
 
 p {
-  @apply text-md-i text-dark font-urbanist-sb
+  @apply text-md-i text-dark
 }
 </style>
