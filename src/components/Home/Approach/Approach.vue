@@ -8,7 +8,7 @@ const {heading, text, buttonText} = approachContent
 </script>
 
 <template>
-  <text-image :heading="heading" :mainText="text" :img="approach">
+  <text-image :heading="heading" :mainText="text" :img="approach" :isReversed="true" contentBg="secondary">
     <template v-slot:button>
       <Button :text="buttonText"/>
     </template>
@@ -20,9 +20,5 @@ const {heading, text, buttonText} = approachContent
     @apply py-[13px] bg-white text-secondary mt-[26px] w-fit
     sm:mt-[52px]
     md:mt-[26px]
-  }
-
-  button span {
-    @apply text-secondary
   }
 </style>

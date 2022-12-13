@@ -3,16 +3,16 @@ import {axios, canary, ctvc, solar} from "@/assets/images";
 import {resourcesContent} from "@/data";
 
 const {heading} = resourcesContent
+const resources = [axios, canary, ctvc, solar]
 </script>
 
 <template>
   <section class="resources">
     <h2 class="title">{{ heading }}</h2>
     <div class="images-container">
-      <div class="image-container"><img :src="axios" alt="axios"></div>
-      <div class="image-container"><img :src="canary" alt="canary"></div>
-      <div class="image-container"><img :src="ctvc" alt="ctvc"></div>
-      <div class="image-container"><img :src="solar" alt="solar"></div>
+      <div v-for="item in resources" class="image-container">
+        <img :src="item" :alt="item"/>
+      </div>
     </div>
   </section>
 </template>
@@ -27,7 +27,7 @@ const {heading} = resourcesContent
   .title {
     @apply text-dark text-md-p text-center mb-2
     sm:text-sm-h-tab sm:mb-4
-    md:text-md-h
+    md:text-md-h md:mb-8
   }
 
   .images-container {

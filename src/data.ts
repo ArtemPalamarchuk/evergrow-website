@@ -1,5 +1,7 @@
 import {banks, corporateFinance, netZero, sponsors} from "@/assets/images";
+import {person1, person2, person3, person4, person5, person6, person7} from "@/assets/images";
 
+//Main page
 export const heroContent = {
   heading: `Save money on taxes. Fight climate change.`,
   subHeading: `It’s that simple.`,
@@ -46,12 +48,53 @@ export const approachContent = {
   buttonText: `Learn more about us`,
 }
 
+//About page
+export const aboutHeroContent = {
+  heading: `Helping to build and sustain a carbon neutral world`,
+  text: `At Evergrow, we use technology to create products that unlock funding for
+         decarbonization. We partner with project developers, corporations, and
+         financial institutions to help build and sustain a carbon neutral world.`,
+  secondaryText: `Our team has experience across corporate finance, clean energy, and technology.
+                  We are backed by top-tier venture capital firms and leaders from the technology,
+                  climate, and finance communities.`,
+}
 export const joinUsContent = {
   heading: `Join us`,
   text: `Evergrow works in person at the beautiful Shack 15 space in the iconic San Francisco Ferry Building.
         We are always looking for talented and mission-driven individuals to join our team.
         Take a look at our openings and get in touch!`,
+  buttonText: 'Get in touch',
 }
+export const investorsContent = [
+  {name: 'Andy Karetsky', position: 'President,', company: 'Skyview Ventures'},
+  {name: 'Maddie Hall', position: 'Co-Founder,', company: 'Living Carbon'},
+  {name: 'Justin Kan', position: 'Co-Founder,', company: 'Twitch'},
+  {name: 'Sanjeev Kumar', position: 'Renewable Energy Executive', company: ''},
+  {name: 'Erica Dorfman', position: 'SVP Of Capital Markets,', company: 'Brex'},
+  {name: 'Michael Tannenbaum', position: 'COO,', company: 'Brex'},
+  {name: 'Karen Karniol-Tambour', position: 'Co-CIO Sustainability,', company: 'Bridgewater Associates'},
+  {name: 'Richard Matsui', position: 'CEO,', company: 'Kwh Analytics'},
+  {name: 'Max Mullen', position: 'Co-Founder,', company: 'Instacart'},
+  {name: 'Zach Perrett', position: 'CEO,', company: 'Plaid'},
+  {name: 'Sierra Peterson', position: 'Managing Partner,', company: 'Voyager'},
+  {name: 'Peter Reinhardt', position: 'CEO,', company: 'Charm Industrial'},
+  {name: '', position: '', company: ''},
+  {name: 'Janice Tran', position: 'CEO,', company: 'Kanin Energy'},
+]
+export const teamContent = {
+  heading: "Our team",
+  team: [
+    {img: person1, title: 'James Richards', text: 'CEO'},
+    {img: person2, title: 'Cassandra Xia', text: 'Head of Engineering'},
+    {img: person3, title: 'Charles Stone', text: 'Strategic Finance Lead'},
+    {img: person4, title: 'Zoe Savellos', text: 'Chief of Staff'},
+    {img: person5, title: 'Arun Prasad', text: 'Staff Software Engineer'},
+    {img: person6, title: 'Neal Donnelly', text: 'Business Development Lead'},
+    {img: person7, title: 'Marrissa His', text: 'Executive Business Partner'},
+  ]
+}
+
+//Taxes page
 export const taxesHeroContent = {
   heading: `Lower your tax bill (and the temperature)`,
   text: `Evergrow is the safest and easiest way to buy green tax credits. 

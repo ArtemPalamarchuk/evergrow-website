@@ -1,37 +1,33 @@
-<script setup>
-import { person1, person2, person3, person4, person5, person6, person7 } from "../../../assets/images";
+<script setup lang="ts">
 import ProfileCard from './ProfileCard.vue'
+import {teamContent} from "@/data";
+
+const {heading, team} = teamContent
 </script>
 
 <template>
   <section class="team">
     <div class="text-content">
-      <h2>Our team</h2>
+      <h2>{{heading}}</h2>
     </div>
     <div class="grid grid-cols-2 sm:flex sm:justify-center sm:flex-wrap gap-x-5 gap-y-6 sm:gap-y-10 md:gap-y-14">
-      <ProfileCard :img="person1" title="James Richards" text="CEO"/>
-      <ProfileCard :img="person2" title="Cassandra Xia"  text="Head of Engineering"/>
-      <ProfileCard :img="person3" title="Charles Stone"  text="Strategic Finance Lead"/>
-      <ProfileCard :img="person4" title="Zoe Savellos"   text="Chief of Staff"/>
-      <ProfileCard :img="person5" title="Arun Prasad"    text="Staff Software Engineer"/>
-      <ProfileCard :img="person6" title="Neal Donnelly"  text="Business Development Lead"/>
-      <ProfileCard :img="person7" title="Marrissa His"   text="Executive Business Partner"/>
+      <ProfileCard v-for="{img, title, text} in team" :img="img" :title="title" :text="text"/>
     </div>
   </section>
 </template>
 
 <style scoped>
-.team {
-  @apply bg-light-green py-12 px-4
-  lg:px-[120px] lg:py-24
-  md:px-10 md:py-16
-}
+  .team {
+    @apply bg-light-green py-12 px-4
+    lg:px-[120px] lg:py-24
+    md:px-10 md:py-16
+  }
 
-.text-content {
-  @apply flex justify-center mb-6 sm-l:mb-12;
-}
+  .text-content {
+    @apply flex justify-center mb-6 sm-l:mb-12;
+  }
 
-.text-content h2 {
-  @apply text-sm-h sm-l:text-md-h-tab md:text-lg-h text-dark;
-}
+  .text-content h2 {
+    @apply text-sm-h sm-l:text-md-h-tab md:text-lg-h text-dark;
+  }
 </style>

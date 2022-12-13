@@ -1,12 +1,14 @@
 <script setup lang="ts">
-
 interface CardProps {
-  name: string,
-  position: string,
-  company: string,
+  person: {
+    name: string,
+    position: string,
+    company: string,
+  }
 }
 
-const {name, position, company} = defineProps<CardProps>()
+const {person} = defineProps<CardProps>()
+const {name, position, company} = person
 </script>
 
 <template>
@@ -22,12 +24,11 @@ const {name, position, company} = defineProps<CardProps>()
 </template>
 
 <style scoped>
+  h3 {
+    @apply text-xs-h text-secondary mb-1
+  }
 
-h3 {
-  @apply text-xs-h text-secondary mb-1
-}
-
-p {
-  @apply text-md-i text-dark
-}
+  p {
+    @apply text-md-i text-dark
+  }
 </style>

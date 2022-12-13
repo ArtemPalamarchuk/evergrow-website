@@ -40,7 +40,7 @@ const {img, title, text} = defineProps<CardProps>()
 
   h3 {
     @apply text-md-i text-white mb-1
-    sm:text-sm-h
+    sm:text-sm-h sm:mb-2
   }
 
   p {

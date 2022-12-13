@@ -7,11 +7,7 @@ import Description from '../components/About/Description/Description.vue';
 
 <template>
   <Description/>
-  <Investors/>
   <Team/>
+  <Investors/>
   <JoinUs/>
 </template>
-
-<style scoped>
-
-</style>

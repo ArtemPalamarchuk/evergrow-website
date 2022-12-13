@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {linkedIn} from "../../../assets/images";
+import {linkedIn} from "@/assets/images";
 
 interface CardProps {
   img: string,
@@ -26,7 +26,6 @@ const {img, title, text} = defineProps<CardProps>()
 </template>
 
 <style scoped>
-
   .content {
     @apply flex flex-col relative bg-primary py-3 px-4 md:px-6 md:py-5 rounded-bl-[2rem] h-[120px] md:h-[134px];
   }

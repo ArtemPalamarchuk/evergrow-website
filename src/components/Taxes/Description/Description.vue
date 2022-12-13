@@ -1,6 +1,6 @@
 <script setup>
 import Button from "@/components/global/Button.vue";
-import {taxesHeroContent} from '@/components/Home/data';
+import {taxesHeroContent} from "@/data";
 import {snow} from "@/assets/images";
 
 const {heading, text} = taxesHeroContent
