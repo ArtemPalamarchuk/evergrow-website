@@ -1,20 +1,21 @@
 <script setup>
 import Button from "@/components/global/Button.vue";
-import { hero } from "@/assets/images";
-import { heroContent } from "../data";
+import {hero} from "@/assets/images";
+import {heroContent} from "@/data";
 
-const {heading, text} = heroContent
+const {heading, subHeading, text, buttonTitle} = heroContent
 </script>
 
 <template>
   <section class="hero">
     <div class="text-content">
       <h1>{{ heading }}</h1>
+      <h2>{{ subHeading }}</h2>
       <p>{{ text }}</p>
-      <Button text="Get Started"/>
+      <Button :text="buttonTitle"/>
     </div>
     <div class="img-wrap">
-      <img :src="hero" alt="">
+      <img :src="hero" alt="hero">
     </div>
   </section>
 </template>
@@ -32,25 +33,29 @@ const {heading, text} = heroContent
     md:pl-0 md:py-[147px] md:max-w-[483px] md:ml-[120px]
   }
 
-  .text-content h1 {
-    @apply text-sm-h mb-1.5
+  .text-content h1, .text-content h2 {
+    @apply text-sm-h
     sm:text-lg-h
+  }
+
+  .text-content h2 {
+    @apply font-urbanist-m my-1
     md:mb-8
   }
 
   .text-content p {
     @apply text-md-i mb-8
     sm:text-md-p
-    md:mb-12
+    md:mb-12 md:text-lg-p
+  }
+
+  .text-content button {
+    @apply bg-secondary py-[13px] px-[56px]
   }
 
   .img-wrap {
     @apply text-white w-[507px] h-[244px] left-1/2 relative -translate-x-1/2 top-5
     sm:w-[753px] sm:h-[353px] sm:top-0
     md:w-[940px] md:h-[453px] md:flex md:translate-x-0 md:-left-[70px] md:translate-y-[10%]
-  }
-
-  .text-content button {
-    @apply bg-secondary py-[13px] px-[56px]
   }
 </style>

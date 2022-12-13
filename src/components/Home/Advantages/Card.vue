@@ -33,9 +33,9 @@ const {img, title, text} = defineProps<CardProps>()
   }
 
   .content {
-    @apply flex flex-col justify-between p-4
-    sm:min-h-[210px]
-    md:min-h-0 md:flex-row md:px-8 md:py-[43px] md:justify-center md:items-center md:h-[150px]
+    @apply p-4 h-[134px] relative
+    sm:min-h-[194px]
+    md:px-8 md:py-8 md:items-center md:h-[134px]
   }
 
   h3 {
@@ -49,8 +49,7 @@ const {img, title, text} = defineProps<CardProps>()
   }
 
   .content .icon {
-    @apply w-8 h-8 mt-6 ml-auto cursor-pointer
+    @apply absolute w-8 h-8 right-4 bottom-4 cursor-pointer
     sm:w-10 sm:h-10
-    md:mt-0
   }
 </style>

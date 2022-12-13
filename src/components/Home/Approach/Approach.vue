@@ -1,16 +1,16 @@
 <script setup>
 import TextImage from "@/components/global/TextImage.vue";
 import Button from "@/components/global/Button.vue";
-import { approach } from "@/assets/images";
-import { approachContent } from "../data";
+import {approach} from "@/assets/images";
+import {approachContent} from "@/data";
 
-const {heading, text, secondaryText} = approachContent
+const {heading, text, buttonText} = approachContent
 </script>
 
 <template>
-  <text-image :heading="heading" :mainText="text" :secondaryText="secondaryText" :img="approach">
+  <text-image :heading="heading" :mainText="text" :img="approach">
     <template v-slot:button>
-      <Button text="Get in touch"/>
+      <Button :text="buttonText"/>
     </template>
   </text-image>
 </template>

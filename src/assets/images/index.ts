@@ -12,9 +12,7 @@ import solar from "./home/resources/solar.svg"
 import netZero from "./home/advantages/net-zero.svg"
 import corporateFinance from "./home/advantages/corporate-finance.svg"
 import sponsors from "./home/advantages/sponsors.svg"
-import contractors from "./home/advantages/contractors.svg"
 import banks from "./home/advantages/banks.svg"
-import syndicators from "./home/advantages/syndicators.svg"
 import approach from "./home/approach.svg"
 
 import construction from "./solutions-menu/construction.svg"
@@ -24,7 +22,7 @@ import document from "./solutions-menu/document.svg"
 
 export {logo, chevron ,arrow, hero}
 export {axios, ctvc ,canary, solar}
-export {netZero, corporateFinance ,sponsors, contractors, banks, syndicators, approach}
+export {netZero, corporateFinance ,sponsors, banks, approach}
 export {construction, bank ,solarPower, document}
 
 //ABOUT PAGE

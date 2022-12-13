@@ -1,6 +1,6 @@
 <script setup>
 import Card from "./Card.vue";
-import { advantagesContent } from "../data";
+import {advantagesContent} from "@/data";
 
 const {heading, text, cards} = advantagesContent
 </script>

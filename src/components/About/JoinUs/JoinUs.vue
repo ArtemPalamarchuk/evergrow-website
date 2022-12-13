@@ -1,8 +1,8 @@
 <script setup>
 import Button from "@/components/global/Button.vue";
 import TextImage from "@/components/global/TextImage.vue";
-import { joinUs } from "../../../assets/images";
-import { joinUsContent } from '@/components/Home/data';
+import { joinUs } from "@/assets/images";
+import { joinUsContent } from '@/data';
 
 const {heading, text} = joinUsContent
 </script>

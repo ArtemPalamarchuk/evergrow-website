@@ -1,10 +1,13 @@
 <script setup>
-import { axios, canary, ctvc, solar } from "@/assets/images";
+import {axios, canary, ctvc, solar} from "@/assets/images";
+import {resourcesContent} from "@/data";
+
+const {heading} = resourcesContent
 </script>
 
 <template>
   <section class="resources">
-    <h2 class="title">As seen on:</h2>
+    <h2 class="title">{{ heading }}</h2>
     <div class="images-container">
       <div class="image-container"><img :src="axios" alt="axios"></div>
       <div class="image-container"><img :src="canary" alt="canary"></div>
@@ -38,7 +41,7 @@ import { axios, canary, ctvc, solar } from "@/assets/images";
   }
 
   .image-container {
-    @apply h-[54px] flex items-center justify-center bg-white rounded-[1rem]
+    @apply h-[54px] flex items-center justify-center bg-white/[.7] rounded-[1rem]
     sm:h-[64px]
     md:h-[81px] md:w-[211px]
   }
