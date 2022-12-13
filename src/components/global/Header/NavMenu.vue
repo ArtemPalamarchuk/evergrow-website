@@ -1,36 +1,82 @@
-<script setup>
-import {chevron} from "@/assets/images";
-import {ref} from "vue";
-import Solutions from "../Solutions.vue";
+<script>
+import { chevron } from "@/assets/images";
+import { construction, bank, solarPower, document } from "@/assets/images";
 
-const isActiveDDMenu = ref(false)
-
-const nav = ([
+const solutionsMenu = [
   {
-    id: 'pricing',
-    name: 'Pricing',
-    to: '/pricing',
+    path: "/tax-equity",
+    title: "Corporate tax & treasury",
+    img: document,
   },
   {
-    id: 'about',
-    name: 'About',
-    to: '/about',
+    path: "/sponsors",
+    title: "Project developers & sponsors",
+    img: construction,
   },
-]);
+  {
+    path: "/net-zero",
+    title: "Corporate net-zero",
+    img: solarPower,
+  },
+  {
+    path: "/contractors",
+    title: "Banks & financial institutions",
+    img: bank,
+  },
+]
 
-const toggleSolutionsMenu = () => {
-  // isActiveDDMenu.value = !isActiveDDMenu.value
+export default {
+  name: 'dropdown',
+  data() {
+    return {
+      nav: [
+        {
+          id: 'about',
+          name: 'About',
+          to: '/about',
+        },
+      ],
+      isActiveDDMenu: false,
+      solutionsMenu,
+      chevron
+    }
+  },
+  methods: {
+    toggleDropdown() {
+      this.isActiveDDMenu = !this.isActiveDDMenu
+    },
+    close(e) {
+      if (!this.$el.contains(e.target)) {
+        this.isActiveDDMenu = false
+      }
+    }
+  },
+  mounted() {
+    window.addEventListener('click', this.close)
+  },
+  beforeDestroy() {
+    window.removeEventListener('click', this.close)
+  }
 }
 
 </script>
 
 <template>
   <nav class="nav-menu">
-    <div class="solutions-container" @click="toggleSolutionsMenu">
-      <a @click="false">Solutions</a>
-      <img :src="chevron" alt="chevron">
-      <solutions v-if="isActiveDDMenu"/>
+    <div class="solutions-container" @click="toggleDropdown">
+      <a>Solutions</a>
+      <img :src="chevron" alt="chevron" :style="{transform: isActiveDDMenu ? 'rotate(180deg)' : 'rotate(0)' }">
     </div>
+    <Transition>
+      <ul class="solutions-header" v-if="isActiveDDMenu">
+        <li v-for="{ path, title, img } in solutionsMenu" @click="this.isActiveDDMenu = false">
+          <router-link :to="path">
+            <img :src="img" alt="page">
+            <span>{{ title }}</span>
+          </router-link>
+        </li>
+      </ul>
+    </Transition>
     <router-link
       v-for="{ name, to, id } in nav"
       :id="id"
@@ -45,22 +91,51 @@ const toggleSolutionsMenu = () => {
 
 <style scoped>
   .nav-menu {
-    @apply w-full flex justify-center gap-8 text-[#1a1a1a] opacity-70 z-1;
+    @apply w-full flex gap-8 z-1 text-dark justify-center;
   }
 
   .solutions-container {
     @apply flex relative gap-2 cursor-pointer pl-2;
   }
 
-  .solutions {
-    @apply w-[200px] absolute top-full bg-[#d6d6d6] left-0 px-2 py-2;
+  .solutions-header {
+    @apply grid grid-cols-1 w-max gap-2.5 absolute
+    top-[80px] left-1/2 -translate-x-1/2 px-2.5 py-3
+    bg-white whitespace-nowrap rounded-2xl
+    sm-l:grid-cols-2;
+    box-shadow: 0 34px 44px -30px rgba(13, 43, 46, 0.3);
   }
 
-  .solutions li {
-    @apply mb-2;
+  .solutions-header li:hover {
+    @apply border-[1px] border-solid border-primary;
   }
 
-  .solutions li:last-child {
-    @apply mb-0;
+  .solutions-header li {
+    @apply text-md-p font-urbanist-b rounded-[10px] duration-300
+    border-[1px] border-solid border-beige;
+  }
+
+  .solutions-header li:nth-child(2) {
+    @apply pr-[30px]
+  }
+
+  .solutions-header li a {
+    @apply flex flex-row items-center;
+  }
+
+  .solutions-header li img {
+    @apply p-2.5;
+  }
+
+  img[alt=chevron] {
+    @apply duration-300
+  }
+
+  .v-enter-active, .v-leave-active {
+    @apply duration-300 transition-opacity
+  }
+
+  .v-enter-from, .v-leave-to {
+    @apply opacity-0
   }
 </style>

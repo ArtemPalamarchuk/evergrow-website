@@ -17,9 +17,15 @@ import banks from "./home/advantages/banks.svg"
 import syndicators from "./home/advantages/syndicators.svg"
 import approach from "./home/approach.svg"
 
+import construction from "./solutions-menu/construction.svg"
+import bank from "./solutions-menu/bank.svg"
+import solarPower from "./solutions-menu/solar.svg"
+import document from "./solutions-menu/document.svg"
+
 export {logo, chevron ,arrow, hero}
 export {axios, ctvc ,canary, solar}
 export {netZero, corporateFinance ,sponsors, contractors, banks, syndicators, approach}
+export {construction, bank ,solarPower, document}
 
 //ABOUT PAGE
 import francisco from "./about/description/francisco.svg"

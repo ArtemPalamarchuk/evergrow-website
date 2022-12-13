@@ -15,6 +15,7 @@ const hamburgerHandler = () => {}
     </router-link>
     <div class="menu">
       <nav-menu/>
+      <a href="/" class="whitespace-nowrap mr-[26px]">Log in</a>
       <Button text="Contact Us"/>
     </div>
     <Hamburger @click="hamburgerHandler"/>

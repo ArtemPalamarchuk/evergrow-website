@@ -1,6 +1,5 @@
 <script setup>
 import { logo } from "@/assets/images";
-import Solutions from "../Solutions.vue";
 </script>
 
 <template>
@@ -14,7 +13,12 @@ import Solutions from "../Solutions.vue";
       </div>
       <div class="solutions-wrap">
         <p class="title">Solutions</p>
-        <solutions/>
+        <ul>
+          <li><router-link to="/sponsors">For project sponsors</router-link></li>
+          <li><router-link to="/net-zero">For corporate net-zero</router-link></li>
+          <li><router-link to="/contractors">For EPCs and contractors</router-link></li>
+          <li><router-link to="/tax-equity">For tax equity</router-link></li>
+        </ul>
       </div>
       <div class="company">
         <p class="title">Company</p>
