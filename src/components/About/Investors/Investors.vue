@@ -26,6 +26,7 @@
       <Person name="Zach Perrett" position="CEO," company="Plaid"/>
       <Person name="Sierra Peterson" position="Managing Partner," company="Voyager"/>
       <Person name="Peter Reinhardt" position="CEO," company="Charm Industrial"/>
+      <div class="hidden md:block"/>
       <Person name="Janice Tran" position="CEO," company="Kanin Energy"/>
     </div>
   </section>

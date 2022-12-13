@@ -20,6 +20,14 @@ const router = createRouter({
         title: 'About'
       }
     },
+    {
+      path: '/taxes',
+      name: 'taxes',
+      component: () => import('../pages/Taxes.vue'),
+      meta: {
+        title: 'Corporate taxes'
+      }
+    },
   ]
 })
 

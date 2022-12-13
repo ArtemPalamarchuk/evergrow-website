@@ -36,6 +36,7 @@ module.exports = {
         "md-i": ["16px", {lineHeight: "24px"}],
         "sm-i": ["14px", {lineHeight: "24px"}],
         // Paragraphs
+        'lg-p': ["20px", {lineHeight: "30px"}],
         'md-p': ["18px", {lineHeight: "30px"}],
         'sm-p': ["16px", {lineHeight: "24px"}],
       },
