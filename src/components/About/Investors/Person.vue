@@ -25,10 +25,13 @@ const {name, position, company} = person
 
 <style scoped>
   h3 {
-    @apply text-xs-h text-secondary mb-1
+    @apply text-sm-p text-secondary
+    sm:text-xs-h-tab
+    md:text-xs-h
   }
 
   p {
-    @apply text-md-i text-dark
+    @apply text-sm-l-p text-dark
+    sm:text-sm-p
   }
 </style>

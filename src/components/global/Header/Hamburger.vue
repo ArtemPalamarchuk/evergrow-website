@@ -12,7 +12,7 @@
 
 <style scoped>
   .hamburger-menu {
-    @apply ml-auto flex flex-col justify-between items-end gap-[3px] sm:hidden cursor-pointer
+    @apply ml-auto flex flex-col justify-between items-end gap-[3px] sm-l:hidden cursor-pointer
   }
 
   .hamburger-menu span {

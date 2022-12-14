@@ -23,21 +23,25 @@ export const advantagesContent = {
       title: "Corporate tax & treasury",
       text: 'Lower your tax bill, grow after-tax cash flow, and earn high risk-adjusted IRRs on cash in treasury.',
       img: netZero,
+      path: '/taxes',
     },
     {
       title: "Corporate net-zero",
       text: 'Provide mission-critical funding to highly additional projects in the United States while also turning a profit.',
       img: corporateFinance,
+      path: '/net-zero',
     },
     {
       title: "Banks & financial institutions",
       text: 'Invest in high-yield, low-risk tax credits to bolster both your financial returns and impact story.',
       img: banks,
+      path: '/contractors',
     },
     {
       title: "Project developers & sponsors",
       text: `Monetize your projects' tax attributes in a simple and streamlined way`,
       img: sponsors,
+      path: '/sponsors',
     },
   ]
 }

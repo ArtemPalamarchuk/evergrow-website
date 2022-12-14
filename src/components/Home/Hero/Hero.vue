@@ -39,7 +39,8 @@ const {heading, subHeading, text, buttonTitle} = heroContent
   }
 
   .text-content h2 {
-    @apply font-urbanist-m my-1
+    @apply font-urbanist-m mt-1 mb-4
+    sm:mb-6
     md:mb-8
   }
 

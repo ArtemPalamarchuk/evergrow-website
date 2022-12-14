@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import {arrow} from "@/assets/images";
+import router from "@/router";
 
 interface CardProps {
   img: string,
   title: string,
   text: string,
+  path: string,
 }
 
-const {img, title, text} = defineProps<CardProps>()
+const {img, title, text, path} = defineProps<CardProps>()
 </script>
 
 <template>
@@ -18,7 +20,7 @@ const {img, title, text} = defineProps<CardProps>()
         <h3>{{ title }}</h3>
         <p>{{ text }}</p>
       </div>
-      <img :src="arrow" alt="arrow" class="icon">
+      <img :src="arrow" alt="arrow" class="icon" @click="router.push({path})">
     </div>
   </div>
 </template>

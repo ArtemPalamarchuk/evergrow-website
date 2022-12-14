@@ -1,11 +1,46 @@
-<script setup>
-import { logo } from "@/assets/images";
+<script>
+import {logo} from "@/assets/images";
 import NavMenu from "./NavMenu.vue"
 import Button from "../Button.vue";
 import Hamburger from "@/components/global/Header/Hamburger.vue";
+import router from "@/router";
+import Sidebar from "@/components/global/Sidebar/Sidebar.vue";
 
-const hamburgerHandler = () => {}
-
+export default {
+  components: {Sidebar, Button, NavMenu, Hamburger},
+  data() {
+    return {
+      logo,
+      router,
+      isActiveSidebarMenu: false,
+      isActiveSolutionsMenu: false,
+      app: document.getElementById("app"),
+    }
+  },
+  methods: {
+    openMenu() {
+      this.isActiveSidebarMenu = !this.isActiveSidebarMenu
+      this.app.style.height = '100vh'
+    },
+    closeMenu() {
+      this.isActiveSidebarMenu = false
+      this.app.style.height = 'auto'
+    },
+    toggleSolutionsMenu() {
+      this.isActiveSolutionsMenu = !this.isActiveSolutionsMenu
+    },
+    navigate(path) {
+      this.isActiveSolutionsMenu = false
+      this.closeMenu()
+      router.push({path})
+    },
+  },
+  computed: {
+    sidebarStyling() {
+      return this.isActiveSidebarMenu ? 'active' : ''
+    }
+  }
+}
 </script>
 
 <template>
@@ -16,9 +51,17 @@ const hamburgerHandler = () => {}
     <div class="menu">
       <nav-menu/>
       <a href="/" class="whitespace-nowrap mr-[26px]">Log in</a>
-      <Button text="Contact Us"/>
+      <Button text="Contact Us" @click="navigate('/contact-us')"/>
     </div>
-    <Hamburger @click="hamburgerHandler"/>
+    <hamburger @click="openMenu"/>
+    <sidebar
+      :isActiveSidebarMenu="isActiveSidebarMenu"
+      :isActiveSolutionsMenu="isActiveSolutionsMenu"
+      :sidebarStyling="sidebarStyling"
+      @navigate="navigate"
+      @closeMenu="closeMenu"
+      @toggleSolutionsMenu="toggleSolutionsMenu"
+    />
   </header>
 </template>
 
@@ -34,6 +77,6 @@ const hamburgerHandler = () => {}
   }
 
   .menu {
-    @apply hidden sm:flex w-full items-center
+    @apply hidden sm-l:flex w-full items-center
   }
 </style>

@@ -13,7 +13,7 @@ const {heading, text, cards} = advantagesContent
     </div>
 
     <div class="cards">
-      <Card v-for="{img, title, text} in cards" :img="img" :title="title" :text="text"/>
+      <Card v-for="{img, title, text, path} in cards" :img="img" :title="title" :text="text" :path="path"/>
     </div>
   </section>
 </template>

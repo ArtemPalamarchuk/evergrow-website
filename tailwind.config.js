@@ -39,6 +39,7 @@ module.exports = {
         'lg-p': ["20px", {lineHeight: "30px"}],
         'md-p': ["18px", {lineHeight: "30px"}],
         'sm-p': ["16px", {lineHeight: "24px"}],
+        'sm-l-p': ["12px", {lineHeight: "16px"}],
       },
       zIndex: {
         0: 0,

@@ -1,29 +1,6 @@
 <script>
-import { chevron } from "@/assets/images";
-import { construction, bank, solarPower, document } from "@/assets/images";
-
-const solutionsMenu = [
-  {
-    path: "/tax-equity",
-    title: "Corporate tax & treasury",
-    img: document,
-  },
-  {
-    path: "/sponsors",
-    title: "Project developers & sponsors",
-    img: construction,
-  },
-  {
-    path: "/net-zero",
-    title: "Corporate net-zero",
-    img: solarPower,
-  },
-  {
-    path: "/contractors",
-    title: "Banks & financial institutions",
-    img: bank,
-  },
-]
+import {chevron} from "@/assets/images";
+import {solutionsMenu} from "@/components/global/Header/solutions";
 
 export default {
   name: 'dropdown',
