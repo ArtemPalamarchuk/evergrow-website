@@ -51,7 +51,7 @@ export default {
 
 <style scoped>
   .sidebar-wrapper {
-    @apply flex fixed h-screen w-screen top-0 right-0 left-0 bottom-0 flex-row z-[2];
+    @apply flex fixed h-screen w-screen top-0 right-0 left-0 bottom-0 flex-row z-[2] text-dark;
     background-color: rgba(42, 69, 71, 0.7);
   }
 

@@ -1,6 +1,7 @@
 import logo from "./logo.svg"
 import chevron from "./chevron.svg"
 import close from "./close.svg"
+import caretDown from "./caret-down.svg"
 
 import arrow from "./home/arrow.svg"
 import hero from "./home/hero.svg"
@@ -21,7 +22,7 @@ import bank from "./solutions-menu/bank.svg"
 import solarPower from "./solutions-menu/solar.svg"
 import document from "./solutions-menu/document.svg"
 
-export {logo, chevron ,arrow, hero, close}
+export {logo, chevron ,arrow, hero, close, caretDown}
 export {axios, ctvc ,canary, solar}
 export {netZero, corporateFinance ,sponsors, banks, approach}
 export {construction, bank ,solarPower, document}
