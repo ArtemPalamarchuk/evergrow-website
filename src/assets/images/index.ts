@@ -1,8 +1,12 @@
+// Global
 import logo from "./logo.svg"
 import chevron from "./chevron.svg"
 import close from "./close.svg"
 import caretDown from "./caret-down.svg"
 
+export {logo, chevron, close, caretDown}
+
+// Home page
 import arrow from "./home/arrow.svg"
 import hero from "./home/hero.svg"
 
@@ -17,17 +21,11 @@ import sponsors from "./home/advantages/sponsors.svg"
 import banks from "./home/advantages/banks.svg"
 import approach from "./home/approach.svg"
 
-import construction from "./solutions-menu/construction.svg"
-import bank from "./solutions-menu/bank.svg"
-import solarPower from "./solutions-menu/solar.svg"
-import document from "./solutions-menu/document.svg"
+export {hero, arrow}
+export {axios, ctvc, canary, solar}
+export {netZero, corporateFinance, sponsors, banks, approach}
 
-export {logo, chevron ,arrow, hero, close, caretDown}
-export {axios, ctvc ,canary, solar}
-export {netZero, corporateFinance ,sponsors, banks, approach}
-export {construction, bank ,solarPower, document}
-
-//ABOUT PAGE
+// About page
 import francisco from "./about/description/francisco.svg"
 
 import congruent from "./about/investors/congruent.svg"
@@ -52,12 +50,20 @@ export {congruent, firstRound, garuda, journey, xyz}
 export {person1, person2, person3, person4, person5, person6, person7}
 export {joinUs, linkedIn}
 
-//TAXES PAGE
-import snow from "./taxes/description/snow.png"
-import aboutTaxes1 from "./taxes/aboutTaxes/aboutTaxes1.png"
-import aboutTaxes2 from "./taxes/aboutTaxes/aboutTaxes2.png"
-import aboutTaxes3 from "./taxes/aboutTaxes/aboutTaxes3.png"
-import aboutTaxes4 from "./taxes/aboutTaxes/aboutTaxes4.png"
+// Solution pages (taxes, corporate, sponsors, institutions)
+import snow from "./solutions/heros/snow.png"
+import windmills from "./solutions/heros/windmills.png"
+import batteries from "./solutions/heros/batteries.png"
+import batteries2 from "./solutions/heros/battaries2.png"
 
-export {snow}
-export {aboutTaxes1, aboutTaxes2, aboutTaxes3, aboutTaxes4}
+import construction from "./solutions/construction.svg"
+import bank from "./solutions/bank.svg"
+import solarPower from "./solutions/solar.svg"
+import document from "./solutions/document.svg"
+import cash from "./solutions/cash.svg"
+import plant from "./solutions/plant.svg"
+import shield from "./solutions/shield.svg"
+import work from "./solutions/work.svg"
+
+export {snow, windmills, batteries, batteries2}
+export {construction, bank ,solarPower, document, cash, plant, shield, work}

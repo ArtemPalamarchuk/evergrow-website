@@ -1,16 +1,21 @@
-<script>
-import {taxesJoinUsContent} from "@/data";
+<script lang="ts">
 import BaseInput from "@/components/global/Input/BaseInput.vue";
 import Select from "@/components/global/Input/Select.vue";
 import TextArea from "@/components/global/Input/TextArea.vue";
 import CheckBox from "@/components/global/Input/Checkbox.vue";
 import Button from "@/components/global/Button.vue";
+import type {PropType} from "vue";
+import type {IForm} from "@/types";
 
 export default {
   components: {BaseInput, Select, TextArea, CheckBox, Button},
+  props: {
+    formContent: {
+      type: Object as PropType<IForm>,
+    },
+  },
   data() {
     return {
-      ...taxesJoinUsContent,
       userData: {
         name: "",
         email: "",
@@ -33,13 +38,13 @@ export default {
 <template>
   <section class="description-wrapper">
     <div class="text-content">
-      <h2 class="text-white">{{ heading }}</h2>
-      <p class="text-white">{{ text }}</p>
+      <h2 class="text-white">{{ formContent.heading }}</h2>
+      <p class="text-white">{{ formContent.text }}</p>
     </div>
     <form action="">
       <div class="text-fields">
         <base-input v-model="userData.name" label="Name" name="name"/>
-        <base-input v-model="userData.email" label="Email adress" name="email"/>
+        <base-input v-model="userData.email" label="Email address" name="email"/>
         <base-input v-model="userData.organization" label="Organization" name="organization"/>
         <Select
           @click.capture v-model="userData.interested"
@@ -51,7 +56,7 @@ export default {
         <text-area v-model="userData.message" label="Message" name="message"></text-area>
       </div>
       <check-box v-model="userData.isScheduled" label="Schedule a meeting" name="isScheduled"/>
-      <Button @click.prevent="sendForm" :text="buttonText"/>
+      <Button @click.prevent="sendForm" :text="formContent.buttonText"/>
     </form>
   </section>
 </template>

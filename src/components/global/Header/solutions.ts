@@ -12,7 +12,7 @@ export const solutionsMenu = [
     img: construction,
   },
   {
-    path: "/net-zero",
+    path: "/corporate-net-zero",
     title: "Corporate net-zero",
     img: solarPower,
   },

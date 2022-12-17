@@ -15,7 +15,7 @@ import { logo } from "@/assets/images";
         <p class="title">Solutions</p>
         <ul>
           <li><router-link to="/sponsors">For project sponsors</router-link></li>
-          <li><router-link to="/net-zero">For corporate net-zero</router-link></li>
+          <li><router-link to="/corporate-net-zero">For corporate net-zero</router-link></li>
           <li><router-link to="/contractors">For EPCs and contractors</router-link></li>
           <li><router-link to="/taxes">For tax equity</router-link></li>
         </ul>

@@ -23,12 +23,39 @@ const router = createRouter({
     {
       path: '/taxes',
       name: 'taxes',
-      component: () => import('../pages/Taxes.vue'),
+      component: () => import('../pages/solutionPages/Taxes.vue'),
       meta: {
         title: 'Corporate tax & treasury'
       }
     },
-  ]
+    {
+      path: '/corporate-net-zero',
+      name: 'corporate-net-zero',
+      component: () => import('../pages/solutionPages/Corporate.vue'),
+      meta: {
+        title: 'Corporate net-zero'
+      }
+    },
+    {
+      path: '/sponsors',
+      name: 'sponsors',
+      component: () => import('../pages/solutionPages/Sponsors.vue'),
+      meta: {
+        title: 'Sponsors'
+      }
+    },
+    {
+      path: '/contractors',
+      name: 'contractors',
+      component: () => import('../pages/solutionPages/Contractors.vue'),
+      meta: {
+        title: 'Contractors'
+      }
+    },
+  ],
+  scrollBehavior() {
+    document.getElementById('app')!.scrollIntoView({ behavior: 'auto' });
+  }
 })
 
 router.beforeEach((to, from, next) => {
