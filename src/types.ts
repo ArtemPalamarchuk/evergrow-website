@@ -19,8 +19,12 @@ export interface IForm {
 }
 
 
-export interface TSolutionPageLayout {
+export interface ISolutionPageLayout {
   textImage: ITextImage,
   list: IList,
+  form: IForm,
+}
+
+export interface IContactUsPageContent {
   form: IForm,
 }

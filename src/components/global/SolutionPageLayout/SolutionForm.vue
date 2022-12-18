@@ -36,18 +36,18 @@ export default {
 </script>
 
 <template>
-  <section class="description-wrapper">
+  <section class="container-form-wrapper">
     <div class="text-content">
       <h2 class="text-white">{{ formContent.heading }}</h2>
       <p class="text-white">{{ formContent.text }}</p>
     </div>
-    <form action="">
+    <form class="contact-form">
       <div class="text-fields">
         <base-input v-model="userData.name" label="Name" name="name"/>
         <base-input v-model="userData.email" label="Email address" name="email"/>
         <base-input v-model="userData.organization" label="Organization" name="organization"/>
         <Select
-          @click.capture v-model="userData.interested"
+          v-model="userData.interested"
           placeholder="Please Select"
           :option-list="optionsList"
           label="I am interested in"
@@ -62,46 +62,46 @@ export default {
 </template>
 
 <style scoped>
-  .description-wrapper {
+  .container-form-wrapper {
     @apply flex flex-col gap-x-[100px] gap-y-6 bg-secondary py-[56px] px-4
     sm-l:py-[76px]
     md:px-[120px]
     lg:flex-row
   }
 
-  button {
-    @apply bg-white text-secondary ml-auto mt-6 px-9
-    sm-l:px-10
+  .container-form-wrapper .text-content {
+    @apply flex flex-col justify-center;
   }
 
-  form {
+  .container-form-wrapper h2 {
+    @apply text-sm-h-mob mb-4 sm:text-md-h-tab md:text-lg-h whitespace-nowrap;
+  }
+
+  .container-form-wrapper p {
+    @apply text-sm-p sm:text-md-p;
+  }
+
+  .contact-form {
     @apply w-full
   }
 
-  form .checkbox {
-    @apply mt-6
-  }
-
-  .text-fields {
+  .contact-form .text-fields {
     @apply grid grid-cols-1 gap-x-6 gap-y-2
     sm-l:grid-cols-2
   }
 
-  .text-fields .input-wrapper:nth-child(5) {
+  .contact-form .checkbox {
+    @apply mt-6 text-white
+  }
+
+  .contact-form .textarea {
     @apply col-start-1 col-end-2
     sm-l:col-start-1 sm-l:col-end-3 sm-l:row-start-3 sm-l:row-end-3;
   }
 
-  h2 {
-    @apply text-sm-h-mob mb-4 sm:text-md-h-tab md:text-lg-h whitespace-nowrap;
-  }
-
-  p {
-    @apply text-sm-p sm:text-md-p;
-  }
-
-  .text-content {
-    @apply flex flex-col justify-center;
+  .contact-form button {
+    @apply bg-white text-secondary ml-auto mt-6 px-9
+    sm-l:px-10
   }
 </style>
 

@@ -67,3 +67,8 @@ import work from "./solutions/work.svg"
 
 export {snow, windmills, batteries, batteries2}
 export {construction, bank ,solarPower, document, cash, plant, shield, work}
+
+// Contact Us page
+import formWindmills from "./form-windmill.png"
+
+export {formWindmills}

@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <div class="input-wrapper">
+  <div class="input-wrapper textarea">
     <label :for="name">{{ label }}</label>
     <textarea
       v-model="modelValue"
@@ -25,15 +25,15 @@ export default {
 
 <style scoped>
   .input-wrapper {
-    @apply flex flex-col
+    @apply flex flex-col text-white
   }
 
   textarea {
-    @apply p-2 bg-transparent rounded-xl text-white
+    @apply p-2 bg-transparent rounded-xl
     outline-[1.5px] outline outline-white resize-none;
   }
 
   label{
-    @apply font-urbanist-b text-md-p text-white
+    @apply font-urbanist-b text-md-p
   }
 </style>

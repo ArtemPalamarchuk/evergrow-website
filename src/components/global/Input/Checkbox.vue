@@ -27,7 +27,7 @@ export default {
 
 <style scoped>
   .input-wrapper {
-    @apply flex flex-col
+    @apply flex flex-col text-dark
   }
 
   .container {
@@ -39,12 +39,12 @@ export default {
   }
 
   .checkmark {
-    @apply absolute top-1 h-4 w-4 rounded border-[1.3px] border-solid border-white;
+    @apply absolute top-1 h-4 w-4 rounded border-[1.3px] border-solid;
   }
 
-  .container:hover input ~ .checkmark {
-    @apply bg-secondary-hover duration-300
-  }
+  /*.container:hover input ~ .checkmark {*/
+  /*  @apply bg-secondary-hover duration-300*/
+  /*}*/
 
   .container input:checked ~ .checkmark {
     @apply bg-white
@@ -64,6 +64,6 @@ export default {
   }
 
   .label {
-    @apply ml-6 text-white
+    @apply ml-6
   }
 </style>

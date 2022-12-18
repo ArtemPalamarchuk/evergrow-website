@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-  <div class="input-wrapper">
+  <div class="input-wrapper select">
     <label :for="name" v-if="label">{{ label }}</label>
     <select :name="name" v-model="modelValue" @change="$emit('update:modelValue', $event.target.value)">
       <option class="placeholder" value="" disabled selected hidden>{{ placeholder }}</option>

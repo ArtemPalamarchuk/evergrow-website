@@ -52,6 +52,14 @@ const router = createRouter({
         title: 'Contractors'
       }
     },
+    {
+      path: '/contact-us',
+      name: 'contact-us',
+      component: () => import('../pages/ContactUs.vue'),
+      meta: {
+        title: 'Contact Us'
+      }
+    },
   ],
   scrollBehavior() {
     document.getElementById('app')!.scrollIntoView({ behavior: 'auto' });
