@@ -43,11 +43,13 @@ const {img, title, text, path} = defineProps<CardProps>()
   h3 {
     @apply text-md-i text-white mb-1
     sm:text-sm-h sm:mb-2
+    md:max-w-[80%]
   }
 
   p {
     @apply text-xs-h-mob text-white
     sm:text-md-i
+    md:max-w-[90%]
   }
 
   .content .icon {

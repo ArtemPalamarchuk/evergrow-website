@@ -70,8 +70,12 @@ import { logo } from "@/assets/images";
     md:mt-5
   }
 
-  .evergrow p, .title {
-    @apply text-xs-h-mob
+  .evergrow p, .title, li {
+    @apply text-sm-i md:text-xs-h-mob
+  }
+
+  li {
+    @apply md:text-md-i
   }
 
   .title:not(.solutions-wrap .title) {
@@ -82,11 +86,6 @@ import { logo } from "@/assets/images";
   .solutions-wrap .title {
     @apply mb-2 mt-6
     md:mt-0
-  }
-
-  li {
-    @apply text-sm-i
-    md:text-md-i
   }
 
   li:not(li:last-child) {

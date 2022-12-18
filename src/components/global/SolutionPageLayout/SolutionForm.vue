@@ -61,7 +61,7 @@ export default {
   </section>
 </template>
 
-<style scoped>
+<style>
   .container-form-wrapper {
     @apply flex flex-col gap-x-[100px] gap-y-6 bg-secondary py-[56px] px-4
     sm-l:py-[76px]
@@ -88,6 +88,14 @@ export default {
   .contact-form .text-fields {
     @apply grid grid-cols-1 gap-x-6 gap-y-2
     sm-l:grid-cols-2
+  }
+
+  .contact-form .text-fields .input-wrapper input{
+    @apply py-2.5
+  }
+
+  .contact-form select{
+    @apply h-full
   }
 
   .contact-form .checkbox {

@@ -97,7 +97,15 @@ export default {
   .contact-us-form .text-fields .input-wrapper input,
   .contact-us-form .text-fields .input-wrapper select,
   .contact-us-form .text-fields .input-wrapper textarea {
-    @apply outline-dark
+    @apply outline-dark bg-white
+  }
+
+  .contact-us-form .text-fields .input-wrapper input{
+    @apply py-2.5
+  }
+
+  .contact-us-form .text-fields .input-wrapper select{
+    @apply h-full
   }
 
   .contact-us-form .text-fields .input-wrapper {

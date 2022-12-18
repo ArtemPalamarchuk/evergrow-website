@@ -33,7 +33,7 @@ const {heading, text, cards} = advantagesContent
   .text-content h2 {
     @apply text-sm-h-mob
     sm:text-md-h-tab sm:max-w-[550px]
-    md:text-lg-h md:w-1/2 md:max-w-full
+    md:text-xmd-h md:w-1/2 md:max-w-full
   }
 
   .text-content p {

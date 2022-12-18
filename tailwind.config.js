@@ -21,6 +21,7 @@ module.exports = {
       fontSize: {
         // Headings
         "lg-h": ["48px", {lineHeight: "58px"}],
+        "xmd-h": ["44px", {lineHeight: "54px"}],
         "md-h": ["40px", {lineHeight: "45px"}],
         "sm-h": ["30px", {lineHeight: "32px"}],
         "xs-h": ["24px", {lineHeight: "38px"}],
