@@ -15,18 +15,18 @@ import ctvc from "./home/resources/ctvc.svg"
 import canary from "./home/resources/canary.svg"
 import solar from "./home/resources/solar.svg"
 
-import netZero from "./home/advantages/net-zero.svg"
-import corporateFinance from "./home/advantages/corporate-finance.svg"
-import sponsors from "./home/advantages/sponsors.svg"
-import banks from "./home/advantages/banks.svg"
-import approach from "./home/approach.svg"
+import netZero from "./home/advantages/net-zero.png"
+import corporateFinance from "./home/advantages/corporate-finance.png"
+import sponsors from "./home/advantages/sponsors.png"
+import banks from "./home/advantages/banks.png"
+import approach from "./home/approach.png"
 
 export {hero, arrow}
 export {axios, ctvc, canary, solar}
 export {netZero, corporateFinance, sponsors, banks, approach}
 
 // About page
-import francisco from "./about/description/francisco.svg"
+import francisco from "./about/description/francisco.png"
 
 import congruent from "./about/investors/congruent.svg"
 import firstRound from "./about/investors/firstRound.svg"
@@ -34,15 +34,15 @@ import garuda from "./about/investors/garuda.svg"
 import journey from "./about/investors/journey.svg"
 import xyz from "./about/investors/xyz.svg"
 
-import person1 from "./about/team/person1.svg"
-import person2 from "./about/team/person2.svg"
-import person3 from "./about/team/person3.svg"
-import person4 from "./about/team/person4.svg"
-import person5 from "./about/team/person5.svg"
-import person6 from "./about/team/person6.svg"
-import person7 from "./about/team/person7.svg"
+import person1 from "./about/team/person1.png"
+import person2 from "./about/team/person2.png"
+import person3 from "./about/team/person3.png"
+import person4 from "./about/team/person4.png"
+import person5 from "./about/team/person5.png"
+import person6 from "./about/team/person6.png"
+import person7 from "./about/team/person7.png"
 
-import joinUs from "./about/joinUs.svg"
+import joinUs from "./about/joinUs.png"
 import linkedIn from "./about/LinkedIn.svg"
 
 export {francisco}
