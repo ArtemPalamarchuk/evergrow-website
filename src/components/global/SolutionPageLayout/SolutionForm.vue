@@ -110,7 +110,7 @@ export default {
   }
 
   .contact-form .input-wrapper .input-select{
-    @apply text-white outline-[1.5px] outline outline-white
+    @apply text-white outline-[1.5px] outline outline-white py-[3px]
   }
 
   .contact-form .checkbox {
