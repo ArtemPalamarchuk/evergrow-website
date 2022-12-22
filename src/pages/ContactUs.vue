@@ -24,12 +24,23 @@ export default {
         interested: "",
         message: "",
       },
-      optionsList: ['A', "B", "C"],
+      optionsList: [
+        'Saving money on taxes',
+        "Monetizing my tax credits",
+        "Helping my clients with tax credits",
+        "Something else"
+      ]
     }
   },
   methods: {
     sendForm() {
-      // console.log(this.userData)
+      //@ts-ignore
+      const userData = JSON.parse(JSON.stringify(this.userData));
+      console.log(userData)
+    },
+    updateValue(option: string){
+      //@ts-ignore
+      this.userData.interested = option
     }
   }
 }
@@ -51,11 +62,11 @@ export default {
           <base-input v-model="userData.email" label="Email address" name="email"/>
           <base-input v-model="userData.organization" label="Organization" name="organization"/>
           <Select
-            v-model="userData.interested"
+            :value="userData.interested"
             placeholder="Please Select"
             :option-list="optionsList"
             label="I am interested in"
-            name="interested"
+            @updateValue="updateValue"
           />
           <text-area v-model="userData.message" label="Message" name="message"></text-area>
         </div>
@@ -108,6 +119,14 @@ export default {
 
   .contact-us-form .text-fields .input-wrapper {
     @apply text-dark
+  }
+
+  .contact-us-form .input-wrapper.select{
+    @apply text-dark
+  }
+
+  .contact-us-form .input-wrapper .input-select{
+    @apply outline-[1.5px] outline outline-black py-[2.9px]
   }
 
   .contact-us-form .text-fields .input-wrapper:nth-child(5) {
