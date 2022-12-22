@@ -23,7 +23,6 @@ export default {
         organization: "",
         interested: "",
         message: "",
-        isScheduled: false,
       },
       optionsList: ['A', "B", "C"],
     }
@@ -60,7 +59,6 @@ export default {
           />
           <text-area v-model="userData.message" label="Message" name="message"></text-area>
         </div>
-        <check-box v-model="userData.isScheduled" label="Schedule a meeting" name="isScheduled"/>
         <Button @click.prevent="sendForm" :text="form.buttonText"/>
       </form>
     </div>

@@ -13,21 +13,21 @@ const {img, title, text, path} = defineProps<CardProps>()
 </script>
 
 <template>
-  <div class="card">
+  <div class="card" @click="router.push({path})">
     <img :src="img" alt="card">
     <div class="content">
       <div class="text-container">
         <h3>{{ title }}</h3>
         <p>{{ text }}</p>
       </div>
-      <img :src="arrow" alt="arrow" class="icon" @click="router.push({path})">
+      <img :src="arrow" alt="arrow" class="icon">
     </div>
   </div>
 </template>
 
 <style scoped>
   .card {
-    @apply rounded-bl-[2rem] rounded-t-[2rem] bg-primary
+    @apply rounded-bl-[2rem] rounded-t-[2rem] bg-primary cursor-pointer
   }
 
   img[alt="card"] {
@@ -53,7 +53,7 @@ const {img, title, text, path} = defineProps<CardProps>()
   }
 
   .content .icon {
-    @apply absolute w-8 h-8 right-4 bottom-4 cursor-pointer
+    @apply absolute w-8 h-8 right-4 bottom-4
     sm:w-10 sm:h-10
   }
 </style>

@@ -41,7 +41,7 @@ export default {
 
         <div class="flex flex-col">
           <a class="mt-10 cursor-pointer" @click.prevent="this.$emit('navigate', '/about')">About</a>
-          <a class="mt-10" href="/">Log in</a>
+          <a class="mt-10" href="https://app.evergrow.com/" target="_blank">Log in</a>
           <Button class="w-fit mt-10" text="Contact Us" @click="this.$emit('navigate', 'contact-us')"/>
         </div>
       </div>

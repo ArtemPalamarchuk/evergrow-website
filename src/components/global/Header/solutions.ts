@@ -1,10 +1,13 @@
-import {construction, bank, solarPower, document} from "@/assets/images";
+import office from "@/assets/images/solutions/menu/office.svg";
+import solarPower from "@/assets/images/solutions/menu/solar.svg";
+import bank from "@/assets/images/solutions/menu/bank.svg";
+import construction from "@/assets/images/solutions/menu/construction.svg";
 
 export const solutionsMenu = [
   {
     path: "/taxes",
     title: "Corporate tax & treasury",
-    img: document,
+    img: office,
   },
   {
     path: "/sponsors",

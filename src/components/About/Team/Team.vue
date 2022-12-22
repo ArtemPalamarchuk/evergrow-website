@@ -11,7 +11,7 @@ const {heading, team} = teamContent
       <h2>{{heading}}</h2>
     </div>
     <div class="grid grid-cols-2 sm:flex sm:justify-center sm:flex-wrap gap-x-5 gap-y-6 sm:gap-y-10 md:gap-y-14">
-      <ProfileCard v-for="{img, title, text} in team" :img="img" :title="title" :text="text"/>
+      <ProfileCard v-for="{img, title, text, link} in team" :img="img" :title="title" :text="text" :link="link"/>
     </div>
   </section>
 </template>

@@ -96,13 +96,13 @@ export const investorsContent = [
 export const teamContent = {
   heading: "Our team",
   team: [
-    {img: person1, title: 'James Richards', text: 'CEO'},
-    {img: person2, title: 'Cassandra Xia', text: 'Head of Engineering'},
-    {img: person3, title: 'Charles Stone', text: 'Strategic Finance Lead'},
-    {img: person4, title: 'Zoe Savellos', text: 'Chief of Staff'},
-    {img: person5, title: 'Arun Prasad', text: 'Staff Software Engineer'},
-    {img: person6, title: 'Neal Donnelly', text: 'Business Development Lead'},
-    {img: person7, title: 'Marrissa His', text: 'Executive Business Partner'},
+    {img: person1, title: 'James Richards', text: 'CEO', link: "https://www.linkedin.com/in/jpr2120/"},
+    {img: person2, title: 'Cassandra Xia', text: 'Head of Engineering', link: "https://www.linkedin.com/in/cassandraxia/"},
+    {img: person3, title: 'Charles Stone', text: 'Strategic Finance Lead', link: "https://www.linkedin.com/in/charlesstone92/"},
+    {img: person4, title: 'Zoe Savellos', text: 'Chief of Staff', link: "https://www.linkedin.com/in/zoe-savellos-77a11a108/"},
+    {img: person5, title: 'Arun Prasad', text: 'Staff Software Engineer', link: "https://www.linkedin.com/in/arun-k-prasad"},
+    {img: person6, title: 'Neal Donnelly', text: 'Business Development Lead', link: "https://www.linkedin.com/in/neal-donnelly-2633a71b/"},
+    {img: person7, title: 'Marrissa His', text: 'Executive Business Partner', link: "https://www.linkedin.com/in/marrissahis/"},
   ]
 }
 

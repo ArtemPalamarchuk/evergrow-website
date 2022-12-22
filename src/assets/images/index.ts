@@ -58,7 +58,7 @@ import batteries2 from "./solutions/heros/battaries2.png"
 
 import construction from "./solutions/construction.svg"
 import bank from "./solutions/bank.svg"
-import solarPower from "./solutions/solar.svg"
+import solarPower from "./solutions/solar-power.svg"
 import document from "./solutions/document.svg"
 import cash from "./solutions/cash.svg"
 import plant from "./solutions/plant.svg"
@@ -66,7 +66,7 @@ import shield from "./solutions/shield.svg"
 import work from "./solutions/work.svg"
 
 export {snow, windmills, batteries, batteries2}
-export {construction, bank ,solarPower, document, cash, plant, shield, work}
+export {construction, bank, solarPower, document, cash, plant, shield, work}
 
 // Contact Us page
 import formWindmills from "./form-windmill.png"

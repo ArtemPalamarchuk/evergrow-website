@@ -2,6 +2,7 @@
 import Button from "@/components/global/Button.vue";
 import {hero} from "@/assets/images";
 import {heroContent} from "@/data";
+import router from "@/router";
 
 const {heading, subHeading, text, buttonTitle} = heroContent
 </script>
@@ -12,7 +13,7 @@ const {heading, subHeading, text, buttonTitle} = heroContent
       <h1>{{ heading }}</h1>
       <h2>{{ subHeading }}</h2>
       <p>{{ text }}</p>
-      <Button :text="buttonTitle"/>
+      <Button :text="buttonTitle" @click="router.push({path: '/contact-us'})"/>
     </div>
     <div class="img-wrap">
       <img :src="hero" alt="hero">

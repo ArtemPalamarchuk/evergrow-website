@@ -3,6 +3,7 @@ import TextImage from "@/components/global/TextImage.vue";
 import Button from "@/components/global/Button.vue";
 import {approach} from "@/assets/images";
 import {approachContent} from "@/data";
+import router from "@/router";
 
 const {heading, text, buttonText} = approachContent
 </script>
@@ -10,7 +11,7 @@ const {heading, text, buttonText} = approachContent
 <template>
   <text-image :heading="heading" :mainText="text" :img="approach" :isReversed="true" contentBg="secondary">
     <template v-slot:button>
-      <Button :text="buttonText"/>
+      <Button :text="buttonText" @click="router.push({path: '/about'})"/>
     </template>
   </text-image>
 </template>

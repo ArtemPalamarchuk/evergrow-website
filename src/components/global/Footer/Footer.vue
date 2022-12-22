@@ -9,7 +9,7 @@ import { logo } from "@/assets/images";
         <router-link to="/">
           <img :src="logo" alt="logo">
         </router-link>
-        <p>© 2022 Company</p>
+        <p>© 2022 Evergrow Inc.</p>
       </div>
       <div class="solutions-wrap">
         <p class="title">Solutions</p>
@@ -27,21 +27,21 @@ import { logo } from "@/assets/images";
             <router-link to="/about">About</router-link>
           </li>
           <li>
-            <router-link to="/pricing">Pricing</router-link>
+            <router-link to="/contact-us">Contact</router-link>
           </li>
         </ul>
       </div>
-      <div class="other">
-        <p class="title">Other</p>
-        <ul>
-          <li>
-            <router-link to="/privacy-policy">Privacy Policy</router-link>
-          </li>
-          <li>
-            <router-link to="/terms-of-service">Terms of Service</router-link>
-          </li>
-        </ul>
-      </div>
+<!--      <div class="other">-->
+<!--        <p class="title">Other</p>-->
+<!--        <ul>-->
+<!--          <li>-->
+<!--            <router-link to="/privacy-policy">Privacy Policy</router-link>-->
+<!--          </li>-->
+<!--          <li>-->
+<!--            <router-link to="/terms-of-service">Terms of Service</router-link>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </div>-->
     </div>
   </footer>
 </template>
@@ -56,7 +56,12 @@ import { logo } from "@/assets/images";
   .info {
     @apply grid pt-2
     sm:grid-cols-auto-columns
-    md:grid-cols-4
+    md:grid-cols-3
+  }
+
+  .info > div{
+    @apply justify-self-start
+    md:justify-self-center
   }
 
   .evergrow {

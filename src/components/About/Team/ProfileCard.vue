@@ -5,9 +5,10 @@ interface CardProps {
   img: string,
   title: string,
   text: string,
+  link: string,
 }
 
-const {img, title, text} = defineProps<CardProps>()
+const {img, title, text, link} = defineProps<CardProps>()
 </script>
 
 <template>
@@ -18,9 +19,9 @@ const {img, title, text} = defineProps<CardProps>()
         <h3>{{ title }}</h3>
         <p>{{ text }}</p>
       </div>
-      <div class="linkedIn">
+      <a :href="link" target="_blank" class="linkedIn">
         <img :src="linkedIn" alt="arrow" class="cursor-pointer float-right mt-3">
-      </div>
+      </a>
     </div>
   </div>
 </template>

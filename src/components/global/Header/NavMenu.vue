@@ -101,7 +101,7 @@ export default {
   }
 
   .solutions-header li img {
-    @apply p-2.5;
+    @apply p-2.5 w-[100px] h-[100px];
   }
 
   img[alt=chevron] {

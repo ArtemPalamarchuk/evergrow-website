@@ -5,9 +5,15 @@ import SolutionsList from "@/components/global/SolutionPageLayout/SolutionsList.
 import SolutionsForm from "@/components/global/SolutionPageLayout/SolutionForm.vue";
 import type {IForm, IList, ITextImage} from "@/types";
 import type {PropType} from "vue";
+import router from "@/router";
 
 export default {
   components: {SolutionsForm, SolutionsList, Button, TextImage},
+  data() {
+    return {
+      router
+    }
+  },
   props: {
     textImage: {
       type: Object as PropType<ITextImage>,
@@ -35,7 +41,9 @@ export default {
     textColor="dark"
   >
     <template v-slot:button>
-      <Button :text="textImage.buttonText"/>
+      <a href="#contact-form">
+        <Button :text="textImage.buttonText"/>
+      </a>
     </template>
   </text-image>
   <solutions-list :list="list"/>

@@ -50,7 +50,7 @@ export default {
     </router-link>
     <div class="menu">
       <nav-menu/>
-      <a href="/" class="whitespace-nowrap mr-[26px]">Log in</a>
+      <a href="https://app.evergrow.com/" target="_blank" class="whitespace-nowrap mr-[26px]">Log in</a>
       <Button text="Contact Us" @click="navigate('/contact-us')"/>
     </div>
     <hamburger @click="openMenu"/>
