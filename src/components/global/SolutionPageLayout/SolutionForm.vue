@@ -35,33 +35,35 @@ export default {
 </script>
 
 <template>
-  <section class="container-form-wrapper" id="contact-form">
-    <div class="text-content">
-      <h2 class="text-white">{{ formContent.heading }}</h2>
-      <p class="text-white">{{ formContent.text }}</p>
-    </div>
-    <form class="contact-form">
-      <div class="text-fields">
-        <base-input v-model="userData.name" label="Name" name="name"/>
-        <base-input v-model="userData.email" label="Email address" name="email"/>
-        <base-input v-model="userData.organization" label="Organization" name="organization"/>
-        <Select
-          v-model="userData.interested"
-          placeholder="Please Select"
-          :option-list="optionsList"
-          label="I am interested in"
-          name="interested"
-        />
-        <text-area v-model="userData.message" label="Message" name="message"></text-area>
+  <section class="w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center bg-secondary">
+    <div class="container-form-wrapper" id="contact-form">
+      <div class="text-content">
+        <h2 class="text-white">{{ formContent.heading }}</h2>
+        <p class="text-white">{{ formContent.text }}</p>
       </div>
-      <Button @click.prevent="sendForm" :text="formContent.buttonText"/>
-    </form>
+      <form class="contact-form">
+        <div class="text-fields">
+          <base-input v-model="userData.name" label="Name" name="name"/>
+          <base-input v-model="userData.email" label="Email address" name="email"/>
+          <base-input v-model="userData.organization" label="Organization" name="organization"/>
+          <Select
+            v-model="userData.interested"
+            placeholder="Please Select"
+            :option-list="optionsList"
+            label="I am interested in"
+            name="interested"
+          />
+          <text-area v-model="userData.message" label="Message" name="message"></text-area>
+        </div>
+        <Button @click.prevent="sendForm" :text="formContent.buttonText"/>
+      </form>
+    </div>
   </section>
 </template>
 
 <style>
   .container-form-wrapper {
-    @apply flex flex-col gap-x-[100px] gap-y-6 bg-secondary py-[56px] px-4
+    @apply flex flex-col gap-x-[100px] gap-y-6 py-[56px] px-4 max-w-[1440px] m-auto
     sm-l:py-[76px]
     md:px-[120px]
     lg:flex-row

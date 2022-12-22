@@ -19,7 +19,7 @@ const resources = [axios, canary, ctvc, solar]
 
 <style scoped>
   .resources {
-    @apply bg-beige pt-4 pb-3
+    @apply bg-beige pt-4 pb-3 w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center
     sm:py-7
     md:py-12
   }

@@ -23,7 +23,7 @@ const {heading, subHeading, text, buttonTitle} = heroContent
 
 <style scoped>
   .hero {
-    @apply w-full flex flex-col bg-light-green
+    @apply w-full flex flex-col bg-light-green w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center
     sm:pb-8
     md:pb-0 md:flex-row md:items-center
   }

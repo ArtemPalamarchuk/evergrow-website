@@ -10,7 +10,7 @@ const {heading, team} = teamContent
     <div class="text-content">
       <h2>{{heading}}</h2>
     </div>
-    <div class="grid grid-cols-2 sm:flex sm:justify-center sm:flex-wrap gap-x-5 gap-y-6 sm:gap-y-10 md:gap-y-14">
+    <div class="max-w-[1440px] m-auto grid grid-cols-2 sm:flex sm:justify-center sm:flex-wrap gap-x-5 gap-y-6 sm:gap-y-10 md:gap-y-14">
       <ProfileCard v-for="{img, title, text, link} in team" :img="img" :title="title" :text="text" :link="link"/>
     </div>
   </section>
@@ -18,7 +18,7 @@ const {heading, team} = teamContent
 
 <style scoped>
   .team {
-    @apply bg-light-green py-12 px-4
+    @apply bg-light-green py-12 px-4 w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center
     lg:px-[120px] lg:py-24
     md:px-10 md:py-16
   }

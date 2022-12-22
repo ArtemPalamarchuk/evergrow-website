@@ -48,13 +48,13 @@ import { logo } from "@/assets/images";
 
 <style scoped>
   footer {
-    @apply bg-beige text-dark px-4 pt-10 pb-8
+    @apply bg-beige text-dark px-4 pt-10 pb-8 w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center
     sm:py-8
     md:px-[120px] md:py-[56px]
   }
 
   .info {
-    @apply grid pt-2
+    @apply grid pt-2 max-w-[1440px] mx-auto
     sm:grid-cols-auto-columns
     md:grid-cols-3
   }
