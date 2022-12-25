@@ -62,6 +62,7 @@ export default {
           <base-input v-model="userData.email" label="Email address" name="email"/>
           <base-input v-model="userData.organization" label="Organization" name="organization"/>
           <Select
+            style="cursor: pointer"
             :value="userData.interested"
             placeholder="Please Select"
             :option-list="optionsList"

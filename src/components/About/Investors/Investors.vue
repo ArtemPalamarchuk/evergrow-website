@@ -43,7 +43,7 @@ import {investorsContent} from "@/data";
   }
 
   .person-list {
-    @apply grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8
+    @apply grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 md:ml-8
   }
 
   .person-list .card:nth-last-child(2) {

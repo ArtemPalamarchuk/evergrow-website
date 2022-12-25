@@ -10,10 +10,9 @@ export {logo, chevron, close, caretDown}
 import arrow from "./home/arrow.svg"
 import hero from "./home/hero.svg"
 
-import axios from "./home/resources/axios.svg"
-import ctvc from "./home/resources/ctvc.svg"
-import canary from "./home/resources/canary.svg"
-import solar from "./home/resources/solar.svg"
+import finExtra from "./home/resources/Finextra.svg"
+import techCrunch from "./home/resources/TechCrunch.svg"
+import impactAlpha from "./home/resources/ImpactAlpha.svg"
 
 import netZero from "./home/advantages/net-zero.png"
 import corporateFinance from "./home/advantages/corporate-finance.png"
@@ -22,7 +21,7 @@ import banks from "./home/advantages/banks.png"
 import approach from "./home/approach.png"
 
 export {hero, arrow}
-export {axios, ctvc, canary, solar}
+export {finExtra, techCrunch, impactAlpha}
 export {netZero, corporateFinance, sponsors, banks, approach}
 
 // About page
