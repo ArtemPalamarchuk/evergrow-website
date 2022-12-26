@@ -20,7 +20,7 @@ const {img, title, text, path} = defineProps<CardProps>()
         <h3>{{ title }}</h3>
         <p>{{ text }}</p>
       </div>
-      <img :src="arrow" alt="arrow" class="icon">
+      <div class="icon"><img :src="arrow" alt="arrow" class="arrow"></div>
     </div>
   </div>
 </template>
@@ -32,6 +32,10 @@ const {img, title, text, path} = defineProps<CardProps>()
 
   .card:hover {
     @apply bg-[#036D61];
+  }
+
+  .card:hover .content .icon {
+    @apply bg-[#F18060];
   }
 
   img[alt="card"] {
@@ -57,7 +61,11 @@ const {img, title, text, path} = defineProps<CardProps>()
   }
 
   .content .icon {
-    @apply absolute w-8 h-8 right-4 bottom-4
+    @apply absolute w-8 h-8 right-4 bottom-4 bg-[#F0F7F6] rounded-[30px] flex items-center justify-center duration-500
     sm:w-10 sm:h-10
+  }
+
+  .arrow {
+    @apply w-4 h-[14px] sm:w-[21px] sm:h-[18px]
   }
 </style>
