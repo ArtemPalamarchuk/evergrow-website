@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import {arrow} from "@/assets/images";
 import router from "@/router";
 
 interface CardProps {
@@ -20,14 +19,18 @@ const {img, title, text, path} = defineProps<CardProps>()
         <h3>{{ title }}</h3>
         <p>{{ text }}</p>
       </div>
-      <div class="icon"><img :src="arrow" alt="arrow" class="arrow"></div>
+      <div class="icon">
+        <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3904 1.05718C11.9111 0.536482 12.7554 0.536482 13.2761 1.05718L21.2761 9.05718C21.5261 9.30723 21.6666 9.64637 21.6666 9.99999C21.6666 10.3536 21.5261 10.6928 21.2761 10.9428L13.2761 18.9428C12.7554 19.4635 11.9111 19.4635 11.3904 18.9428C10.8697 18.4221 10.8697 17.5779 11.3904 17.0572L17.1143 11.3333L1.66659 11.3333C0.930206 11.3333 0.333252 10.7364 0.333252 9.99999C0.333252 9.26361 0.930206 8.66666 1.66659 8.66666H17.1143L11.3904 2.9428C10.8697 2.4221 10.8697 1.57788 11.3904 1.05718Z" fill="#068576"/>
+        </svg>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
   .card {
-    @apply rounded-bl-[2rem] rounded-t-[2rem] bg-primary cursor-pointer duration-500
+    @apply rounded-bl-[2rem] rounded-t-[2rem] bg-primary cursor-pointer duration-300
   }
 
   .card:hover {
@@ -36,6 +39,10 @@ const {img, title, text, path} = defineProps<CardProps>()
 
   .card:hover .content .icon {
     @apply bg-[#F18060];
+  }
+
+  .card:hover .icon path {
+    @apply duration-300 fill-white
   }
 
   img[alt="card"] {
@@ -65,7 +72,7 @@ const {img, title, text, path} = defineProps<CardProps>()
     sm:w-10 sm:h-10
   }
 
-  .arrow {
+  .icon {
     @apply w-4 h-[14px] sm:w-[21px] sm:h-[18px]
   }
 </style>

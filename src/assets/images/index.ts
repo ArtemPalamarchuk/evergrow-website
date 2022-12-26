@@ -7,7 +7,6 @@ import caretDown from "./caret-down.svg"
 export {logo, chevron, close, caretDown}
 
 // Home page
-import arrow from "./home/arrow.svg"
 import hero from "./home/hero.svg"
 
 import finExtra from "./home/resources/Finextra.svg"
@@ -20,7 +19,7 @@ import sponsors from "./home/advantages/sponsors.png"
 import banks from "./home/advantages/banks.png"
 import approach from "./home/approach.png"
 
-export {hero, arrow}
+export {hero}
 export {finExtra, techCrunch, impactAlpha}
 export {netZero, corporateFinance, sponsors, banks, approach}
 

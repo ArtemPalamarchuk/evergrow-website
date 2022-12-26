@@ -20,7 +20,7 @@ const {img, title, text, link} = defineProps<CardProps>()
         <p>{{ text }}</p>
       </div>
       <a :href="link" target="_blank" class="linkedIn">
-        <img :src="linkedIn" alt="arrow" class="cursor-pointer float-right mt-3">
+        <img :src="linkedIn" alt="linkedIn" class="cursor-pointer float-right mt-3">
       </a>
     </div>
   </div>

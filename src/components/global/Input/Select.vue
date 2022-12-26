@@ -54,7 +54,7 @@ export default {
 
 <style scoped>
   .input-wrapper {
-    @apply select-none
+    @apply select-none cursor-pointer
   }
 
   .input-wrapper .label {
