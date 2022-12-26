@@ -27,7 +27,11 @@ const {img, title, text, path} = defineProps<CardProps>()
 
 <style scoped>
   .card {
-    @apply rounded-bl-[2rem] rounded-t-[2rem] bg-primary cursor-pointer
+    @apply rounded-bl-[2rem] rounded-t-[2rem] bg-primary cursor-pointer duration-500
+  }
+
+  .card:hover {
+    @apply bg-[#036D61];
   }
 
   img[alt="card"] {
