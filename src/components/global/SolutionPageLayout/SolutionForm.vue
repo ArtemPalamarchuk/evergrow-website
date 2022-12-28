@@ -6,6 +6,8 @@ import CheckBox from "@/components/global/Input/Checkbox.vue";
 import Button from "@/components/global/Button.vue";
 import type {PropType} from "vue";
 import type {IForm} from "@/types";
+import {useVuelidate} from '@vuelidate/core'
+import {required, email} from '@vuelidate/validators'
 
 export default {
   components: {BaseInput, Select, TextArea, CheckBox, Button},
@@ -13,6 +15,9 @@ export default {
     formContent: {
       type: Object as PropType<IForm>,
     },
+  },
+  setup() {
+    return {v$: useVuelidate()}
   },
   data() {
     return {
@@ -23,23 +28,32 @@ export default {
         interested: "",
         message: "",
       },
-      optionsList: [
-        'Saving money on taxes',
-        "Monetizing my tax credits",
-        "Helping my clients with tax credits",
-        "Something else"
-      ]
+    }
+  },
+  validations() {
+    return {
+      userData: {
+        name: {required, $autoDirty: true},
+        email: {required, email, $autoDirty: true},
+      },
     }
   },
   methods: {
     sendForm() {
-      //@ts-ignore
-      const userData = JSON.parse(JSON.stringify(this.userData));
+      const userData = JSON.parse(JSON.stringify(this.v$.userData));
       console.log(userData)
     },
-    updateValue(option: string){
+    updateValue(option: string) {
       //@ts-ignore
       this.userData.interested = option
+    },
+  },
+  computed: {
+    errMessages() {
+      return {
+        name: this.v$.userData.name.$dirty ? this.v$.userData.name.$silentErrors[0]?.$message || "" : "",
+        email: this.v$.userData.email.$dirty ? this.v$.userData.email.$silentErrors[0]?.$message || "" : "",
+      }
     }
   }
 }
@@ -54,13 +68,12 @@ export default {
       </div>
       <form class="contact-form">
         <div class="text-fields">
-          <base-input v-model="userData.name" label="Name" name="name"/>
-          <base-input v-model="userData.email" label="Email address" name="email"/>
-          <base-input v-model="userData.organization" label="Organization" name="organization"/>
+          <base-input outline-color="white" :err-msg="errMessages.name" v-model="userData.name" label="Name" name="name"/>
+          <base-input outline-color="white" :err-msg="errMessages.email" v-model="userData.email" label="Email address" name="email"/>
+          <base-input outline-color="white" v-model="userData.organization" label="Organization" name="organization"/>
           <Select
             :value="userData.interested"
             placeholder="Please Select"
-            :option-list="optionsList"
             label="I am interested in"
             @updateValue="updateValue"
           />
@@ -101,20 +114,16 @@ export default {
     sm-l:grid-cols-2
   }
 
-  .contact-form .text-fields .input-wrapper input{
+  .contact-form .text-fields .input-wrapper input {
     @apply py-2.5
   }
 
-  .contact-form .input-wrapper.select{
+  .contact-form .input-wrapper.select {
     @apply text-white
   }
 
-  .contact-form .input-wrapper .input-select{
+  .contact-form .input-wrapper .input-select {
     @apply text-white outline-[1.5px] outline outline-white py-[3px]
-  }
-
-  .contact-form .checkbox {
-    @apply mt-6 text-white
   }
 
   .contact-form .textarea {

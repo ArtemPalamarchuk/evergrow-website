@@ -6,13 +6,16 @@ import Select from "@/components/global/Input/Select.vue";
 import TextArea from "@/components/global/Input/TextArea.vue";
 import CheckBox from "@/components/global/Input/Checkbox.vue";
 import {contactUsContent} from "@/data";
+import {useVuelidate} from '@vuelidate/core'
+import {required, email} from '@vuelidate/validators'
 
 export default {
   components: {BaseInput, Select, TextArea, CheckBox, Button},
   setup() {
     return {
       form: contactUsContent.form,
-      formWindmills
+      formWindmills,
+      v$: useVuelidate()
     }
   },
   data() {
@@ -24,23 +27,36 @@ export default {
         interested: "",
         message: "",
       },
-      optionsList: [
-        'Saving money on taxes',
-        "Monetizing my tax credits",
-        "Helping my clients with tax credits",
-        "Something else"
-      ]
+    }
+  },
+  validations() {
+    return {
+      userData: {
+        name: {required, $autoDirty: true},
+        email: {required, email, $autoDirty: true},
+      },
     }
   },
   methods: {
-    sendForm() {
-      //@ts-ignore
-      const userData = JSON.parse(JSON.stringify(this.userData));
-      console.log(userData)
+    async sendForm() {
+      const isValid = await this.v$.userData.$validate()
+      if (isValid) {
+        const userData = JSON.parse(JSON.stringify(this.userData));
+        console.log(userData)
+        // showThankYouMessage()
+      }
     },
-    updateValue(option: string){
+    updateValue(option: string) {
       //@ts-ignore
       this.userData.interested = option
+    },
+  },
+  computed: {
+    errMessages() {
+      return {
+        name: this.v$.userData.name.$dirty ? this.v$.userData.name.$silentErrors[0]?.$message || "" : "",
+        email: this.v$.userData.email.$dirty ? this.v$.userData.email.$silentErrors[0]?.$message || "" : "",
+      }
     }
   }
 }
@@ -58,13 +74,14 @@ export default {
     <div class="contact-text-content">
       <form class="contact-us-form">
         <div class="text-fields">
-          <base-input v-model="userData.name" label="Name" name="name"/>
-          <base-input v-model="userData.email" label="Email address" name="email"/>
-          <base-input v-model="userData.organization" label="Organization" name="organization"/>
+          <base-input outline-color="#2A4547" :err-msg="errMessages.name" v-model="userData.name" label="Name"
+                      name="name"/>
+          <base-input outline-color="#2A4547" :err-msg="errMessages.email" v-model="userData.email"
+                      label="Email address" name="email"/>
+          <base-input outline-color="#2A4547" v-model="userData.organization" label="Organization" name="organization"/>
           <Select
             :value="userData.interested"
             placeholder="Please Select"
-            :option-list="optionsList"
             label="I am interested in"
             @updateValue="updateValue"
           />
@@ -90,30 +107,21 @@ export default {
     @apply w-full
   }
 
-  .contact-us-form .checkbox {
-    @apply mt-6
-  }
-
-  .contact-us-form .checkmark {
-    @apply border-dark
-  }
-
   .contact-us-form .text-fields {
     @apply grid grid-cols-1 gap-x-6 gap-y-2
     sm-l:grid-cols-2
   }
 
-  .contact-us-form .text-fields .input-wrapper input,
   .contact-us-form .text-fields .input-wrapper select,
   .contact-us-form .text-fields .input-wrapper textarea {
     @apply outline-dark bg-white
   }
 
-  .contact-us-form .text-fields .input-wrapper input{
-    @apply py-2.5
+  .contact-us-form .text-fields .input-wrapper input {
+    @apply py-2.5 bg-white
   }
 
-  .contact-us-form .text-fields .input-wrapper select{
+  .contact-us-form .text-fields .input-wrapper select {
     @apply h-full
   }
 
@@ -121,11 +129,11 @@ export default {
     @apply text-dark
   }
 
-  .contact-us-form .input-wrapper.select{
+  .contact-us-form .input-wrapper.select {
     @apply text-dark
   }
 
-  .contact-us-form .input-wrapper .input-select{
+  .contact-us-form .input-wrapper .input-select {
     @apply outline-[1.5px] outline outline-black py-[2.9px]
   }
 

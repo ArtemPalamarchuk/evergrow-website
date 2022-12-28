@@ -11,7 +11,8 @@ module.exports = {
         "secondary": '#F1805F',
         "secondary-hover": '#D96949',
         "light-green": '#E6F0ED',
-        "beige": '#F5F3EF'
+        "beige": '#F5F3EF',
+        "error": '#BC0017',
       },
       fontFamily: {
         ["urbanist-m"]: "Urbanist-500",

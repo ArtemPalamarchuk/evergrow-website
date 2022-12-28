@@ -2,12 +2,18 @@
 import {caretDown} from "@/assets/images";
 
 export default {
-  props: ['optionList', 'value', 'placeholder', 'label'],
+  props: ['value', 'placeholder', 'label'],
   emits: ['updateValue'],
   data() {
     return {
       isActiveSelectMenu: false,
-      caretDown
+      caretDown,
+      optionList: [
+        'Saving money on taxes',
+        "Monetizing my tax credits",
+        "Helping my clients with tax credits",
+        "Something else"
+      ]
     }
   },
   methods: {
