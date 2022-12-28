@@ -26,6 +26,7 @@ export default {
         interested: "",
         message: "",
       },
+      isFormSended: false
     }
   },
   validations() {
@@ -37,9 +38,24 @@ export default {
     }
   },
   methods: {
-    sendForm() {
-      const userData = JSON.parse(JSON.stringify(this.v$.userData));
-      console.log(userData)
+    async sendForm() {
+      const isValid = await this.v$.userData.$validate()
+      if (isValid) {
+        const userData = JSON.stringify(this.userData);
+
+        // const response = await fetch('api-url', {
+        //   method: 'POST',
+        //   body: userData,
+        // });
+
+        this.$toast.show("Form has been sended successfully. Thank you!", {
+          type: "success",
+          position: 'top',
+          duration: 4000,
+          maxToasts: 1,
+          queue: false
+        });
+      }
     },
     updateValue(option: string) {
       //@ts-ignore
