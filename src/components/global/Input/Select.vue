@@ -1,13 +1,10 @@
 <script>
-import {caretDown} from "@/assets/images";
-
 export default {
-  props: ['value', 'placeholder', 'label'],
+  props: ['value', 'placeholder', 'label', 'colorSchema'],
   emits: ['updateValue'],
   data() {
     return {
       isActiveSelectMenu: false,
-      caretDown,
       optionList: [
         'Saving money on taxes',
         "Monetizing my tax credits",
@@ -35,22 +32,38 @@ export default {
   },
   beforeDestroy() {
     window.removeEventListener('click', this.close)
+  },
+  computed: {
+    styles() {
+      const baseColor = this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
+      const bgColor = this.$props.colorSchema === 'dark' ? 'white' : 'transparent'
+      const imgColor = this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
+
+      return {
+        outline: {outline: `1.5px solid ${baseColor}`},
+        text: {color: `${baseColor}`},
+        background: {background: `${bgColor}`},
+        imgColor,
+      }
+    },
   }
 }
 </script>
 
 <template>
-  <div class="input-wrapper select" @click="this.toggleDropdown">
+  <div class="input-wrapper select" @click="this.toggleDropdown" :style="styles.text">
     <p class="label">{{ label }}</p>
-    <div class="input-select">
+    <div class="input-select" :style="[styles.outline, styles.background]">
       <p class="placeholder">{{ value || placeholder }}</p>
-      <img :src="caretDown" alt="arrow" :style="{transform: isActiveSelectMenu ? 'rotate(180deg)' : 'rotate(0)' }">
+
+      <div class="arrow-container" :style="{transform: isActiveSelectMenu ? 'rotate(180deg)' : 'rotate(0)' }">
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M-2.18557e-07 0.5L5 5.5L10 0.5L-2.18557e-07 0.5Z" :fill="styles.imgColor"/>
+        </svg>
+      </div>
 
       <ul v-if="isActiveSelectMenu" class="options-menu">
-        <li v-for="option in optionList"
-            @click="itemHandler(option)"
-            :style="{backgroundColor: value === option ? '#E6F0ED' : 'none' }"
-        >
+        <li v-for="option in optionList" @click="itemHandler(option)" :style="{backgroundColor: value === option ? '#E6F0ED' : 'none' }">
           {{ option }}
         </li>
       </ul>
@@ -60,7 +73,7 @@ export default {
 
 <style scoped>
   .input-wrapper {
-    @apply select-none cursor-pointer
+    @apply select-none cursor-pointer flex flex-col justify-between
   }
 
   .input-wrapper .label {
@@ -68,11 +81,13 @@ export default {
   }
 
   .input-wrapper .input-select {
-    @apply w-full rounded-xl bg-white text-dark flex flex-row items-center justify-between relative pr-[18px];
+    @apply w-full rounded-xl flex flex-row grow items-center justify-between relative
+    pr-[18px] pl-3 py-2
+    sm-l:py-[4.5px];
   }
 
   .input-wrapper .input-select .placeholder {
-    @apply pl-3 py-[4.5px] whitespace-nowrap overflow-hidden text-dark
+    @apply whitespace-nowrap overflow-hidden
   }
 
   .options-menu {
@@ -88,7 +103,7 @@ export default {
     @apply bg-light-green cursor-pointer;
   }
 
-  .input-wrapper .input-select img {
+  .input-wrapper .input-select .arrow-container {
     @apply w-3 duration-300 ml-2
   }
 </style>

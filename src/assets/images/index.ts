@@ -2,9 +2,8 @@
 import logo from "./logo.svg"
 import chevron from "./chevron.svg"
 import close from "./close.svg"
-import caretDown from "./caret-down.svg"
 
-export {logo, chevron, close, caretDown}
+export {logo, chevron, close}
 
 // Home page
 import hero from "./home/hero.svg"

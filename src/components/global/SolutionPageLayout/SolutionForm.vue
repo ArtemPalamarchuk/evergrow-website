@@ -1,61 +1,15 @@
 <script lang="ts">
-import BaseInput from "@/components/global/Input/BaseInput.vue";
-import Select from "@/components/global/Input/Select.vue";
-import TextArea from "@/components/global/Input/TextArea.vue";
-import CheckBox from "@/components/global/Input/Checkbox.vue";
-import Button from "@/components/global/Button.vue";
 import type {PropType} from "vue";
 import type {IForm} from "@/types";
-import {useVuelidate} from '@vuelidate/core'
-import {required, email} from '@vuelidate/validators'
+import Form from "@/components/global/Form.vue";
 
 export default {
-  components: {BaseInput, Select, TextArea, CheckBox, Button},
+  components: {Form},
   props: {
     formContent: {
       type: Object as PropType<IForm>,
     },
   },
-  setup() {
-    return {v$: useVuelidate()}
-  },
-  data() {
-    return {
-      userData: {
-        name: "",
-        email: "",
-        organization: "",
-        interested: "",
-        message: "",
-      },
-    }
-  },
-  validations() {
-    return {
-      userData: {
-        name: {required, $autoDirty: true},
-        email: {required, email, $autoDirty: true},
-      },
-    }
-  },
-  methods: {
-    sendForm() {
-      const userData = JSON.parse(JSON.stringify(this.v$.userData));
-      console.log(userData)
-    },
-    updateValue(option: string) {
-      //@ts-ignore
-      this.userData.interested = option
-    },
-  },
-  computed: {
-    errMessages() {
-      return {
-        name: this.v$.userData.name.$dirty ? this.v$.userData.name.$silentErrors[0]?.$message || "" : "",
-        email: this.v$.userData.email.$dirty ? this.v$.userData.email.$silentErrors[0]?.$message || "" : "",
-      }
-    }
-  }
 }
 </script>
 
@@ -66,21 +20,7 @@ export default {
         <h2 class="text-white">{{ formContent.heading }}</h2>
         <p class="text-white">{{ formContent.text }}</p>
       </div>
-      <form class="contact-form">
-        <div class="text-fields">
-          <base-input outline-color="white" :err-msg="errMessages.name" v-model="userData.name" label="Name" name="name"/>
-          <base-input outline-color="white" :err-msg="errMessages.email" v-model="userData.email" label="Email address" name="email"/>
-          <base-input outline-color="white" v-model="userData.organization" label="Organization" name="organization"/>
-          <Select
-            :value="userData.interested"
-            placeholder="Please Select"
-            label="I am interested in"
-            @updateValue="updateValue"
-          />
-          <text-area v-model="userData.message" label="Message" name="message"></text-area>
-        </div>
-        <Button @click.prevent="sendForm" :text="formContent.buttonText"/>
-      </form>
+      <Form colorSchema="light"/>
     </div>
   </section>
 </template>
@@ -103,37 +43,6 @@ export default {
 
   .container-form-wrapper p {
     @apply text-sm-p sm:text-md-p;
-  }
-
-  .contact-form {
-    @apply w-full
-  }
-
-  .contact-form .text-fields {
-    @apply grid grid-cols-1 gap-x-6 gap-y-2
-    sm-l:grid-cols-2
-  }
-
-  .contact-form .text-fields .input-wrapper input {
-    @apply py-2.5
-  }
-
-  .contact-form .input-wrapper.select {
-    @apply text-white
-  }
-
-  .contact-form .input-wrapper .input-select {
-    @apply text-white outline-[1.5px] outline outline-white py-[3px]
-  }
-
-  .contact-form .textarea {
-    @apply col-start-1 col-end-2
-    sm-l:col-start-1 sm-l:col-end-3 sm-l:row-start-3 sm-l:row-end-3;
-  }
-
-  .contact-form button {
-    @apply bg-white text-secondary ml-auto mt-6 px-9
-    sm-l:px-10
   }
 </style>
 

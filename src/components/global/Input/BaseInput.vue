@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 
 export default {
   props: {
@@ -9,7 +9,9 @@ export default {
     },
     modelValue: String,
     placeholder: String,
-    outlineColor: String,
+    colorSchema: {
+      type: String
+    },
     errMsg: {
       type: String,
       default: ''
@@ -17,20 +19,25 @@ export default {
   },
   emits: ['update:modelValue'],
   computed: {
-    outline() {
+    styles() {
+      const baseColor = this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
+      const bgColor = this.$props.colorSchema === 'dark' ? 'white' : 'transparent'
+
       return {
-        style: this.errMsg ? {outline: '1.5px solid #BC0017'} : {outline: `1.5px solid ${this.$props.outlineColor}`}
+        outline: this.errMsg ? {outline: '1.5px solid #BC0017'} : {outline: `1.5px solid ${baseColor}`},
+        text: {color: `${baseColor}`},
+        background: {background: `${bgColor}`}
       }
-    }
+    },
   }
 }
 </script>
 
 <template>
-  <div class="input-wrapper input">
+  <div class="input-wrapper input" :style="styles.text">
     <label :for="name">{{ label }}</label>
     <input
-      :style="outline.style"
+      :style="[styles.outline, styles.background]"
       v-model="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
       :name="name"
@@ -42,11 +49,16 @@ export default {
 
 <style scoped>
   .input-wrapper {
-    @apply flex flex-col text-white
+    @apply flex flex-col
   }
 
   input {
-    @apply h-full p-2 bg-transparent rounded-xl
+    @apply py-2 px-3 bg-transparent rounded-xl
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
   }
 
   label {
