@@ -32,7 +32,7 @@ const textClr = `text-${textColor}`
       <p v-if="secondaryText">{{ secondaryText }}</p>
       <slot name="button"/>
     </div>
-    <img class="object-cover max-h-[550px] lg:max-h-full lg:w-1/2" :src="img" alt="image">
+    <img class="object-cover max-h-[450px] lg:max-h-full lg:w-1/2" :src="img" alt="image">
   </section>
 </template>
 

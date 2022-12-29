@@ -12,18 +12,18 @@ import finExtra from "./home/resources/Finextra.svg"
 import techCrunch from "./home/resources/TechCrunch.svg"
 import impactAlpha from "./home/resources/ImpactAlpha.svg"
 
-import netZero from "./home/advantages/net-zero.png"
-import corporateFinance from "./home/advantages/corporate-finance.png"
-import sponsors from "./home/advantages/sponsors.png"
-import banks from "./home/advantages/banks.png"
-import approach from "./home/approach.png"
+import netZero from "./home/advantages/net-zero.jpg"
+import corporateFinance from "./home/advantages/corporate-finance.jpg"
+import sponsors from "./home/advantages/sponsors.jpg"
+import banks from "./home/advantages/banks.jpg"
+import approach from "./home/approach.jpeg"
 
 export {hero}
 export {finExtra, techCrunch, impactAlpha}
 export {netZero, corporateFinance, sponsors, banks, approach}
 
 // About page
-import francisco from "./about/description/francisco.png"
+import francisco from "./about/description/francisco.jpeg"
 
 import congruent from "./about/investors/congruent.svg"
 import firstRound from "./about/investors/firstRound.svg"
@@ -31,15 +31,15 @@ import garuda from "./about/investors/garuda.svg"
 import journey from "./about/investors/journey.svg"
 import xyz from "./about/investors/xyz.svg"
 
-import person1 from "./about/team/person1.png"
-import person2 from "./about/team/person2.png"
-import person3 from "./about/team/person3.png"
-import person4 from "./about/team/person4.png"
-import person5 from "./about/team/person5.png"
-import person6 from "./about/team/person6.png"
-import person7 from "./about/team/person7.png"
+import person1 from "./about/team/person1.jpg"
+import person2 from "./about/team/person2.jpg"
+import person3 from "./about/team/person3.jpg"
+import person4 from "./about/team/person4.jpg"
+import person5 from "./about/team/person5.jpg"
+import person6 from "./about/team/person6.jpg"
+import person7 from "./about/team/person7.jpg"
 
-import joinUs from "./about/joinUs.png"
+import joinUs from "./about/joinUs.jpeg"
 import linkedIn from "./about/LinkedIn.svg"
 
 export {francisco}
@@ -48,10 +48,10 @@ export {person1, person2, person3, person4, person5, person6, person7}
 export {joinUs, linkedIn}
 
 // Solution pages (taxes, corporate, sponsors, institutions)
-import snow from "./solutions/heros/snow.png"
-import windmills from "./solutions/heros/windmills.png"
-import batteries from "./solutions/heros/batteries.png"
-import batteries2 from "./solutions/heros/battaries2.png"
+import snow from "./solutions/heros/snow.jpeg"
+import windmills from "./solutions/heros/windmills.jpeg"
+import batteries from "./solutions/heros/batteries.jpeg"
+import batteries2 from "./solutions/heros/battaries2.jpeg"
 
 import construction from "./solutions/construction.svg"
 import bank from "./solutions/bank.svg"
@@ -66,6 +66,6 @@ export {snow, windmills, batteries, batteries2}
 export {construction, bank, solarPower, document, cash, plant, shield, work}
 
 // Contact Us page
-import formWindmills from "./form-windmill.png"
+import formWindmills from "./contact/form-windmill.jpeg"
 
 export {formWindmills}

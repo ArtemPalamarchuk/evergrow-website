@@ -18,7 +18,7 @@ export default {
 <template>
   <section class="flex flex-col md:flex-row">
     <div class="relative lg:max-h-full md:w-1/2">
-      <img class="object-cover max-h-[442px] md:max-h-[662px] w-full" :src="formWindmills" alt="image">
+      <img class="object-cover max-h-[442px] md:max-h-[562px] w-full" :src="formWindmills" alt="image">
       <div class="text-white absolute -translate-y-1/2 left-4 top-1/2 w-[90%] lg:left-[60px]">
         <h2 class="text-sm-h-mob sm:text-lg-h mb-4">{{ form.heading }}</h2>
         <p class="text-sm-p sm:text-lg-p">{{ form.text }}</p>
