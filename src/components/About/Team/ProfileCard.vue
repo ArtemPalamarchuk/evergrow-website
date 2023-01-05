@@ -13,7 +13,7 @@ const {img, title, text, link} = defineProps<CardProps>()
 
 <template>
   <div class="card w-fit">
-    <img :src="img" alt="card" class="rounded-t-[2rem]">
+    <img :src="img" alt="card" class="rounded-t-[2rem] max-h-[350px]">
     <div class="content">
       <div class="text-container">
         <h3>{{ title }}</h3>

@@ -16,7 +16,7 @@ import netZero from "./home/advantages/net-zero.jpg"
 import corporateFinance from "./home/advantages/corporate-finance.jpg"
 import sponsors from "./home/advantages/sponsors.jpg"
 import banks from "./home/advantages/banks.jpg"
-import approach from "./home/approach.jpeg"
+import approach from "./home/approach.jpg"
 
 export {hero}
 export {finExtra, techCrunch, impactAlpha}
@@ -31,24 +31,24 @@ import garuda from "./about/investors/garuda.svg"
 import journey from "./about/investors/journey.svg"
 import xyz from "./about/investors/xyz.svg"
 
-import person1 from "./about/team/person1.jpg"
-import person2 from "./about/team/person2.jpg"
-import person3 from "./about/team/person3.jpg"
-import person4 from "./about/team/person4.jpg"
-import person5 from "./about/team/person5.jpg"
-import person6 from "./about/team/person6.jpg"
-import person7 from "./about/team/person7.jpg"
+import James from "./about/team/James.jpg"
+import Cassandra from "./about/team/Cass.jpg"
+import Charles from "./about/team/Charles.jpg"
+import Zoe from "./about/team/Zoe.jpg"
+import Arun from "./about/team/Arun.jpg"
+import Neal from "./about/team/Neal.jpg"
+import Marrissa from "./about/team/Marissa.jpg"
 
-import joinUs from "./about/joinUs.jpeg"
+import joinUs from "./about/joinUs.jpg"
 import linkedIn from "./about/LinkedIn.svg"
 
 export {francisco}
 export {congruent, firstRound, garuda, journey, xyz}
-export {person1, person2, person3, person4, person5, person6, person7}
+export {James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa}
 export {joinUs, linkedIn}
 
 // Solution pages (taxes, corporate, sponsors, institutions)
-import snow from "./solutions/heros/snow.jpeg"
+import snow from "./solutions/heros/snow.jpg"
 import windmills from "./solutions/heros/windmills.jpeg"
 import batteries from "./solutions/heros/batteries.jpeg"
 import batteries2 from "./solutions/heros/battaries2.jpeg"
@@ -66,6 +66,6 @@ export {snow, windmills, batteries, batteries2}
 export {construction, bank, solarPower, document, cash, plant, shield, work}
 
 // Contact Us page
-import formWindmills from "./contact/form-windmill.jpeg"
+import formWindmills from "./contact/form-windmill.jpg"
 
 export {formWindmills}

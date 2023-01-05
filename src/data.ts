@@ -1,7 +1,7 @@
 // Main page: cards
 import {banks, corporateFinance, finExtra, impactAlpha, netZero, sponsors, techCrunch} from "@/assets/images";
 // About page: team cards
-import {person1, person2, person3, person4, person5, person6, person7} from "@/assets/images";
+import {James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa} from "@/assets/images";
 // Solution pages lists
 import {construction, bank, solarPower, document, cash, plant, shield, work} from "@/assets/images";
 // Solution pages heros
@@ -101,13 +101,13 @@ export const investorsContent = [
 export const teamContent = {
   heading: "Our team",
   team: [
-    {img: person1, title: 'James Richards', text: 'CEO', link: "https://www.linkedin.com/in/jpr2120/"},
-    {img: person2, title: 'Cassandra Xia', text: 'Head of Engineering', link: "https://www.linkedin.com/in/cassandraxia/"},
-    {img: person3, title: 'Charles Stone', text: 'Strategic Finance Lead', link: "https://www.linkedin.com/in/charlesstone92/"},
-    {img: person4, title: 'Zoe Savellos', text: 'Chief of Staff', link: "https://www.linkedin.com/in/zoe-savellos-77a11a108/"},
-    {img: person5, title: 'Arun Prasad', text: 'Staff Software Engineer', link: "https://www.linkedin.com/in/arun-k-prasad"},
-    {img: person6, title: 'Neal Donnelly', text: 'Business Development Lead', link: "https://www.linkedin.com/in/neal-donnelly-2633a71b/"},
-    {img: person7, title: 'Marrissa His', text: 'Executive Business Partner', link: "https://www.linkedin.com/in/marrissahis/"},
+    {img: James, title: 'James Richards', text: 'CEO', link: "https://www.linkedin.com/in/jpr2120/"},
+    {img: Cassandra, title: 'Cassandra Xia', text: 'Head of Engineering', link: "https://www.linkedin.com/in/cassandraxia/"},
+    {img: Charles, title: 'Charles Stone', text: 'Strategic Finance Lead', link: "https://www.linkedin.com/in/charlesstone92/"},
+    {img: Zoe, title: 'Zoe Savellos', text: 'Chief of Staff', link: "https://www.linkedin.com/in/zoe-savellos-77a11a108/"},
+    {img: Arun, title: 'Arun Prasad', text: 'Staff Software Engineer', link: "https://www.linkedin.com/in/arun-k-prasad"},
+    {img: Neal, title: 'Neal Donnelly', text: 'Business Development Lead', link: "https://www.linkedin.com/in/neal-donnelly-2633a71b/"},
+    {img: Marrissa, title: 'Marrissa His', text: 'Executive Business Partner', link: "https://www.linkedin.com/in/marrissahis/"},
   ]
 }
 
