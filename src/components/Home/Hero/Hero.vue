@@ -52,7 +52,8 @@ const {heading, subHeading, text, buttonTitle} = heroContent
   }
 
   .text-content button {
-    @apply bg-secondary py-[13px] px-[56px]
+    @apply bg-secondary  px-10 py-2.5
+    sm-l:px-[56px]
   }
 
   .img-wrap {

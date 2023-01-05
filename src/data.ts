@@ -1,5 +1,5 @@
 // Main page: cards
-import {banks, corporateFinance, netZero, sponsors} from "@/assets/images";
+import {banks, corporateFinance, finExtra, impactAlpha, netZero, sponsors, techCrunch} from "@/assets/images";
 // About page: team cards
 import {person1, person2, person3, person4, person5, person6, person7} from "@/assets/images";
 // Solution pages lists
@@ -19,6 +19,11 @@ export const heroContent = {
 }
 export const resourcesContent = {
   heading: `As seen on:`,
+  resources: [
+    {source: finExtra},
+    {source: techCrunch},
+    {source: impactAlpha},
+  ]
 }
 export const advantagesContent = {
   heading: "Big banks use green tax credits to save billions every year. Now you can too.",

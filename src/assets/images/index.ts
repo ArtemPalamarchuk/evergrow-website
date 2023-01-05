@@ -23,7 +23,7 @@ export {finExtra, techCrunch, impactAlpha}
 export {netZero, corporateFinance, sponsors, banks, approach}
 
 // About page
-import francisco from "./about/description/francisco.jpeg"
+import francisco from "./about/description/francisco.jpg"
 
 import congruent from "./about/investors/congruent.svg"
 import firstRound from "./about/investors/firstRound.svg"

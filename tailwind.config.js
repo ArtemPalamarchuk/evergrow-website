@@ -55,6 +55,7 @@ module.exports = {
     screens: {
       'sm': '640px', // tablet
       'sm-l': '768px', // tablet-large
+      'tablet-portrait': '800px', // tablet portrait - todo fix
       'md': '1024px', // laptop
       'lg': '1280px', // desktop
     }

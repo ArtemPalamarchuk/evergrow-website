@@ -52,6 +52,7 @@ export default {
 
 <style scoped>
   button {
-    @apply bg-secondary w-fit mt-1.5 md:mt-5
+    @apply bg-secondary w-fit mt-1.5 md:mt-5 sm-l:py-[13px] px-10 py-2.5
+    sm-l:px-[56px]
   }
 </style>
