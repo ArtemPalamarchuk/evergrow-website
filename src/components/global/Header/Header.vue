@@ -67,9 +67,7 @@ export default {
 
 <style scoped>
   header {
-    @apply h-[72px] flex items-center px-4 pt-[30px] pb-[14px]
-    sm:mb-[9px] sm:h-[58px] sm:px-6 sm:py-0
-    md:mb-[14px]
+    @apply h-[74px] flex items-center px-4 sm:px-6
   }
 
   .logo {

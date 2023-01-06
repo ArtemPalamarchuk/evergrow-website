@@ -14,9 +14,9 @@ import { logo } from "@/assets/images";
       <div class="solutions-wrap">
         <p class="title">Solutions</p>
         <ul>
-          <li><router-link to="/taxes">For corporate tax &amp; treasury</router-link></li>
-          <li><router-link to="/corporate-net-zero">For corporate net-zero</router-link></li>
-          <li><router-link to="/contractors">For financial institutions</router-link></li>
+          <li><router-link to="/tax-and-treasury">For corporate tax &amp; treasury</router-link></li>
+          <li><router-link to="/net-zero">For corporate net-zero</router-link></li>
+          <li><router-link to="/banks">For financial institutions</router-link></li>
           <li><router-link to="/sponsors">For project sponsors</router-link></li>
         </ul>
       </div>
@@ -48,7 +48,7 @@ import { logo } from "@/assets/images";
 
 <style scoped>
   footer {
-    @apply bg-beige text-dark px-4 pt-10 pb-8 w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center
+    @apply grow bg-beige text-dark px-4 pt-10 pb-8 w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center
     sm:py-8
     md:px-[120px] md:py-[56px]
   }

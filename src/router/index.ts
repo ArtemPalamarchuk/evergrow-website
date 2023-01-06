@@ -21,7 +21,7 @@ const router = createRouter({
       }
     },
     {
-      path: '/taxes',
+      path: '/tax-and-treasury',
       name: 'taxes',
       component: () => import('../pages/solutionPages/Taxes.vue'),
       meta: {
@@ -29,11 +29,11 @@ const router = createRouter({
       }
     },
     {
-      path: '/corporate-net-zero',
-      name: 'corporate-net-zero',
+      path: '/net-zero',
+      name: 'net-zero',
       component: () => import('../pages/solutionPages/Corporate.vue'),
       meta: {
-        title: 'Corporate net-zero'
+        title: 'Net zero'
       }
     },
     {
@@ -45,11 +45,11 @@ const router = createRouter({
       }
     },
     {
-      path: '/contractors',
-      name: 'contractors',
-      component: () => import('../pages/solutionPages/Contractors.vue'),
+      path: '/banks',
+      name: 'banks',
+      component: () => import('../pages/solutionPages/Banks.vue'),
       meta: {
-        title: 'Contractors'
+        title: 'Banks'
       }
     },
     {

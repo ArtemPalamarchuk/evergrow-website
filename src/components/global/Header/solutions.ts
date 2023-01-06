@@ -5,7 +5,7 @@ import construction from "@/assets/images/solutions/menu/construction.svg";
 
 export const solutionsMenu = [
   {
-    path: "/taxes",
+    path: "/tax-and-treasury",
     title: "Corporate tax & treasury",
     img: office,
   },
@@ -15,12 +15,12 @@ export const solutionsMenu = [
     img: construction,
   },
   {
-    path: "/corporate-net-zero",
+    path: "/net-zero",
     title: "Corporate net-zero",
     img: solarPower,
   },
   {
-    path: "/contractors",
+    path: "/banks",
     title: "Banks & financial institutions",
     img: bank,
   },

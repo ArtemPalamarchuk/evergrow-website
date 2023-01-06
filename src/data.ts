@@ -36,19 +36,19 @@ export const advantagesContent = {
       title: "Corporate tax & treasury",
       text: 'Lower your tax bill, grow after-tax cash flow, and earn high risk-adjusted IRRs on cash in treasury.',
       img: netZero,
-      path: '/taxes',
+      path: '/tax-and-treasury',
     },
     {
       title: "Corporate net-zero",
       text: 'Provide mission-critical funding to highly additional projects in the United States while also turning a profit.',
       img: corporateFinance,
-      path: '/corporate-net-zero',
+      path: '/net-zero',
     },
     {
       title: "Banks & financial institutions",
       text: 'Invest in high-yield, low-risk tax credits to bolster both your financial returns and ESG impact.',
       img: banks,
-      path: '/contractors',
+      path: '/banks',
     },
     {
       title: "Project developers & sponsors",
@@ -250,8 +250,8 @@ export const sponsorsPageContent: ISolutionPageLayout = {
     buttonText: 'Get in touch'
   },
 }
-// Contractors page
-export const contractorsPageContent: ISolutionPageLayout = {
+// Banks page
+export const banksPageContent: ISolutionPageLayout = {
   textImage: {
     heading: `A green investment strategy that you can bank on`,
     text: `Evergrow is the safest and easiest way to buy green tax credits. Earn high returns by investing in our 

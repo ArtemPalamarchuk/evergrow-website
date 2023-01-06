@@ -28,8 +28,12 @@ export default {
       <div class="sidebar-content">
         <div class="solutions-container" @click="this.$emit('toggleSolutionsMenu')">
           <a>Solutions</a>
-          <img class="duration-300" :src="chevron" alt="chevron"
-               :style="{transform: isActiveSolutionsMenu ? 'rotate(180deg)' : 'rotate(0)' }">
+          <img
+            class="duration-300"
+            :src="chevron"
+            alt="chevron"
+            :style="{transform: isActiveSolutionsMenu ? 'rotate(180deg)' : 'rotate(0)' }"
+          >
         </div>
 
         <ul class="sidebar-solutions" v-if="isActiveSolutionsMenu">
@@ -64,10 +68,10 @@ export default {
   }
 
   .top-bar {
-    @apply flex items-center justify-between pt-8 px-4 pb-4
+    @apply h-[74px] flex items-center justify-between px-4
   }
 
-  .top-bar img{
+  .top-bar img {
     @apply cursor-pointer
   }
 
