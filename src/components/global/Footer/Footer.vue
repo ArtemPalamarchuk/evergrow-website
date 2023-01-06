@@ -14,10 +14,10 @@ import { logo } from "@/assets/images";
       <div class="solutions-wrap">
         <p class="title">Solutions</p>
         <ul>
-          <li><router-link to="/sponsors">For project sponsors</router-link></li>
+          <li><router-link to="/taxes">For corporate tax &amp; treasury</router-link></li>
           <li><router-link to="/corporate-net-zero">For corporate net-zero</router-link></li>
-          <li><router-link to="/contractors">For EPCs and contractors</router-link></li>
-          <li><router-link to="/taxes">For tax equity</router-link></li>
+          <li><router-link to="/contractors">For financial institutions</router-link></li>
+          <li><router-link to="/sponsors">For project sponsors</router-link></li>
         </ul>
       </div>
       <div class="company">
