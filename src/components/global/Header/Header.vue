@@ -20,11 +20,9 @@ export default {
   methods: {
     openMenu() {
       this.isActiveSidebarMenu = !this.isActiveSidebarMenu
-      this.app.style.height = '100vh'
     },
     closeMenu() {
       this.isActiveSidebarMenu = false
-      this.app.style.height = 'auto'
     },
     toggleSolutionsMenu() {
       this.isActiveSolutionsMenu = !this.isActiveSolutionsMenu
@@ -67,7 +65,7 @@ export default {
 
 <style scoped>
   header {
-    @apply h-[74px] flex items-center px-4 sm:px-6
+    @apply h-[74px] flex items-center px-4 sm:px-6 shrink-0
   }
 
   .logo {
