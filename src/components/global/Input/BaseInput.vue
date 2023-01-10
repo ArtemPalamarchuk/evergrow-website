@@ -7,6 +7,9 @@ export default {
     type: {
       default: 'text',
     },
+    disabled: {
+      default: false
+    },
     modelValue: String,
     placeholder: String,
     colorSchema: {
@@ -42,6 +45,7 @@ export default {
       @input="$emit('update:modelValue', $event.target.value)"
       :name="name"
       :placeholder="placeholder"
+      :disabled="disabled"
     >
     <span v-if="errMsg" class="error-text">{{ errMsg }}</span>
   </div>

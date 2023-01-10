@@ -1,6 +1,16 @@
 <script>
 export default {
-  props: ['value', 'placeholder', 'label', 'colorSchema'],
+  props: {
+    value: String,
+    placeholder: String,
+    label: String,
+    colorSchema: {
+      type: String
+    },
+    disabled: {
+      default: false
+    },
+  },
   emits: ['updateValue'],
   data() {
     return {
@@ -38,22 +48,28 @@ export default {
       const baseColor = this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
       const bgColor = this.$props.colorSchema === 'dark' ? 'white' : 'transparent'
       const imgColor = this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
+      const isDisabled = this.$props.disabled ? {pointerEvents: 'none'} : {pointerEvents: 'auto'}
 
       return {
         outline: {outline: `1.5px solid ${baseColor}`},
         text: {color: `${baseColor}`},
         background: {background: `${bgColor}`},
         imgColor,
+        isDisabled
       }
     },
-  }
+  },
 }
 </script>
 
 <template>
-  <div class="input-wrapper select" @click="this.toggleDropdown" :style="styles.text">
+  <div class="input-wrapper select" :style="styles.text">
     <p class="label">{{ label }}</p>
-    <div class="input-select" :style="[styles.outline, styles.background]">
+    <div
+      class="input-select"
+      @click="this.toggleDropdown"
+      :style="[styles.outline, styles.background, styles.isDisabled]"
+    >
       <p class="placeholder">{{ value || placeholder }}</p>
 
       <div class="arrow-container" :style="{transform: isActiveSelectMenu ? 'rotate(180deg)' : 'rotate(0)' }">

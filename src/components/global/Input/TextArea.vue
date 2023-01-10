@@ -9,6 +9,9 @@ export default {
     colorSchema: {
       type: String
     },
+    disabled: {
+      default: false
+    },
   },
   emits: ['update:modelValue'],
   computed:{
@@ -36,6 +39,7 @@ export default {
       @input="$emit('update:modelValue', $event.target.value)"
       :name="name"
       :placeholder="placeholder"
+      :disabled="disabled"
     />
   </div>
 </template>

@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 import BaseInput from "./Input/BaseInput.vue";
 import Select from "./Input/Select.vue";
 import TextArea from "./Input/TextArea.vue";
@@ -6,13 +6,19 @@ import CheckBox from "./Input/Checkbox.vue";
 import Button from "./Button.vue";
 import {useVuelidate} from "@vuelidate/core";
 import {email, required} from "@vuelidate/validators";
+import emailjs from 'emailjs-com';
+import Spinner from "@/components/global/Spinner.vue";
+
+const SERVICE_ID = 'service_ds785bv'
+const TEMPLATE_ID = 'template_oqhzl0u'
+const USER_ID = 'tiK3KBLCmpXk-1F1z'
 
 export default {
-  components: {BaseInput, Select, TextArea, CheckBox, Button},
+  components: {Spinner, BaseInput, Select, TextArea, CheckBox, Button},
   props: {
     colorSchema: {
       type: String
-    }
+    },
   },
   setup() {
     return {v$: useVuelidate()}
@@ -26,7 +32,9 @@ export default {
         interested: "",
         message: "",
       },
-      isFormSended: false
+      formHeight: 0,
+      formIsSended: false,
+      isLoading: false
     }
   },
   validations() {
@@ -40,27 +48,42 @@ export default {
   methods: {
     async sendForm() {
       const isValid = await this.v$.userData.$validate()
+
       if (isValid) {
-        const userData = JSON.stringify(this.userData);
+        const userData = this.userData;
 
-        // const response = await fetch('api-url', {
-        //   method: 'POST',
-        //   body: userData,
-        // });
+        try {
+          this.setIsLoading(true)
+          await emailjs.send(SERVICE_ID, TEMPLATE_ID, userData, USER_ID)
+          this.setSendedForm(true)
+        } catch (error) {
+          console.log({error})
+        } finally {
+          this.setDefaultFormState()
+        }
 
-        this.$toast.show("Form has been sended successfully. Thank you!", {
-          type: "success",
-          position: 'top',
-          duration: 4000,
-          maxToasts: 1,
-          queue: false
-        });
       }
     },
-    updateValue(option: string) {
-      //@ts-ignore
+
+    setDefaultFormState() {
+      this.setIsLoading(false)
+      this.userData = {
+        name: "",
+        email: "",
+        organization: "",
+        interested: "",
+        message: "",
+      }
+    },
+    updateValue(option) {
       this.userData.interested = option
     },
+    setSendedForm(bool) {
+      this.formIsSended = bool
+    },
+    setIsLoading(bool) {
+      this.isLoading = bool
+    }
   },
   computed: {
     errMessages() {
@@ -69,35 +92,98 @@ export default {
         email: this.v$.userData.email.$dirty ? this.v$.userData.email.$silentErrors[0]?.$message || "" : "",
       }
     },
-    btnStyle(){
+    styles() {
       const btnColor = this.$props.colorSchema === 'dark' ? 'white' : '#F1805F'
       const btnBgColor = this.$props.colorSchema === 'dark' ? '#F1805F' : 'white'
+      const textFieldsOpacity = this.isLoading ? 0.5 : 1
 
       return {
         color: `${btnColor}`,
-        background: `${btnBgColor}`
+        background: `${btnBgColor}`,
+        opacity: textFieldsOpacity
       }
     },
+    thankMsgStyle() {
+      return this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
+    },
+    getFormHeight() {
+      return this.formHeight + 'px'
+    }
   },
+  mounted() {
+    this.formHeight = this.$refs.form.clientHeight
+  }
 }
 </script>
 
 <template>
-  <form class="contact-form">
-    <div class="text-fields">
-      <base-input :colorSchema="this.$props.colorSchema" :err-msg="errMessages.name" v-model="userData.name" label="Name" name="name"/>
-      <base-input :colorSchema="this.$props.colorSchema" :err-msg="errMessages.email" v-model="userData.email" label="Email address" name="email"/>
-      <base-input :colorSchema="this.$props.colorSchema" v-model="userData.organization" label="Organization" name="organization"/>
-      <Select :colorSchema="this.$props.colorSchema" :value="userData.interested" placeholder="Please Select" label="I am interested in" @updateValue="updateValue"/>
-      <text-area :colorSchema="this.$props.colorSchema" v-model="userData.message" label="Message" name="message"></text-area>
+  <div
+    class="thank-container text-center flex flex-col p-10 justify-center items-center"
+    v-if="formIsSended"
+    :style="{height: getFormHeight, color: thankMsgStyle}"
+  >
+    <h2 class="text-sm-h-mob sm:text-lg-h mb-4">Thank you for your message!</h2>
+    <p class="text-sm-p sm:text-lg-p">We look forward to working together and will be in touch soon</p>
+  </div>
+  <form v-else class="contact-form" ref="form">
+    <div :style="{opacity: styles.opacity}" class="text-fields">
+      <base-input
+        :colorSchema="this.$props.colorSchema"
+        :err-msg="errMessages.name"
+        v-model="userData.name"
+        label="Name"
+        name="name"
+        :disabled="isLoading"
+      />
+      <base-input
+        :colorSchema="this.$props.colorSchema"
+        :err-msg="errMessages.email"
+        v-model="userData.email"
+        label="Email address"
+        name="email"
+        :disabled="isLoading"
+      />
+      <base-input
+        :colorSchema="this.$props.colorSchema"
+        v-model="userData.organization"
+        label="Organization"
+        name="organization"
+        :disabled="isLoading"
+      />
+      <Select
+        :colorSchema="this.$props.colorSchema"
+        :value="userData.interested"
+        placeholder="Please Select"
+        label="I am interested in"
+        @updateValue="updateValue"
+        :disabled="isLoading"
+      />
+      <text-area
+        :colorSchema="this.$props.colorSchema"
+        v-model="userData.message"
+        label="Message"
+        name="message"
+        :disabled="isLoading"
+      />
     </div>
-    <Button :style="btnStyle" @click.prevent="sendForm" text="Get in touch"/>
+    <div v-if="isLoading" class="spinner-container">
+      <spinner/>
+    </div>
+    <Button :disabled="isLoading" :style="styles" @click.prevent="sendForm" text="Get in touch"/>
   </form>
 </template>
 
 <style scoped>
+  .thank-container h2 {
+    @apply whitespace-pre-line
+  }
+
+  .spinner-container {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+
   .contact-form {
-    @apply w-full
+    @apply w-full relative
   }
 
   .contact-form .text-fields {
