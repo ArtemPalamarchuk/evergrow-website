@@ -6,12 +6,15 @@ import CheckBox from "./Input/Checkbox.vue";
 import Button from "./Button.vue";
 import {useVuelidate} from "@vuelidate/core";
 import {email, required} from "@vuelidate/validators";
-import emailjs from 'emailjs-com';
 import Spinner from "@/components/global/Spinner.vue";
 
-const SERVICE_ID = 'service_ds785bv'
-const TEMPLATE_ID = 'template_oqhzl0u'
-const USER_ID = 'tiK3KBLCmpXk-1F1z'
+const default_form_data = {
+  name: "",
+  email: "",
+  organization: "",
+  'interested in': "",
+  message: "",
+}
 
 export default {
   components: {Spinner, BaseInput, Select, TextArea, CheckBox, Button},
@@ -25,13 +28,7 @@ export default {
   },
   data() {
     return {
-      userData: {
-        name: "",
-        email: "",
-        organization: "",
-        interested: "",
-        message: "",
-      },
+      userData: {...default_form_data},
       formHeight: 0,
       formIsSended: false,
       isLoading: false
@@ -50,11 +47,13 @@ export default {
       const isValid = await this.v$.userData.$validate()
 
       if (isValid) {
-        const userData = this.userData;
+        const userData = JSON.parse(JSON.stringify(this.userData))
 
         try {
           this.setIsLoading(true)
-          await emailjs.send(SERVICE_ID, TEMPLATE_ID, userData, USER_ID)
+
+          await this.axios.post('https://app.evergrow.com/email/', userData)
+
           this.setSendedForm(true)
         } catch (error) {
           console.log({error})
@@ -67,16 +66,10 @@ export default {
 
     setDefaultFormState() {
       this.setIsLoading(false)
-      this.userData = {
-        name: "",
-        email: "",
-        organization: "",
-        interested: "",
-        message: "",
-      }
+      this.userData = default_form_data
     },
     updateValue(option) {
-      this.userData.interested = option
+      this.userData['interested in'] = option
     },
     setSendedForm(bool) {
       this.formIsSended = bool
@@ -152,7 +145,7 @@ export default {
       />
       <Select
         :colorSchema="this.$props.colorSchema"
-        :value="userData.interested"
+        :value="userData['interested in']"
         placeholder="Please Select"
         label="I am interested in"
         @updateValue="updateValue"
