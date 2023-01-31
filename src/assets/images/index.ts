@@ -24,6 +24,7 @@ export {netZero, corporateFinance, sponsors, banks, approach}
 
 // About page
 import francisco from "./about/description/francisco.jpg"
+import francisco1 from "./about/description/francisco1.jpg"
 
 import congruent from "./about/investors/congruent.svg"
 import firstRound from "./about/investors/firstRound.svg"
@@ -42,10 +43,11 @@ import Marrissa from "./about/team/Marissa.jpg"
 import joinUs from "./about/joinUs.jpg"
 import linkedIn from "./about/LinkedIn.svg"
 
-export {francisco}
+export {francisco, francisco1}
 export {congruent, firstRound, garuda, journey, xyz}
 export {James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa}
 export {joinUs, linkedIn}
+export const about_page_imgs_preload = {francisco}
 
 // Solution pages (taxes, corporate, sponsors, institutions)
 import snow from "./solutions/heros/snow.jpg"

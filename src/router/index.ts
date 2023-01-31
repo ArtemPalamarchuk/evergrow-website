@@ -1,5 +1,13 @@
-import {createRouter, createWebHistory} from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../pages/Home.vue'
+// import { team } from "@/assets/images";
+//
+// function loadImage(imagesObject: Record<string, string>) {
+//   Object.keys(imagesObject).map((key, index) => {
+//     const img = new Image();
+//     img.src = imagesObject[key];
+//   });
+// }
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,7 +26,11 @@ const router = createRouter({
       component: () => import('../pages/About.vue'),
       meta: {
         title: 'About'
-      }
+      },
+      // async beforeEnter(to, from, next) {
+      //   await loadImage(team);
+      //   next()
+      // }
     },
     {
       path: '/tax-and-treasury',
@@ -62,7 +74,7 @@ const router = createRouter({
     },
   ],
   scrollBehavior() {
-    document.getElementById('app')!.scrollIntoView({ behavior: 'auto' });
+    document.getElementById('app')!.scrollIntoView({behavior: 'auto'});
   }
 })
 

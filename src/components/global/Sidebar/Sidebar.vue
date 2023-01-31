@@ -21,8 +21,8 @@ export default {
     <div class="overlay" @click="this.$emit('closeMenu')"/>
     <div class="sidebar-menu" :class="sidebarStyling">
       <div class="top-bar">
-        <img :src="logo" alt="logo" @click="this.$emit('navigate', '/')">
-        <img :src="close" alt="close" @click="this.$emit('closeMenu')">
+        <img :src="logo" alt="logo" @click="this.$emit('navigate', '/')" loading="lazy">
+        <img :src="close" alt="close" @click="this.$emit('closeMenu')" loading="lazy">
       </div>
       <div class="divider"/>
       <div class="sidebar-content">
@@ -38,7 +38,7 @@ export default {
 
         <ul class="sidebar-solutions" v-if="isActiveSolutionsMenu">
           <li v-for="{ path, title, img } in solutionsMenu" @click="this.$emit('navigate', path)">
-            <img :src="img" alt="page">
+            <img :src="img" alt="page" loading="lazy">
             <span>{{ title }}</span>
           </li>
         </ul>

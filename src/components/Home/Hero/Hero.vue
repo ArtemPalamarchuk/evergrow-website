@@ -16,7 +16,7 @@ const {heading, subHeading, text, buttonTitle} = heroContent
       <Button :text="buttonTitle" @click="router.push({path: '/contact-us'})"/>
     </div>
     <div class="img-wrap">
-      <img :src="hero" alt="hero">
+      <img :src="hero" alt="hero" loading="lazy">
     </div>
   </section>
 </template>

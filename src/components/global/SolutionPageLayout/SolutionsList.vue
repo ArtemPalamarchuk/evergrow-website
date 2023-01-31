@@ -14,7 +14,7 @@ export default {
 <template>
   <section class="solutions-list">
     <div class="solutions-item" v-for="{img, title, text} in list">
-      <img :src="img" alt="image">
+      <img :src="img" alt="image" loading="lazy">
       <div class="text-container">
         <h3>{{ title }}</h3>
         <p>{{ text }}</p>

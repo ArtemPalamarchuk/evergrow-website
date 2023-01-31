@@ -9,7 +9,7 @@ const {heading, resources} = resourcesContent
     <h2 class="title">{{ heading }}</h2>
     <div class="images-container">
       <div v-for="item in resources" class="image-container">
-        <img :src="item.source" :alt="item.source"/>
+        <img :src="item.source" :alt="item.source" loading="lazy"/>
       </div>
     </div>
   </section>
