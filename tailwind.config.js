@@ -15,9 +15,12 @@ module.exports = {
         "error": '#BC0017',
       },
       fontFamily: {
-        ["urbanist-m"]: "Urbanist-500",
-        ["urbanist-sb"]: "Urbanist-600",
-        ["urbanist-b"]: "Urbanist-700",
+        "urbanist": "Urbanist",
+      },
+      fontWeight: {
+        'urbanist-m': '500',
+        'urbanist-sb': '600',
+        'urbanist-b': '700',
       },
       fontSize: {
         // Headings
