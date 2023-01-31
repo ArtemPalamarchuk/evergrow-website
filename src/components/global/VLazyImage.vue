@@ -94,7 +94,6 @@ export default {
 
 <style>
 .v-lazy-image {
-  max-height: 100%;
   object-fit: cover;
   filter: blur(10px);
   transition: filter 0.7s;
