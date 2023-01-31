@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { francisco1 } from "@/assets/images";
+import VLazyImage from './VLazyImage.vue'
+
 interface TextImageProps {
   heading: string
   mainText: string
@@ -27,13 +30,18 @@ const textClr = `text-${textColor}`
 <template>
   <section class="w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center" :class="[background, textClr]">
     <div class="max-w-[1440px] flex tablet-portrait:flex-row m-auto" :class="styling">
-      <div class="text-content">
+      <div class="text-content tablet-portrait:w-1/2">
         <h2 class="text-sm-h mb-4 sm-l:text-md-h-tab md:text-lg-h">{{ heading }}</h2>
         <p>{{ mainText }}</p>
         <p v-if="secondaryText">{{ secondaryText }}</p>
         <slot name="button"/>
       </div>
-      <img class="object-cover max-h-[450px] tablet-portrait:max-h-full tablet-portrait:w-1/2" :src="img" alt="image" loading="lazy">
+      <v-lazy-image
+        class="max-h-[450px] tablet-portrait:max-h-full tablet-portrait:w-1/2"
+        :src="img"
+        :src-placeholder="francisco1"
+      />
+<!--      <img class="object-cover max-h-[450px] tablet-portrait:max-h-full tablet-portrait:w-1/2" :src="img" alt="image" loading="lazy">-->
     </div>
   </section>
 </template>
