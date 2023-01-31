@@ -42,13 +42,13 @@ export default {
   <nav class="nav-menu">
     <div class="solutions-container" @click="toggleDropdown">
       <a>Solutions</a>
-      <img :src="chevron" alt="chevron" :style="{transform: isActiveDDMenu ? 'rotate(180deg)' : 'rotate(0)' }">
+      <img :src="chevron" alt="chevron" :style="{transform: isActiveDDMenu ? 'rotate(180deg)' : 'rotate(0)' }" loading="lazy">
     </div>
     <Transition>
       <ul class="solutions-header" v-if="isActiveDDMenu">
         <li v-for="{ path, title, img } in solutionsMenu" @click="this.isActiveDDMenu = false">
           <router-link :to="path">
-            <img :src="img" alt="page">
+            <img :src="img" alt="page" loading="lazy">
             <span>{{ title }}</span>
           </router-link>
         </li>

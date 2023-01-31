@@ -7,7 +7,7 @@ import { logo } from "@/assets/images";
     <div class="info">
       <div class="evergrow">
         <router-link to="/">
-          <img :src="logo" alt="logo">
+          <img :src="logo" alt="logo" loading="lazy">
         </router-link>
         <p>© 2022 Evergrow Inc.</p>
       </div>

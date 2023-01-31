@@ -44,7 +44,7 @@ export default {
 <template>
   <header>
     <router-link to="/" class="logo">
-      <img :src="logo" alt="logo">
+      <img :src="logo" alt="logo" loading="lazy">
     </router-link>
     <div class="menu">
       <nav-menu/>

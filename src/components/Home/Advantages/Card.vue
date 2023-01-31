@@ -13,7 +13,7 @@ const {img, title, text, path} = defineProps<CardProps>()
 
 <template>
   <div class="card" @click="router.push({path})">
-    <img :src="img" alt="card">
+    <img :src="img" alt="card" loading="lazy">
     <div class="content">
       <div class="text-container">
         <h3>{{ title }}</h3>
