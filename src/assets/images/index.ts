@@ -47,6 +47,7 @@ export {francisco, francisco1}
 export {congruent, firstRound, garuda, journey, xyz}
 export {James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa}
 export {joinUs, linkedIn}
+export const about_page_imgs_preload = {francisco}
 
 // Solution pages (taxes, corporate, sponsors, institutions)
 import snow from "./solutions/heros/snow.jpg"
