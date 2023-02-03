@@ -2,25 +2,29 @@
 import logo from "./logo.svg"
 import chevron from "./chevron.svg"
 import close from "./close.svg"
+import arrow from "./arrow.svg"
 
-export {logo, chevron, close}
+export { logo, chevron, close, arrow }
 
-// Home page
-import hero from "./home/hero.svg"
+// Home page //
+import hero from "./home/hero/hero.png"
 
-import finExtra from "./home/resources/Finextra.svg"
-import techCrunch from "./home/resources/TechCrunch.svg"
-import impactAlpha from "./home/resources/ImpactAlpha.svg"
+import finExtra from "./home/asSeenOn/fin-extra.svg"
+import techCrunch from "./home/asSeenOn/tech-crunch.svg"
+import impactAlpha from "./home/asSeenOn/impact-alpha.svg"
+import ctvc from "./home/asSeenOn/ctvc.svg"
 
-import netZero from "./home/advantages/net-zero.jpg"
-import corporateFinance from "./home/advantages/corporate-finance.jpg"
-import sponsors from "./home/advantages/sponsors.jpg"
-import banks from "./home/advantages/banks.jpg"
-import approach from "./home/approach.jpg"
+import solar from "./home/advantages/solar.jpeg"
+import card from "./home/advantages/card-image-1.jpg"
+import card1 from "./home/advantages/card-image-2.jpg"
+import card2 from "./home/advantages/card-image-3.jpg"
 
-export {hero}
-export {finExtra, techCrunch, impactAlpha}
-export {netZero, corporateFinance, sponsors, banks, approach}
+import approach from "./home/approach/approach.svg"
+
+export { hero }
+export { finExtra, techCrunch, impactAlpha, ctvc }
+export { solar, card, card1, card2 }
+export { approach }
 
 // About page
 import francisco from "./about/description/francisco.jpg"
@@ -32,22 +36,22 @@ import garuda from "./about/investors/garuda.svg"
 import journey from "./about/investors/journey.svg"
 import xyz from "./about/investors/xyz.svg"
 
-import James from "./about/team/James.jpg"
-import Cassandra from "./about/team/Cass.jpg"
-import Charles from "./about/team/Charles.jpg"
-import Zoe from "./about/team/Zoe.jpg"
-import Arun from "./about/team/Arun.jpg"
-import Neal from "./about/team/Neal.jpg"
-import Marrissa from "./about/team/Marissa.jpg"
+import James from "./about/team/James.jpeg"
+import Cassandra from "./about/team/Cassandra.jpeg"
+import Charles from "./about/team/Charles.jpeg"
+import Zoe from "./about/team/Zoe.jpeg"
+import Arun from "./about/team/Arun.jpeg"
+import Neal from "./about/team/Neal.jpeg"
+import Marrissa from "./about/team/Marissa.jpeg"
+import Adam from "./about/team/Adam.jpeg"
 
 import joinUs from "./about/joinUs.jpg"
 import linkedIn from "./about/LinkedIn.svg"
 
-export {francisco, francisco1}
-export {congruent, firstRound, garuda, journey, xyz}
-export {James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa}
-export {joinUs, linkedIn}
-export const about_page_imgs_preload = {francisco}
+export { francisco, francisco1 }
+export { congruent, firstRound, garuda, journey, xyz }
+export { James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa, Adam }
+export { joinUs, linkedIn }
 
 // Solution pages (taxes, corporate, sponsors, institutions)
 import snow from "./solutions/heros/snow.jpg"
@@ -64,10 +68,10 @@ import plant from "./solutions/plant.svg"
 import shield from "./solutions/shield.svg"
 import work from "./solutions/work.svg"
 
-export {snow, windmills, batteries, batteries2}
-export {construction, bank, solarPower, document, cash, plant, shield, work}
+export { snow, windmills, batteries, batteries2 }
+export { construction, bank, solarPower, document, cash, plant, shield, work }
 
 // Contact Us page
 import formWindmills from "./contact/form-windmill.jpg"
 
-export {formWindmills}
+export { formWindmills }
