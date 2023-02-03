@@ -3,7 +3,7 @@ import Button from "@/components/global/Button.vue";
 import TextImage from "@/components/global/TextImage.vue";
 import SolutionsList from "@/components/global/SolutionPageLayout/SolutionsList.vue";
 import SolutionsForm from "@/components/global/SolutionPageLayout/SolutionForm.vue";
-import type {IForm, IList, ITextImage} from "@/types";
+import type {IList, ITextImage} from "@/types";
 import type {PropType} from "vue";
 import router from "@/router";
 
@@ -24,7 +24,7 @@ export default {
       required: true
     },
     form: {
-      type: Object as PropType<IForm>,
+      type: Object as PropType<ITextImage>,
       required: true
     },
   },

@@ -2,7 +2,7 @@ export interface ITextImage {
   heading: string,
   text: string,
   buttonText: string,
-  img: string,
+  img?: string,
 }
 
 export interface IListItem {
@@ -12,19 +12,12 @@ export interface IListItem {
 }
 export type IList = IListItem[]
 
-export interface IForm {
-  heading: string
-  text: string
-  buttonText: string
-}
-
-
 export interface ISolutionPageLayout {
   textImage: ITextImage,
   list: IList,
-  form: IForm,
+  form: ITextImage,
 }
 
 export interface IContactUsPageContent {
-  form: IForm,
+  form: ITextImage,
 }

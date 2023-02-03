@@ -1,20 +1,20 @@
 <script lang="ts">
-import type {PropType} from "vue";
-import type {IForm} from "@/types";
+import type { PropType } from "vue";
+import type { ITextImage } from "@/types";
 import Form from "@/components/global/Form.vue";
 
 export default {
   components: {Form},
   props: {
     formContent: {
-      type: Object as PropType<IForm>,
+      type: Object as PropType<ITextImage>,
     },
   },
 }
 </script>
 
 <template>
-  <section class="w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center bg-secondary">
+  <section class="full-width-filled bg-secondary">
     <div class="container-form-wrapper" id="contact-form">
       <div class="text-content">
         <h2 class="text-white">{{ formContent.heading }}</h2>

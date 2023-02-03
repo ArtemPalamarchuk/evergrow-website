@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .as-seen-shadow {
+    box-shadow: 0 44px 54px -20px rgba(11, 15, 32, 0.15);
+  }
 
+  .approach-shadow{
+    box-shadow: 0 14px 84px 20px rgba(30, 42, 61, 0.3);
+  }
+  .full-width-filled {
+    @apply w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center
+  }
+}
 
 @font-face {
   font-family: "Urbanist-500";
