@@ -1,54 +1,29 @@
 <script setup>
-import Card from "./Card.vue";
 import {advantagesContent} from "@/data";
+import { solar } from "@/assets/images";
+import VLazyImage from "@/components/global/VLazyImage.vue";
+import Card from "./Card.vue";
 
 const {heading, text, cards} = advantagesContent
 </script>
 
 <template>
-  <section class="advantages">
-    <div class="text-content">
-      <h2>{{ heading }}</h2>
-      <p>{{ text }}</p>
+  <section class="px-[120px]">
+    <div class="flex flex-col max-w-[790px] gap-8 mx-auto text-center">
+      <h2 class="text-xmd-h">{{ heading }}</h2>
+      <p class="text-md-p">{{ text }}</p>
     </div>
 
-    <div class="cards">
-      <Card v-for="{img, title, text, path} in cards" :img="img" :title="title" :text="text" :path="path"/>
+    <div class="w-screen relative left-1/2 -translate-x-1/2 mt-[130px] -mb-[5px]">
+      <v-lazy-image class="w-full" :src="solar"/>
     </div>
+
+    <div class="py-[160px] bg-dark w-screen relative left-1/2 -translate-x-1/2">
+      <div class="flex flex-col gap-y-10">
+        <Card v-for="{img, title, text, path} in cards" :img="img" :title="title" :text="text" :path="path"/>
+      </div>
+    </div>
+
+    <div class="w-screen relative h-[250px] bg-dark left-1/2 -translate-x-1/2"/>
   </section>
 </template>
-
-<style scoped>
-  .advantages {
-    @apply my-12 px-4
-    md:my-[104px] md:px-[120px]
-  }
-
-  .text-content {
-    @apply flex flex-col gap-4 text-dark mb-12
-    sm:gap-6
-    md:flex-row
-  }
-
-  .text-content h2 {
-    @apply text-sm-h-mob
-    sm:text-md-h-tab sm:max-w-[550px]
-    md:text-xmd-h md:w-1/2 md:max-w-full
-  }
-
-  .text-content p {
-    @apply text-md-i
-    sm:text-md-p sm:max-w-[610px]
-    md:w-1/2 md:max-w-full
-  }
-
-  .cards {
-    @apply grid gap-6 mb-16
-    sm:grid-cols-2 sm:gap-x-4
-    md:gap-x-6;
-  }
-
-  .advantages .cards:last-child {
-    @apply mb-0
-  }
-</style>

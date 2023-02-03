@@ -1,37 +1,32 @@
 <script setup>
 import {resourcesContent} from "@/data";
+import VLazyImage from "@/components/global/VLazyImage.vue";
 
 const {heading, resources} = resourcesContent
 </script>
 
 <template>
-  <section class="resources">
+  <section class="max-w-[1200px] w-full mx-auto pt-4 pb-8 -translate-y-[147px] bg-white as-seen-shadow">
     <h2 class="title">{{ heading }}</h2>
     <div class="images-container">
       <div v-for="item in resources" class="image-container">
-        <img :src="item.source" :alt="item.source" loading="lazy"/>
+        <v-lazy-image :src="item.source"/>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-  .resources {
-    @apply bg-beige pt-4 pb-3 w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center
-    sm:py-7
-    md:py-12
-  }
-
   .title {
-    @apply text-dark text-md-p text-center mb-2
-    sm:text-sm-h-tab sm:mb-4
+    @apply text-sm-h-tab text-center mb-2
+    sm:mb-4
     md:text-md-h md:mb-8
   }
 
   .images-container {
     @apply grid gap-y-2 gap-x-2.5 px-4 grid-cols-2
-    sm:grid-cols-3
-    md:gap-[50px] md:mx-auto md:w-fit
+    sm:grid-cols-4
+    md:gap-4 md:mx-auto md:w-fit;
   }
 
   .image-container img {
@@ -39,9 +34,10 @@ const {heading, resources} = resourcesContent
   }
 
   .image-container {
-    @apply h-[54px] flex items-center justify-center bg-white/[.7] rounded-[1rem]
+    @apply h-[54px] max-w-[246px] flex items-center justify-center rounded-[1rem]
     sm:h-[64px]
-    md:h-[81px] md:w-[300px]
+    md:h-[81px] md:w-[300px];
+    background: rgba(201, 205, 205, 0.12);
   }
 
   .image-container:last-child {
