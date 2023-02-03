@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         "primary": "#068576",
+        'primary-black': '#02191B',
         "dark": '#2A4547',
         "secondary": '#F1805F',
         "secondary-hover": '#D96949',
@@ -15,12 +16,9 @@ module.exports = {
         "error": '#BC0017',
       },
       fontFamily: {
-        "urbanist": "Urbanist",
-      },
-      fontWeight: {
-        'urbanist-m': '500',
-        'urbanist-sb': '600',
-        'urbanist-b': '700',
+        ["urbanist-m"]: "Urbanist-500",
+        ["urbanist-sb"]: "Urbanist-600",
+        ["urbanist-b"]: "Urbanist-700",
       },
       fontSize: {
         // Headings
@@ -39,6 +37,7 @@ module.exports = {
 
         // Interfaces
         "lg-i": ["20px", {lineHeight: "32px"}],
+        "xmd-i": ["16px", {lineHeight: "32px"}],
         "md-i": ["16px", {lineHeight: "24px"}],
         "sm-i": ["14px", {lineHeight: "24px"}],
         // Paragraphs

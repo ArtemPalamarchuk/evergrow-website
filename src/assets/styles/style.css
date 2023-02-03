@@ -2,14 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    font-family: Urbanist, system-ui, sans-serif;
-  }
+
+
+@font-face {
+  font-family: "Urbanist-500";
+  src: url("../fonts/Urbanist/Urbanist-Medium.ttf");
+}
+
+@font-face {
+  font-family: "Urbanist-600";
+  src: url("../fonts/Urbanist/Urbanist-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "Urbanist-700";
+  src: url("../fonts/Urbanist/Urbanist-Bold.ttf");
 }
 
 #app{
   @apply flex flex-col min-h-[100vh] max-w-[1440px] mx-auto
+}
+
+* {
+  @apply text-primary-black;
 }
 
 h1, h2, h3, h4, h5, h6, button {
