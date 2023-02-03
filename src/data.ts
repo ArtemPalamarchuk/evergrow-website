@@ -1,27 +1,32 @@
-// Main page: cards
-import {banks, corporateFinance, finExtra, impactAlpha, netZero, sponsors, techCrunch} from "@/assets/images";
+// Home page
+import {
+  finExtra, impactAlpha, techCrunch, ctvc,
+  approach,
+  card, card1, card2
+} from "@/assets/images";
 // About page: team cards
-import {James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa} from "@/assets/images";
+import { James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa, Adam } from "@/assets/images";
 // Solution pages lists
-import {construction, bank, solarPower, document, cash, plant, shield, work} from "@/assets/images";
+import { construction, bank, solarPower, document, cash, plant, shield, work } from "@/assets/images";
 // Solution pages heros
-import {snow, windmills, batteries, batteries2} from "@/assets/images";
+import { snow, windmills, batteries, batteries2 } from "@/assets/images";
 // Types
-import type {ISolutionPageLayout, IContactUsPageContent} from "@/types";
+import type { ISolutionPageLayout, IContactUsPageContent } from "@/types";
 
-// Main page
+// Home page
 export const heroContent = {
   heading: `Save money on taxes. Fight climate change.`,
   subHeading: `It’s that simple.`,
-  text: `Evergrow helps companies and financial institutions buy green tax credits. Earn attractive financial returns,
-         boost earnings, and lead on climate change, all at once.`,
-  buttonTitle: 'Get Started',
+  text: `Evergrow helps companies and financial institutions buy green tax credits. 
+         Earn attractive IRRs on idle cash, boost earnings, and lead on climate change, all at once.`,
+  buttonTitle: 'Get a quote',
 }
 export const resourcesContent = {
   heading: `As seen on:`,
   resources: [
     {source: finExtra},
     {source: techCrunch},
+    {source: ctvc},
     {source: impactAlpha},
   ]
 }
@@ -35,34 +40,37 @@ export const advantagesContent = {
     {
       title: "Corporate tax & treasury",
       text: 'Lower your tax bill, grow after-tax cash flow, and earn high risk-adjusted IRRs on cash in treasury.',
-      img: netZero,
+      img: card,
       path: '/tax-and-treasury',
     },
     {
       title: "Corporate net-zero",
       text: 'Provide mission-critical funding to highly additional projects in the United States while also turning a profit.',
-      img: corporateFinance,
+      img: card1,
       path: '/net-zero',
     },
     {
       title: "Banks & financial institutions",
       text: 'Invest in high-yield, low-risk tax credits to bolster both your financial returns and ESG impact.',
-      img: banks,
+      img: card2,
       path: '/banks',
     },
     {
       title: "Project developers & sponsors",
       text: `Monetize your projects' tax attributes in a simple and streamlined way`,
-      img: sponsors,
+      img: 'fake',
       path: '/sponsors',
     },
   ]
 }
 export const approachContent = {
-  heading: `Climate finance without compromise.`,
-  text: `Our mission is to build and sustain a carbon-neutral world. We use technology to create products that
-         unlock funding for decarbonization and provide compelling risk-adjusted returns for our partners.`,
-  buttonText: `Learn more about us`,
+  heading: `The modern approach to tax credits`,
+  paragraph: `Tax credits have historically been complicated and the Inflation Reduction Act has raised the stakes.
+              We’re about to see anenormous growth in tax credit eligibility, while the compliance requirements 
+              are more complex than ever before.`,
+  paragraph1: `That’s why we built Evergrow - to make tax credits simple. It’s a new approach that can scale with the challenge before us.`,
+  buttonText: `Get in touch`,
+  img: approach
 }
 
 // About page
@@ -102,12 +110,48 @@ export const teamContent = {
   heading: "Our team",
   team: [
     {img: James, title: 'James Richards', text: 'CEO', link: "https://www.linkedin.com/in/jpr2120/"},
-    {img: Cassandra, title: 'Cassandra Xia', text: 'Head of Engineering', link: "https://www.linkedin.com/in/cassandraxia/"},
-    {img: Charles, title: 'Charles Stone', text: 'Strategic Finance Lead', link: "https://www.linkedin.com/in/charlesstone92/"},
-    {img: Zoe, title: 'Zoe Savellos', text: 'Chief of Staff', link: "https://www.linkedin.com/in/zoe-savellos-77a11a108/"},
-    {img: Arun, title: 'Arun Prasad', text: 'Staff Software Engineer', link: "https://www.linkedin.com/in/arun-k-prasad"},
-    {img: Neal, title: 'Neal Donnelly', text: 'Business Development Lead', link: "https://www.linkedin.com/in/neal-donnelly-2633a71b/"},
-    {img: Marrissa, title: 'Marrissa His', text: 'Executive Business Partner', link: "https://www.linkedin.com/in/marrissahis/"},
+    {
+      img: Cassandra,
+      title: 'Cassandra Xia',
+      text: 'Head of Engineering',
+      link: "https://www.linkedin.com/in/cassandraxia/"
+    },
+    {
+      img: Charles,
+      title: 'Charles Stone',
+      text: 'Strategic Finance Lead',
+      link: "https://www.linkedin.com/in/charlesstone92/"
+    },
+    {
+      img: Zoe,
+      title: 'Zoe Savellos',
+      text: 'Chief of Staff',
+      link: "https://www.linkedin.com/in/zoe-savellos-77a11a108/"
+    },
+    {
+      img: Arun,
+      title: 'Arun Prasad',
+      text: 'Staff Software Engineer',
+      link: "https://www.linkedin.com/in/arun-k-prasad"
+    },
+    {
+      img: Neal,
+      title: 'Neal Donnelly',
+      text: 'Business Development Lead',
+      link: "https://www.linkedin.com/in/neal-donnelly-2633a71b/"
+    },
+    {
+      img: Marrissa,
+      title: 'Marrissa His',
+      text: 'Executive Business Partner',
+      link: "https://www.linkedin.com/in/marrissahis/"
+    },
+    {
+      img: Adam,
+      title: 'Adam Lord',
+      text: 'Software Engineer',
+      link: "https://www.linkedin.com/in/adamtlord/"
+    },
   ]
 }
 
