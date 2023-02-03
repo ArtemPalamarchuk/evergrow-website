@@ -3,13 +3,13 @@ import { logo } from "@/assets/images";
 </script>
 
 <template>
-  <footer>
+  <footer class="full-width-filled">
     <div class="info">
       <div class="evergrow">
         <router-link to="/">
           <img :src="logo" alt="logo" loading="lazy">
         </router-link>
-        <p>© 2022 Evergrow Inc.</p>
+        <p>© 2023 Evergrow Inc.</p>
       </div>
       <div class="solutions-wrap">
         <p class="title">Solutions</p>
@@ -48,7 +48,7 @@ import { logo } from "@/assets/images";
 
 <style scoped>
   footer {
-    @apply grow bg-beige text-dark px-4 pt-10 pb-8 w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center
+    @apply grow text-dark px-4 pt-10 pb-8
     sm:py-8
     md:px-[120px] md:py-[56px]
   }

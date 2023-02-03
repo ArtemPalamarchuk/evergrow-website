@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <section class="w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center bg-light-green">
+  <section class="full-width-filled bg-light-green">
     <div class="max-w-[1440px] flex flex-col md:flex-row m-auto">
       <div class="relative lg:max-h-full md:w-1/2">
         <img class="object-cover max-h-[442px] md:max-h-[562px] w-full" :src="formWindmills" alt="image" loading="lazy">

@@ -6,7 +6,7 @@ const {heading, team} = teamContent
 </script>
 
 <template>
-  <section class="team">
+  <section class="team full-width-filled">
     <div class="text-content">
       <h2>{{heading}}</h2>
     </div>
@@ -18,7 +18,7 @@ const {heading, team} = teamContent
 
 <style scoped>
   .team {
-    @apply bg-light-green py-12 px-4 w-screen relative left-1/2 -translate-x-1/2 overflow-hidden justify-center
+    @apply bg-light-green py-12 px-4
     lg:px-[120px] lg:py-24
     md:px-10 md:py-16
   }

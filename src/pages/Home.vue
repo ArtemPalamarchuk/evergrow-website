@@ -1,13 +1,13 @@
 <script setup>
-import Advantages from "../components/Home/Advantages/Advantages.vue";
-import Resources from "../components/Home/Resources/Resources.vue";
 import Hero from "../components/Home/Hero/Hero.vue";
+import AsSeenOn from "../components/Home/AsSeenOn/AsSeenOn.vue";
+import Advantages from "../components/Home/Advantages/Advantages.vue";
 import Approach from "../components/Home/Approach/Approach.vue";
 </script>
 
 <template>
   <Hero/>
-  <Resources/>
+  <AsSeenOn/>
   <Advantages/>
   <Approach/>
 </template>

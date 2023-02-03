@@ -63,16 +63,17 @@ export default {
     >
       {{ name }}
     </router-link>
+    <a href="https://app.evergrow.com/quote" target="_blank">Project developers: Get a quote</a>
   </nav>
 </template>
 
 <style scoped>
   .nav-menu {
-    @apply w-full flex gap-8 z-1 text-dark justify-center;
+    @apply w-full flex tablet-portrait:gap-8 gap-6 z-1 text-dark justify-center;
   }
 
   .solutions-container {
-    @apply flex relative gap-2 cursor-pointer pl-2;
+    @apply w-[100px] flex relative gap-2 cursor-pointer pl-2;
   }
 
   .solutions-header {
