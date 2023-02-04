@@ -52,19 +52,19 @@ export { James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa, Adam }
 export { linkedIn }
 
 // Solution pages (taxes, corporate, institutions)
-import snow from "./solutions/heros/snow.jpg"
-import windmills from "./solutions/heros/windmills.jpeg"
-import batteries from "./solutions/heros/batteries.jpeg"
+import tax_and_treasury from "./solutions/heros/tax-and-treasury.jpg"
+import net_zero from "./solutions/heros/net-zero.jpg"
+import banks from "./solutions/heros/banks.jpg"
 
-import bank from "./solutions/bank.svg"
-import solarPower from "./solutions/solar-power.svg"
-import document from "./solutions/document.svg"
+import portfolio from "./solutions/portfolio.svg"
+import lock from "./solutions/lock.svg"
+import leaf from "./solutions/leaf.svg"
 import cash from "./solutions/cash.svg"
-import plant from "./solutions/plant.svg"
+import success from "./solutions/success.svg"
 import shield from "./solutions/shield.svg"
 
-export { snow, windmills, batteries }
-export { bank, solarPower, document, cash, plant, shield }
+export { tax_and_treasury, net_zero, banks }
+export { portfolio, lock, leaf, cash, success, shield }
 
 // Contact Us page
 import formWindmills from "./contact/form-windmill.jpg"

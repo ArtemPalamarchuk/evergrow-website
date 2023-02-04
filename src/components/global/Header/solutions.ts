@@ -1,5 +1,5 @@
 import office from "@/assets/images/solutions/menu/office.svg";
-import solarPower from "@/assets/images/solutions/menu/solar.svg";
+import solar from "@/assets/images/solutions/menu/solar.svg";
 import bank from "@/assets/images/solutions/menu/bank.svg";
 
 export const solutionsMenu = [
@@ -11,7 +11,7 @@ export const solutionsMenu = [
   {
     path: "/net-zero",
     title: "Corporate net-zero",
-    img: solarPower,
+    img: solar,
   },
   {
     path: "/banks",
