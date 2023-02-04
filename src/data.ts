@@ -55,12 +55,12 @@ export const advantagesContent = {
       img: card2,
       path: '/banks',
     },
-    {
-      title: "Project developers & sponsors",
-      text: `Monetize your projects' tax attributes in a simple and streamlined way`,
-      img: 'fake',
-      path: '/sponsors',
-    },
+    // {
+    //   title: "Project developers & sponsors",
+    //   text: `Monetize your projects' tax attributes in a simple and streamlined way`,
+    //   img: 'fake',
+    //   path: '/sponsors',
+    // },
   ]
 }
 export const approachContent = {
@@ -108,6 +108,7 @@ export const investorsContent = [
 ]
 export const teamContent = {
   heading: "Our team",
+  text: 'We bring deep experience in compliance technology, software engineering, and project finance',
   team: [
     {img: James, title: 'James Richards', text: 'CEO', link: "https://www.linkedin.com/in/jpr2120/"},
     {

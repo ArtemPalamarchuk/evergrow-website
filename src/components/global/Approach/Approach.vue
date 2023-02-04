@@ -10,7 +10,7 @@ const { heading, paragraph, paragraph1, buttonText, img } = approachContent
 <template>
   <section class="approach-shadow flex bg-primary w-[1200px] mx-auto rounded-2xl
                   relative -translate-y-[250px] -mb-[250px] z-1">
-    <div class="py-[60px] pl-[66px] w-[70%]">
+    <div class=" py-[60px] pl-[66px] w-[70%]">
       <h2 class="text-white text-lg-h mb-[23px] max-w-[513px]">{{ heading }}</h2>
       <div class="max-w-[710px]">
         <p class="text-white text-lg-p">{{ paragraph }}</p>
@@ -26,6 +26,5 @@ const { heading, paragraph, paragraph1, buttonText, img } = approachContent
     <div class="absolute right-0">
       <v-lazy-image :src="img"/>
     </div>
-
   </section>
 </template>

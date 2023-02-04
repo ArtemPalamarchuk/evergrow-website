@@ -27,8 +27,7 @@ export { solar, card, card1, card2 }
 export { approach }
 
 // About page
-import francisco from "./about/description/francisco.jpg"
-import francisco1 from "./about/description/francisco1.jpg"
+import about_hero from "./about/description/about-hero.svg"
 
 import congruent from "./about/investors/congruent.svg"
 import firstRound from "./about/investors/firstRound.svg"
@@ -48,7 +47,7 @@ import Adam from "./about/team/Adam.jpeg"
 import joinUs from "./about/joinUs.jpg"
 import linkedIn from "./about/LinkedIn.svg"
 
-export { francisco, francisco1 }
+export { about_hero }
 export { congruent, firstRound, garuda, journey, xyz }
 export { James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa, Adam }
 export { joinUs, linkedIn }

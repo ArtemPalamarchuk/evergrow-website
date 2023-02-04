@@ -14,10 +14,10 @@ const {name, position, company} = person
 <template>
   <div class="card">
     <div class="text-container w-fit">
-      <h3>{{ name }}</h3>
+      <h3 class="text-white">{{ name }}</h3>
       <div class="flex flex-col sm-l:flex-row sm-l:flex-wrap">
-        <p class="font-urbanist-b sm-l:mr-1">{{ position }}</p>
-        <p class="font-urbanist-sb">{{ company }}</p>
+        <p class="font-urbanist-sb text-light-green sm-l:mr-1">{{ position }}</p>
+        <p class="font-urbanist-m text-light-green">{{ company }}</p>
       </div>
     </div>
   </div>
@@ -25,13 +25,13 @@ const {name, position, company} = person
 
 <style scoped>
   h3 {
-    @apply text-sm-p text-secondary
-    sm:text-xs-h-tab
-    md:text-xs-h
+    @apply text-sm-p
+        sm:text-xs-h-tab
+        md:text-xs-h
   }
 
   p {
-    @apply text-sm-l-p text-dark
-    sm:text-sm-p
+    @apply text-sm-l-p
+        sm:text-sm-p
   }
 </style>

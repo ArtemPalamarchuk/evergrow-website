@@ -1,3 +1,4 @@
+<!--
 <script setup lang="ts">
 import Button from "@/components/global/Button.vue";
 import TextImage from "@/components/global/TextImage.vue";
@@ -22,3 +23,4 @@ const {heading, text, buttonText} = joinUsContent
     @apply bg-white text-secondary w-fit
   }
 </style>
+-->
