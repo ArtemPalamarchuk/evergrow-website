@@ -144,6 +144,15 @@ export const teamContent = {
   ]
 }
 
+// Contact us page
+export const contactUsContent: ITextImage = {
+  heading: "Let’s start a conversation",
+  text: `Getting started is easy. Evergrow works for companies and financial institutions of all sizes. 
+       Fill in this form to schedule a free, no-obligation consultation.`,
+  buttonText: 'Get in touch',
+  img: contact_bg,
+}
+
 // Taxes page
 export const taxesPageContent: ISolutionPageLayout = {
   textImage: {
@@ -188,12 +197,7 @@ export const taxesPageContent: ISolutionPageLayout = {
              don’t have to, and we can work with any budget and timeline.`
     },
   ],
-  form: {
-    heading: "Let’s start a conversation",
-    text: `Getting started is easy. Evergrow works for companies and financial institutions of all sizes. 
-           Fill in this form to schedule a free, no-obligation consultation.`,
-    buttonText: 'Get a quote '
-  }
+  form: contactUsContent
 }
 // Net zero page
 export const corporatePageContent: ISolutionPageLayout = {
@@ -233,12 +237,7 @@ export const corporatePageContent: ISolutionPageLayout = {
            and management so you don’t have to, and we can work with any budget and timeline.`
     },
   ],
-  form: {
-    heading: "Let’s start a conversation",
-    text: `Getting started is easy. Evergrow works for companies and financial institutions of all sizes. 
-         Fill in this form to schedule a free, no-obligation consultation.`,
-    buttonText: 'Get in touch'
-  },
+  form: contactUsContent,
 }
 // Banks page
 export const banksPageContent: ISolutionPageLayout = {
@@ -278,19 +277,5 @@ export const banksPageContent: ISolutionPageLayout = {
            and management so you don’t have to, and we can work with any budget and timeline.`
     },
   ],
-  form: {
-    heading: "Let’s start a conversation",
-    text: `Getting started is easy. Evergrow works for companies and financial institutions of all sizes. 
-         Fill in this form to schedule a free, no-obligation consultation.`,
-    buttonText: 'Get in touch'
-  },
-}
-
-// Contact us page
-export const contactUsContent: ITextImage = {
-  heading: "Let’s start a conversation",
-  text: `Getting started is easy. Evergrow works for companies and financial institutions of all sizes. 
-       Fill in this form to schedule a free, no-obligation consultation.`,
-  buttonText: 'Get in touch',
-  img: contact_bg,
+  form: contactUsContent,
 }

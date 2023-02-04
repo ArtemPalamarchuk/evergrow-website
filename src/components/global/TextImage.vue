@@ -36,10 +36,10 @@ const textClr = `text-${textColor}`
         <slot name="button"/>
       </div>
       <v-lazy-image
-        class="max-h-[450px] tablet-portrait:max-h-full tablet-portrait:w-1/2"
+        class="self-center sm:self-end tablet-portrait:max-h-full tablet-portrait:w-1/2
+                max-h-[400px] sm:max-h-[550px] tablet-portrait:max-h-auto "
         :src="img"
       />
-<!--      <img class="object-cover max-h-[450px] tablet-portrait:max-h-full tablet-portrait:w-1/2" :src="img" alt="image" loading="lazy">-->
     </div>
   </section>
 </template>
