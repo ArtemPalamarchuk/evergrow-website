@@ -44,13 +44,12 @@ import Neal from "./about/team/Neal.jpeg"
 import Marrissa from "./about/team/Marissa.jpeg"
 import Adam from "./about/team/Adam.jpeg"
 
-import joinUs from "./about/joinUs.jpg"
 import linkedIn from "./about/LinkedIn.svg"
 
 export { about_hero }
 export { congruent, firstRound, garuda, journey, xyz }
 export { James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa, Adam }
-export { joinUs, linkedIn }
+export { linkedIn }
 
 // Solution pages (taxes, corporate, sponsors, institutions)
 import snow from "./solutions/heros/snow.jpg"
