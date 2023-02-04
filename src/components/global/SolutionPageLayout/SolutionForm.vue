@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-  <section class="full-width-filled bg-secondary">
+  <section class="full-width-filled bg-primary">
     <div class="container-form-wrapper" id="contact-form">
       <div class="text-content">
         <h2 class="text-white">{{ formContent.heading }}</h2>

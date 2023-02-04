@@ -42,10 +42,6 @@ export default {
     @apply absolute top-1 h-4 w-4 rounded border-[1.3px] border-solid;
   }
 
-  /*.container:hover input ~ .checkmark {*/
-  /*  @apply bg-secondary-hover duration-300*/
-  /*}*/
-
   .container input:checked ~ .checkmark {
     @apply bg-white
   }
@@ -60,7 +56,7 @@ export default {
 
   .container .checkmark:after {
     @apply left-1 top-[2px] w-[5px] h-2 rotate-[35deg]
-    border-secondary border-solid border-t-0 border-l-0 border-b-2 border-r-2;
+    border-primary border-solid border-t-0 border-l-0 border-b-2 border-r-2;
   }
 
   .label {
