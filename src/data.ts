@@ -9,6 +9,8 @@ import { James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa, Adam } from "@/as
 // Solution pages: (hero images + icons)
 import { banks, tax_and_treasury, net_zero } from "@/assets/images";
 import { portfolio, lock, leaf, cash, success, shield } from "@/assets/images";
+// Contact us
+import { contact_bg } from "@/assets/images";
 // Types
 import type { ISolutionPageLayout, ITextImage } from "@/types";
 
@@ -289,5 +291,6 @@ export const contactUsContent: ITextImage = {
   heading: "Let’s start a conversation",
   text: `Getting started is easy. Evergrow works for companies and financial institutions of all sizes. 
        Fill in this form to schedule a free, no-obligation consultation.`,
-  buttonText: 'Get in touch'
+  buttonText: 'Get in touch',
+  img: contact_bg,
 }
