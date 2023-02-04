@@ -52,9 +52,9 @@ export { James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa, Adam }
 export { linkedIn }
 
 // Solution pages (taxes, corporate, institutions)
-import tax_and_treasury from "./solutions/heros/tax-and-treasury.jpg"
-import net_zero from "./solutions/heros/net-zero.jpg"
-import banks from "./solutions/heros/banks.jpg"
+import tax_and_treasury from "./solutions/heros/tax-and-treasury.png"
+import net_zero from "./solutions/heros/net-zero.png"
+import banks from "./solutions/heros/banks.png"
 
 import portfolio from "./solutions/portfolio.svg"
 import lock from "./solutions/lock.svg"

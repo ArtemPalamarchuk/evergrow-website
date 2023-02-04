@@ -97,14 +97,14 @@ export default {
 
 <template>
   <div
-    class="thank-container text-primary-black text-center flex flex-col p-10 justify-center items-center"
+    class="thank-container text-center flex flex-col p-10 justify-center items-center"
     v-if="formIsSended"
     :style="{height: getFormHeight}"
   >
-    <h2 class="text-sm-h-mob sm:text-lg-h mb-4">Thank you for your message!</h2>
-    <p class="text-sm-p sm:text-lg-p">We look forward to working together and will be in touch soon</p>
+    <h2 class="text-white text-sm-h-mob sm:text-lg-h mb-4">Thank you for your message!</h2>
+    <p class="text-white text-sm-p sm:text-lg-p">We look forward to working together and will be in touch soon</p>
   </div>
-  <form v-else class="contact-form" ref="form">
+  <form v-else class="contact-form" ref="form" id="contact-form">
     <h1 class="text-xss-h sm:text-xs-md-h mb-3.5">Get in touch</h1>
     <div :class="`${classes} text-fields`">
       <base-input
