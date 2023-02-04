@@ -7,9 +7,9 @@ import {
 // About page: team cards
 import { James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa, Adam } from "@/assets/images";
 // Solution pages lists
-import { construction, bank, solarPower, document, cash, plant, shield, work } from "@/assets/images";
+import { bank, solarPower, document, cash, plant, shield } from "@/assets/images";
 // Solution pages heros
-import { snow, windmills, batteries, batteries2 } from "@/assets/images";
+import { snow, windmills, batteries } from "@/assets/images";
 // Types
 import type { ISolutionPageLayout, IContactUsPageContent } from "@/types";
 
@@ -55,12 +55,6 @@ export const advantagesContent = {
       img: card2,
       path: '/banks',
     },
-    // {
-    //   title: "Project developers & sponsors",
-    //   text: `Monetize your projects' tax attributes in a simple and streamlined way`,
-    //   img: 'fake',
-    //   path: '/sponsors',
-    // },
   ]
 }
 export const approachContent = {
@@ -241,49 +235,6 @@ export const corporatePageContent: ISolutionPageLayout = {
   form: {
     heading: "Let’s start a conversation",
     text: `Getting started is easy. Evergrow works for companies and financial institutions of all sizes. 
-         Fill in this form to schedule a free, no-obligation consultation.`,
-    buttonText: 'Get in touch'
-  },
-}
-// Sponsors page
-export const sponsorsPageContent: ISolutionPageLayout = {
-  textImage: {
-    heading: `Maximum value, minimum headache`,
-    text: `Evergrow is the easiest way to monetize your project’s tax benefits, including the ITC, PTC, 45Q, and depreciation.`,
-    buttonText: `Get Started `,
-    img: batteries2,
-  },
-  list: [
-    {
-      img: work,
-      title: "Tax equity or credit transfer? It’s up to you",
-      text: `Every project is unique. Whether it’s a traditional tax equity structure or a simple credit transfer,
-           Evergrow is your one-stop-shop for tax benefit monetization.`
-    },
-    {
-      img: document,
-      title: "Simple & fast underwriting",
-      text: `Our modern platform streamlines the underwriting & diligence process to save you time and lower transaction costs.
-           We handle insurance, transactions, and finding you the best price for your credits.`
-    },
-    {
-      img: construction,
-      title: "IRA compliance? Not a problem",
-      text: `Evergrow is purpose-built for the Inflation Reduction Act. Our platform verifies prevailing wage and 
-           apprenticeship compliance with data from your EPC and contractors, and we’ve partnered with leading insurers
-           to cover the value of your credits.`
-    },
-    {
-      img: solarPower,
-      title: "Technology and credit agnostic",
-      text: `Evergrow supports the full gamut of energy technologies that qualify for investment tax credits and
-           production tax credits, including solar, wind, RNG, energy storage, geothermal, sustainable aviation fuel, 
-           biofuels, hydrogen, and carbon capture. From 40B to 45Z to 48E, we’ve got you covered.`
-    },
-  ],
-  form: {
-    heading: "Let’s start a conversation",
-    text: `Getting started is easy. Evergrow works for project developers of all sizes. 
          Fill in this form to schedule a free, no-obligation consultation.`,
     buttonText: 'Get in touch'
   },

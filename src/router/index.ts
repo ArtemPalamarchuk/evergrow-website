@@ -37,14 +37,6 @@ const router = createRouter({
       }
     },
     {
-      path: '/sponsors',
-      name: 'sponsors',
-      component: () => import('../pages/solutionPages/Sponsors.vue'),
-      meta: {
-        title: 'Sponsors'
-      }
-    },
-    {
       path: '/banks',
       name: 'banks',
       component: () => import('../pages/solutionPages/Banks.vue'),

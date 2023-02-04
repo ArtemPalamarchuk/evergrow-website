@@ -17,7 +17,6 @@ import { logo } from "@/assets/images";
           <li><router-link to="/tax-and-treasury">For corporate tax &amp; treasury</router-link></li>
           <li><router-link to="/net-zero">For corporate net-zero</router-link></li>
           <li><router-link to="/banks">For financial institutions</router-link></li>
-          <li><router-link to="/sponsors">For project sponsors</router-link></li>
         </ul>
       </div>
       <div class="company">
