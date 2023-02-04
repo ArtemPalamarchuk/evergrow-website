@@ -68,7 +68,7 @@ export default {
   }
 
   .top-bar {
-    @apply py-3 flex items-center justify-between px-4
+    @apply py-[18px] flex items-center justify-between px-4
   }
 
   .top-bar img {

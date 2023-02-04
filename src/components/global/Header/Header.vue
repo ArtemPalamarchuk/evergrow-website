@@ -44,7 +44,7 @@ export default {
 </script>
 
 <template>
-  <header class="flex items-center px-4 py-[7px] shrink-0">
+  <header class="flex items-center px-4 py-4 sm-l:py-2 shrink-0">
     <router-link to="/" class="w-[105px] shrink-0 mt-1">
       <VLazyImage class="scale-20" :src="logo"/>
     </router-link>

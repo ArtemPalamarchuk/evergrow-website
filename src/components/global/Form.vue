@@ -105,7 +105,7 @@ export default {
     <p class="text-sm-p sm:text-lg-p">We look forward to working together and will be in touch soon</p>
   </div>
   <form v-else class="contact-form" ref="form">
-    <h1 class="text-xs-md-h mb-3.5">Get in touch</h1>
+    <h1 class="text-xss-h sm:text-xs-md-h mb-3.5">Get in touch</h1>
     <div :class="`${classes} text-fields`">
       <base-input
         :err-msg="errMessages.name"
@@ -172,7 +172,7 @@ export default {
   }
 
   .contact-form .text-fields {
-    @apply grid grid-cols-1 gap-x-6 gap-y-2
+    @apply grid grid-cols-1 gap-4 sm:gap-6
     sm-l:grid-cols-2
   }
 

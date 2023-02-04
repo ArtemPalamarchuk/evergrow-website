@@ -67,6 +67,6 @@ export { tax_and_treasury, net_zero, banks }
 export { portfolio, lock, leaf, cash, success, shield }
 
 // Contact Us page
-import formWindmills from "./contact/form-windmill.jpg"
+import contact_bg from "./contact/img-object.svg"
 
-export { formWindmills }
+export { contact_bg }

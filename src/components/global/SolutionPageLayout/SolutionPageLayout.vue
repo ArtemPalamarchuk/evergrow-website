@@ -2,13 +2,13 @@
 import Button from "@/components/global/Button.vue";
 import TextImage from "@/components/global/TextImage.vue";
 import SolutionsList from "@/components/global/SolutionPageLayout/SolutionsList.vue";
-import SolutionsForm from "@/components/global/SolutionPageLayout/SolutionForm.vue";
 import type {IList, ITextImage} from "@/types";
 import type {PropType} from "vue";
 import router from "@/router";
+import ContactFormContainer from "@/components/global/ContactFormContainer.vue";
 
 export default {
-  components: {SolutionsForm, SolutionsList, Button, TextImage},
+  components: {ContactFormContainer, SolutionsList, Button, TextImage},
   data() {
     return {
       router
@@ -47,7 +47,7 @@ export default {
     </template>
   </text-image>
   <solutions-list :list="list"/>
-  <solutions-form :form-content="form"/>
+  <contact-form-container/>
 </template>
 
 <style scoped>

@@ -26,6 +26,7 @@ module.exports = {
         "xs-md-h": ["32px", {lineHeight: "54px"}],
         "sm-h": ["30px", {lineHeight: "32px"}],
         "xs-h": ["24px", {lineHeight: "38px"}],
+        "xss-h": ["24px", {lineHeight: "32px"}],
         // tablet
         "md-h-tab": ["40px", {lineHeight: "48px"}],
         "sm-h-tab": ["30px", {lineHeight: "45px"}],
