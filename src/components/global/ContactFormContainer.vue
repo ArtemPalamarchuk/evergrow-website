@@ -17,6 +17,9 @@ export default {
       contact_bg,
     }
   },
+  mounted() {
+    console.log(JSON.parse(JSON.stringify(this)));
+  }
 }
 </script>
 
@@ -31,8 +34,8 @@ export default {
     <div class="max-w-[1440px] h-auto md:h-[607px] flex flex-col md:flex-row m-auto">
       <div class="relative lg:max-h-full md:w-1/2">
         <div class="md:absolute md:-translate-y-1/2 left-4 mb-11 md:mb-0 md:top-1/2 w-[90%] left-[60px]">
-          <h2 class="text-white text-sm-h-mob sm:text-lg-h mb-4">{{ form.heading }}</h2>
-          <p class="text-white text-sm-p sm:text-lg-p">{{ form.text }}</p>
+          <h2 class="text-white text-sm-h-mob sm:text-lg-h mb-4">{{ this.form.heading }}</h2>
+          <p class="text-white text-sm-p sm:text-lg-p">{{ this.form.text }}</p>
         </div>
       </div>
       <div class="flex flex-col justify-center bg-primary md:w-1/2 md:pl-[46px] md:pr-[74px]">

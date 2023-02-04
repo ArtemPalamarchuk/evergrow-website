@@ -17,7 +17,3 @@ export interface ISolutionPageLayout {
   list: IList,
   form: ITextImage,
 }
-
-export interface IContactUsPageContent {
-  form: ITextImage,
-}
