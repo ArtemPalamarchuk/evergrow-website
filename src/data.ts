@@ -288,7 +288,7 @@ export const banksPageContent: ISolutionPageLayout = {
 export const contactUsContent: IContactUsPageContent = {
   form: {
     heading: "Let’s start a conversation",
-    text: `Getting started is easy. Evergrow works with companies, financial institutions, and project developers of all sizes. 
+    text: `Getting started is easy. Evergrow works for companies and financial institutions of all sizes. 
          Fill in this form to schedule a free, no-obligation consultation.`,
     buttonText: 'Get in touch'
   },

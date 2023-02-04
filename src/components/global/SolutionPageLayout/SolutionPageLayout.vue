@@ -2,18 +2,12 @@
 import Button from "@/components/global/Button.vue";
 import TextImage from "@/components/global/TextImage.vue";
 import SolutionsList from "@/components/global/SolutionPageLayout/SolutionsList.vue";
-import type {IList, ITextImage} from "@/types";
-import type {PropType} from "vue";
-import router from "@/router";
 import ContactFormContainer from "@/components/global/ContactFormContainer.vue";
+import type { IList, ITextImage } from "@/types";
+import type { PropType } from "vue";
 
 export default {
   components: {ContactFormContainer, SolutionsList, Button, TextImage},
-  data() {
-    return {
-      router
-    }
-  },
   props: {
     textImage: {
       type: Object as PropType<ITextImage>,
@@ -47,7 +41,7 @@ export default {
     </template>
   </text-image>
   <solutions-list :list="list"/>
-  <contact-form-container/>
+  <contact-form-container :form="form"/>
 </template>
 
 <style scoped>
