@@ -18,13 +18,10 @@ const default_form_data = {
 
 export default {
   components: {Spinner, BaseInput, Select, TextArea, CheckBox, Button},
-  props: {
-    colorSchema: {
-      type: String
-    },
-  },
   setup() {
-    return {v$: useVuelidate()}
+    return {
+      v$: useVuelidate()
+    }
   },
   data() {
     return {
@@ -85,19 +82,8 @@ export default {
         email: this.v$.userData.email.$dirty ? this.v$.userData.email.$silentErrors[0]?.$message || "" : "",
       }
     },
-    styles() {
-      const btnColor = this.$props.colorSchema === 'dark' ? 'white' : '#F1805F'
-      const btnBgColor = this.$props.colorSchema === 'dark' ? '#F1805F' : 'white'
-      const textFieldsOpacity = this.isLoading ? 0.5 : 1
-
-      return {
-        color: `${btnColor}`,
-        background: `${btnBgColor}`,
-        opacity: textFieldsOpacity
-      }
-    },
-    thankMsgStyle() {
-      return this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
+    classes() {
+      return this.isLoading ? 'opacity-50' :'opacity-100'
     },
     getFormHeight() {
       return this.formHeight + 'px'
@@ -111,40 +97,40 @@ export default {
 
 <template>
   <div
-    class="thank-container text-center flex flex-col p-10 justify-center items-center"
+    class="thank-container text-primary-black text-center flex flex-col p-10 justify-center items-center"
     v-if="formIsSended"
-    :style="{height: getFormHeight, color: thankMsgStyle}"
+    :style="{height: getFormHeight}"
   >
     <h2 class="text-sm-h-mob sm:text-lg-h mb-4">Thank you for your message!</h2>
     <p class="text-sm-p sm:text-lg-p">We look forward to working together and will be in touch soon</p>
   </div>
   <form v-else class="contact-form" ref="form">
-    <div :style="{opacity: styles.opacity}" class="text-fields">
+    <h1 class="text-xs-md-h mb-3.5">Get in touch</h1>
+    <div :class="`${classes} text-fields`">
       <base-input
-        :colorSchema="this.$props.colorSchema"
         :err-msg="errMessages.name"
         v-model="userData.name"
         label="Name"
         name="name"
         :disabled="isLoading"
+        placeholder="Jane Kaul"
       />
       <base-input
-        :colorSchema="this.$props.colorSchema"
         :err-msg="errMessages.email"
         v-model="userData.email"
         label="Email address"
         name="email"
         :disabled="isLoading"
+        placeholder="example@mail.com"
       />
       <base-input
-        :colorSchema="this.$props.colorSchema"
         v-model="userData.organization"
         label="Organization"
         name="organization"
         :disabled="isLoading"
+        placeholder="Organization"
       />
       <Select
-        :colorSchema="this.$props.colorSchema"
         :value="userData['interested in']"
         placeholder="Please Select"
         label="I am interested in"
@@ -152,17 +138,23 @@ export default {
         :disabled="isLoading"
       />
       <text-area
-        :colorSchema="this.$props.colorSchema"
         v-model="userData.message"
         label="Message"
         name="message"
         :disabled="isLoading"
+        placeholder="Tell us about yourself"
       />
     </div>
     <div v-if="isLoading" class="spinner-container">
       <spinner/>
     </div>
-    <Button :disabled="isLoading" :style="styles" @click.prevent="sendForm" text="Get in touch"/>
+    <Button
+      text="Get Started"
+      variant="black"
+      :class="`${classes} w-full flex justify-center py-1.5 sm:py-3 mt-7 sm:mt-11`"
+      :disabled="isLoading"
+      @click.prevent="sendForm"
+    />
   </form>
 </template>
 
@@ -176,7 +168,7 @@ export default {
   }
 
   .contact-form {
-    @apply w-full relative
+    @apply w-full relative bg-white rounded-xl px-4 py-8 sm:px-8 sm:py-11
   }
 
   .contact-form .text-fields {
@@ -191,10 +183,5 @@ export default {
   .contact-form .input-wrapper.textarea {
     @apply col-start-1 col-end-2
     sm-l:col-start-1 sm-l:col-end-3 sm-l:row-start-3 sm-l:row-end-3;
-  }
-
-  .contact-form button {
-    @apply ml-auto mt-6 px-9
-    sm-l:px-10
   }
 </style>

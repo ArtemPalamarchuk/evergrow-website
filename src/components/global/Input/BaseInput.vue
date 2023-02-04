@@ -12,35 +12,19 @@ export default {
     },
     modelValue: String,
     placeholder: String,
-    colorSchema: {
-      type: String
-    },
     errMsg: {
       type: String,
       default: ''
     }
   },
   emits: ['update:modelValue'],
-  computed: {
-    styles() {
-      const baseColor = this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
-      const bgColor = this.$props.colorSchema === 'dark' ? 'white' : 'transparent'
-
-      return {
-        outline: this.errMsg ? {outline: '1.5px solid #BC0017'} : {outline: `1.5px solid ${baseColor}`},
-        text: {color: `${baseColor}`},
-        background: {background: `${bgColor}`}
-      }
-    },
-  }
 }
 </script>
 
 <template>
-  <div class="input-wrapper input" :style="styles.text">
+  <div class="input-wrapper input">
     <label :for="name">{{ label }}</label>
     <input
-      :style="[styles.outline, styles.background]"
       v-model="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
       :name="name"
@@ -57,7 +41,8 @@ export default {
   }
 
   input {
-    @apply py-2 px-3 bg-transparent rounded-xl
+    @apply py-2 pr-3 bg-transparent border-b-[1.5px] duration-300
+    border-b-gray-400 focus:border-b-blue-900 outline-none;
   }
 
   input:-webkit-autofill,

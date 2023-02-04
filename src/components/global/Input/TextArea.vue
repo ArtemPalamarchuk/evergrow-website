@@ -6,35 +6,18 @@ export default {
     label: String,
     modelValue: String,
     placeholder: String,
-    colorSchema: {
-      type: String
-    },
     disabled: {
       default: false
     },
   },
   emits: ['update:modelValue'],
-  computed:{
-    textAreaStyle(){
-      const textColor = this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
-      const bgColor = this.$props.colorSchema === 'dark' ? 'white' : 'transparent'
-      const outlineColor = this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
-
-      return {
-        color: `${textColor}`,
-        background: `${bgColor}`,
-        outline: `1.5px solid ${outlineColor}`,
-      }
-    },
-  }
 }
 </script>
 
 <template>
-  <div class="input-wrapper textarea" :style="{color: textAreaStyle.color}">
-    <label :for="name">{{ label }}</label>
+  <div class="input-wrapper flex flex-col textarea">
+    <label class="font-urbanist-b text-md-p" :for="name">{{ label }}</label>
     <textarea
-      :style="textAreaStyle"
       v-model="modelValue"
       @input="$emit('update:modelValue', $event.target.value)"
       :name="name"
@@ -45,16 +28,8 @@ export default {
 </template>
 
 <style scoped>
-  .input-wrapper {
-    @apply flex flex-col text-white
-  }
-
   textarea {
-    @apply py-2 px-3 bg-transparent rounded-xl
-    outline-[1.5px] outline outline-white resize-none;
-  }
-
-  label{
-    @apply font-urbanist-b text-md-p
+    @apply h-11 py-2 pr-3 text-primary-black outline-none
+    border-b-[1.5px] border-b-gray-400 focus:border-b-blue-900 resize-none;
   }
 </style>

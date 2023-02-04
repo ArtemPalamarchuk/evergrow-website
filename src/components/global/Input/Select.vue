@@ -4,9 +4,6 @@ export default {
     value: String,
     placeholder: String,
     label: String,
-    colorSchema: {
-      type: String
-    },
     disabled: {
       default: false
     },
@@ -44,37 +41,26 @@ export default {
     window.removeEventListener('click', this.close)
   },
   computed: {
-    styles() {
-      const baseColor = this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
-      const bgColor = this.$props.colorSchema === 'dark' ? 'white' : 'transparent'
-      const imgColor = this.$props.colorSchema === 'dark' ? '#2A4547' : 'white'
-      const isDisabled = this.$props.disabled ? {pointerEvents: 'none'} : {pointerEvents: 'auto'}
+    classes() {
+      const isDisabled = this.$props.disabled ? 'pointer-events-none' : 'pointer-events-auto'
+      const border = this.isActiveSelectMenu ? 'border-b-blue-900' : 'border-b-gray-400'
+      const color = this.isActiveSelectMenu ? 'test-red' : 'test-red'
 
-      return {
-        outline: {outline: `1.5px solid ${baseColor}`},
-        text: {color: `${baseColor}`},
-        background: {background: `${bgColor}`},
-        imgColor,
-        isDisabled
-      }
+      return isDisabled + ' ' + border + ' ' + color
     },
   },
 }
 </script>
 
 <template>
-  <div class="input-wrapper select" :style="styles.text">
+  <div class="input-wrapper select">
     <p class="label">{{ label }}</p>
-    <div
-      class="input-select"
-      @click="this.toggleDropdown"
-      :style="[styles.outline, styles.background, styles.isDisabled]"
-    >
+    <div :class="`${classes} input-select`" @click="this.toggleDropdown">
       <p class="placeholder">{{ value || placeholder }}</p>
 
       <div class="arrow-container" :style="{transform: isActiveSelectMenu ? 'rotate(180deg)' : 'rotate(0)' }">
         <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M-2.18557e-07 0.5L5 5.5L10 0.5L-2.18557e-07 0.5Z" :fill="styles.imgColor"/>
+          <path d="M-2.18557e-07 0.5L5 5.5L10 0.5L-2.18557e-07 0.5Z" fill="black"/>
         </svg>
       </div>
 
@@ -97,18 +83,17 @@ export default {
   }
 
   .input-wrapper .input-select {
-    @apply w-full rounded-xl flex flex-row grow items-center justify-between relative
-    pr-[18px] pl-3 py-2
+    @apply w-full flex flex-row grow items-center justify-between relative border-b-[1.5px]
+    pr-[18px] py-2
     sm-l:py-[4.5px];
   }
 
   .input-wrapper .input-select .placeholder {
-    @apply whitespace-nowrap overflow-hidden
+    @apply whitespace-nowrap overflow-hidden text-[#afb5bf]
   }
 
   .options-menu {
-    @apply absolute w-full bg-white top-[44px] rounded-xl p-1;
-    box-shadow: 0 30px 44px -8px rgb(13 43 46 / 30%);
+    @apply drop-down-shadow absolute w-full bg-white top-[44px] rounded-xl p-1;
   }
 
   .options-menu li {
