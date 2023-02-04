@@ -1,7 +1,6 @@
 <script setup>
 import Investors from '../components/About/Investors/Investors.vue';
 import Team from '../components/About/Team/Team.vue';
-import JoinUs from '../components/About/JoinUs/JoinUs.vue';
 import Description from '../components/About/Description/Description.vue';
 import Approach from "../components/global/Approach/Approach.vue";
 </script>
@@ -11,5 +10,4 @@ import Approach from "../components/global/Approach/Approach.vue";
   <Team/>
   <Investors/>
   <Approach/>
-<!--  <JoinUs/>-->
 </template>

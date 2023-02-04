@@ -83,13 +83,6 @@ export const aboutHeroContent = {
                   We are backed by top-tier venture capital firms and leaders from the technology,
                   climate, and finance communities.`,
 }
-export const joinUsContent = {
-  heading: `Join us`,
-  text: `Evergrow works in person at the beautiful Shack 15 space in the iconic San Francisco Ferry Building.
-        We are always looking for talented and mission-driven individuals to join our team.
-        Take a look at our openings and get in touch!`,
-  buttonText: `We're hiring`,
-}
 export const investorsContent = [
   {name: 'Andy Karetsky', position: 'President,', company: 'Skyview Ventures'},
   {name: 'Maddie Hall', position: 'Co-Founder,', company: 'Living Carbon'},
