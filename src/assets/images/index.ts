@@ -28,6 +28,8 @@ export { approach }
 
 // About page
 import about_hero from "./about/description/about-hero.svg"
+import about_hero_big from "./about/description/about-hero-big.svg"
+import about_hero_small from "./about/description/about-hero-small.svg"
 
 import congruent from "./about/investors/congruent.svg"
 import firstRound from "./about/investors/firstRound.svg"
@@ -46,7 +48,7 @@ import Adam from "./about/team/Adam.jpeg"
 
 import linkedIn from "./about/LinkedIn.svg"
 
-export { about_hero }
+export { about_hero,about_hero_big, about_hero_small }
 export { congruent, firstRound, garuda, journey, xyz }
 export { James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa, Adam }
 export { linkedIn }

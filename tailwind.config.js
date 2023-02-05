@@ -32,6 +32,7 @@ module.exports = {
         "sm-h-tab": ["30px", {lineHeight: "45px"}],
         "xs-h-tab": ["18px", {lineHeight: "24px"}],
         // mobile
+        "md-h-mob": ["30px", {lineHeight: "38px"}],
         "sm-h-mob": ["26px", {lineHeight: "28px"}],
         "xs-h-mob": ["14px", {lineHeight: "18px"}],
 

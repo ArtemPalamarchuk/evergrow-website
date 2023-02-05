@@ -17,7 +17,7 @@ export default {
               py-[60px] md:py-[80px]
               px-4 md:px-[120px]">
     <div>
-      <h2 class="text-sm-h sm:text-xmd-h">Headline Here</h2>
+      <h2 class="text-sm-h sm:text-xmd-h mb-4 sm-l:mb-5">Headline Here</h2>
       <p class="text-md-i sm:text-lg-i">We bring deep experience in compliance technology, software engineering, and project finance</p>
     </div>
     <div class="grid
