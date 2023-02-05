@@ -15,7 +15,7 @@ import impactAlpha from "./home/asSeenOn/impact-alpha.svg"
 import ctvc from "./home/asSeenOn/ctvc.svg"
 
 import solar from "./home/advantages/solar.jpeg"
-import card from "./home/advantages/card-image-1.jpg"
+import card from "./home/advantages/card-image-1.png"
 import card1 from "./home/advantages/card-image-2.jpg"
 import card2 from "./home/advantages/card-image-3.jpg"
 
