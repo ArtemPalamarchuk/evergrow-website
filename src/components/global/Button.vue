@@ -41,6 +41,6 @@ export default defineComponent({
 <style scoped>
   button {
     @apply flex items-center rounded-[60px] cursor-pointer whitespace-nowrap
-           text-xmd-i font-urbanist-sb
+           text-xmd-i font-urbanist-sb relative z-1;
   }
 </style>
