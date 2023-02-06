@@ -35,12 +35,16 @@
   src: url("../fonts/Urbanist/Urbanist-Bold.ttf");
 }
 
-#app{
-  @apply flex flex-col min-h-[100vh] max-w-[1440px] mx-auto
+* {
+  @apply text-primary-black
 }
 
-* {
-  @apply text-primary-black;
+html {
+  @apply overflow-x-hidden
+}
+
+#app{
+  @apply flex flex-col min-h-[100vh] max-w-[1440px] mx-auto
 }
 
 h1, h2, h3, h4, h5, h6, button {

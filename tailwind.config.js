@@ -50,6 +50,7 @@ module.exports = {
       zIndex: {
         0: 0,
         1: 1,
+        2: 2,
       },
       gridTemplateColumns: {
         'auto-columns': 'repeat(auto, minmax(3, 1fr))',

@@ -31,7 +31,7 @@ export default {
       </div>
     </div>
   </section>
-  <div class="w-screen relative h-[250px] bg-primary-black left-1/2 -translate-x-1/2"/>
+  <div class="full-width-filled h-[250px] bg-primary-black"/>
 </template>
 
 <style scoped>

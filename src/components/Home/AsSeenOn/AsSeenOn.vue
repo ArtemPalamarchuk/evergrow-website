@@ -6,7 +6,7 @@ const {heading, resources} = resourcesContent
 </script>
 
 <template>
-  <section class=" mx-4 px-8 pt-4 pb-8 -translate-y-[147px] bg-white as-seen-shadow">
+  <section class="max-w-[1200px] mx-4 md:mx-auto px-8 pt-4 pb-8 -translate-y-[147px] bg-white as-seen-shadow rounded-2xl">
     <h2 class="title">{{ heading }}</h2>
     <div class="images-container">
       <div v-for="item in resources" class="image-container">

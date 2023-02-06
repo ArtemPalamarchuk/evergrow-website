@@ -93,7 +93,7 @@ export default {
   }
 
   .options-menu {
-    @apply drop-down-shadow absolute w-full bg-white top-[44px] rounded-xl p-1;
+    @apply drop-down-shadow absolute w-full bg-white top-[44px] rounded-xl p-1 z-2;
   }
 
   .options-menu li {

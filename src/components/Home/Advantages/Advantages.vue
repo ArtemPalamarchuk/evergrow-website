@@ -14,16 +14,16 @@ const {heading, text, cards} = advantagesContent
       <p class="text-sm-p md:text-lg-p">{{ text }}</p>
     </div>
 
-    <div class="w-screen relative left-1/2 -translate-x-1/2 mt-[130px] -mb-[5px]">
+    <div class="full-width-filled mt-[130px] -mb-[5px]">
       <v-lazy-image class="w-full" :src="solar"/>
     </div>
 
-    <div class="py-20 sm:py-40 bg-dark w-screen relative left-1/2 -translate-x-1/2">
+    <div class="full-width-filled py-20 sm:py-40 bg-dark">
       <div class="flex flex-col gap-y-10">
         <Card v-for="{img, title, text, path} in cards" :img="img" :title="title" :text="text" :path="path"/>
       </div>
     </div>
 
-    <div class="w-screen relative h-[250px] bg-dark left-1/2 -translate-x-1/2"/>
+    <div class="full-width-filled h-[250px] bg-dark"/>
   </section>
 </template>
