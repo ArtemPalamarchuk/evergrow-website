@@ -20,7 +20,7 @@ const {heading, text, cards} = advantagesContent
 
     <div class="full-width-filled py-20 sm:py-40 bg-dark">
       <div class="flex flex-col gap-y-10">
-        <Card v-for="{img, title, text, path} in cards" :img="img" :title="title" :text="text" :path="path"/>
+        <Card v-for="{img, img1,  title, text, path} in cards" :img="img" :img1="img1" :title="title" :text="text" :path="path"/>
       </div>
     </div>
 

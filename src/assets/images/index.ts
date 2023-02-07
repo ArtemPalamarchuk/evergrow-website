@@ -8,6 +8,7 @@ export { logo, chevron, close, arrow }
 
 // Home page //
 import hero from "./home/hero/hero.png"
+import hero_mini from "./home/hero/hero-mini.png"
 
 import finExtra from "./home/asSeenOn/fin-extra.svg"
 import techCrunch from "./home/asSeenOn/tech-crunch.svg"
@@ -18,12 +19,15 @@ import solar from "./home/advantages/solar.jpeg"
 import card from "./home/advantages/card-image-1.png"
 import card1 from "./home/advantages/card-image-2.jpg"
 import card2 from "./home/advantages/card-image-3.jpg"
+import card_mini from "./home/advantages/card-image-1-mini.png"
+import card1_mini from "./home/advantages/card-image-2-mini.png"
+import card2_mini from "./home/advantages/card-image-3-mini.png"
 
 import approach from "./home/approach/approach.svg"
 
-export { hero }
+export { hero, hero_mini }
 export { finExtra, techCrunch, impactAlpha, ctvc }
-export { solar, card, card1, card2 }
+export { solar, card, card1, card2, card_mini, card1_mini, card2_mini }
 export { approach }
 
 // About page

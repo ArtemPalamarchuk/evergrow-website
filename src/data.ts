@@ -2,7 +2,7 @@
 import {
   finExtra, impactAlpha, techCrunch, ctvc,
   approach,
-  card, card1, card2
+  card, card1, card2, card_mini, card1_mini, card2_mini
 } from "@/assets/images";
 // About page: team cards
 import { James, Cassandra, Charles, Zoe, Arun, Neal, Marrissa, Adam } from "@/assets/images";
@@ -42,18 +42,21 @@ export const advantagesContent = {
       title: "Corporate tax & treasury",
       text: 'Lower your tax bill, grow after-tax cash flow, and earn high risk-adjusted IRRs on cash in treasury.',
       img: card,
+      img1: card_mini,
       path: '/tax-and-treasury',
     },
     {
       title: "Corporate net-zero",
       text: 'Provide mission-critical funding to highly additional projects in the United States while also turning a profit.',
       img: card1,
+      img1: card1_mini,
       path: '/net-zero',
     },
     {
       title: "Banks & financial institutions",
       text: 'Invest in high-yield, low-risk tax credits to bolster both your financial returns and ESG impact.',
       img: card2,
+      img1: card2_mini,
       path: '/banks',
     },
   ]
