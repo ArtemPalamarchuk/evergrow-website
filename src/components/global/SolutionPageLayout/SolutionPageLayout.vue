@@ -35,7 +35,7 @@ export default {
     textColor="dark"
   >
     <template v-slot:button>
-      <a href="#contact-form">
+      <a href="https://app.evergrow.com/quote">
         <Button :text="textImage.buttonText"/>
       </a>
     </template>
