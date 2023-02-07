@@ -37,8 +37,7 @@ export default {
         </div>
 
         <ul class="sidebar-solutions" v-if="isActiveSolutionsMenu">
-          <li v-for="{ path, title, img } in solutionsMenu" @click="this.$emit('navigate', path)">
-            <img :src="img" alt="page" loading="lazy">
+          <li v-for="{ path, title } in solutionsMenu" @click="this.$emit('navigate', path)">
             <span>{{ title }}</span>
           </li>
         </ul>
@@ -46,7 +45,7 @@ export default {
         <div class="flex flex-col">
           <a class="mt-10 cursor-pointer" @click.prevent="this.$emit('navigate', '/about')">About</a>
           <a class="mt-10" href="https://app.evergrow.com/" target="_blank">Log in</a>
-          <Button class="w-fit mt-10 px-6" text="Contact Us" @click="this.$emit('navigate', 'contact-us')"/>
+          <Button class="w-[180px] h-[58px] flex justify-center w-fit mt-10" text="Contact Us" @click="this.$emit('navigate', 'contact-us')"/>
         </div>
       </div>
     </div>
@@ -88,20 +87,18 @@ export default {
   }
 
   .sidebar-solutions {
-    @apply grid grid-cols-1 w-full gap-2.5 mt-2.5
+    @apply flex flex-col w-full gap-5 mt-6 ml-[-6px]
   }
 
   .sidebar-solutions li {
-    @apply flex flex-row items-center text-xs-h-mob font-urbanist-b rounded-[10px] duration-300
-    cursor-pointer border-[1px] border-solid border-beige;
+    @apply flex flex-row items-center text-sm-p font-urbanist-b duration-300 cursor-pointer;
   }
 
-  .sidebar-solutions li:hover {
-    @apply border-[1px] border-solid border-primary;
+  .sidebar-solutions span {
+    @apply duration-300 text-primary-black
   }
-
-  .sidebar-solutions li img {
-    @apply w-[60px] h-[60px] m-2.5;
+  .sidebar-solutions span:hover {
+    @apply text-primary;
   }
 
   .active {

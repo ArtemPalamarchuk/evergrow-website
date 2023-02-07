@@ -43,17 +43,16 @@ export default {
     <div class="solutions-container" @click="toggleDropdown">
       <a>Solutions</a>
       <img :src="chevron" alt="chevron" :style="{transform: isActiveDDMenu ? 'rotate(180deg)' : 'rotate(0)' }" loading="lazy">
+      <Transition>
+        <ul class="solutions-header" v-if="isActiveDDMenu">
+          <li v-for="{ path, title } in solutionsMenu" @click="this.isActiveDDMenu = false">
+            <router-link :to="path">
+              <span>{{ title }}</span>
+            </router-link>
+          </li>
+        </ul>
+      </Transition>
     </div>
-    <Transition>
-      <ul class="solutions-header" v-if="isActiveDDMenu">
-        <li v-for="{ path, title, img } in solutionsMenu" @click="this.isActiveDDMenu = false">
-          <router-link :to="path">
-            <img :src="img" alt="page" loading="lazy">
-            <span>{{ title }}</span>
-          </router-link>
-        </li>
-      </ul>
-    </Transition>
     <router-link
       v-for="{ name, to, id } in nav"
       :id="id"
@@ -69,7 +68,7 @@ export default {
 
 <style scoped>
   .nav-menu {
-    @apply w-full flex tablet-portrait:gap-8 gap-6 z-1 text-dark justify-center;
+    @apply w-full relative flex tablet-portrait:gap-8 gap-6 z-1 text-dark justify-center;
   }
 
   .solutions-container {
@@ -77,32 +76,21 @@ export default {
   }
 
   .solutions-header {
-    @apply grid grid-cols-1 w-max gap-2.5 absolute
-    top-[80px] left-1/2 -translate-x-1/2 px-2.5 py-3
-    bg-white whitespace-nowrap rounded-2xl
-    sm-l:grid-cols-2;
+    @apply flex flex-col w-max gap-6 absolute
+    top-11 left-0 px-5 py-4
+    bg-white rounded;
     box-shadow: 0 34px 44px -30px rgba(13, 43, 46, 0.3);
   }
 
-  .solutions-header li:hover {
-    @apply border-[1px] border-solid border-primary;
-  }
-
   .solutions-header li {
-    @apply text-md-p font-urbanist-b rounded-[10px] duration-300
-    border-[1px] border-solid border-beige;
+    @apply text-sm-p duration-300;
   }
 
-  .solutions-header li:nth-child(2) {
-    @apply pr-[30px]
+  .solutions-header span {
+    @apply duration-300
   }
-
-  .solutions-header li a {
-    @apply flex flex-row items-center;
-  }
-
-  .solutions-header li img {
-    @apply p-2.5 w-[100px] h-[100px];
+  .solutions-header span:hover {
+    @apply text-primary;
   }
 
   img[alt=chevron] {
